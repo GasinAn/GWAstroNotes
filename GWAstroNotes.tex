@@ -1,4 +1,3 @@
-% 编译方式: xelatex -> bibtex -> xelatex*2
 \documentclass{ctexbook}
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -15,11 +14,11 @@
 \makeatother
 \renewcommand{\tableofcontents}{\twocolumn\starttoc\onecolumn}
 \hypersetup{
-	colorlinks,
-	linkcolor=blue,
-	filecolor=pink,
-	urlcolor=cyan,
-	citecolor=red,
+    colorlinks,
+    linkcolor=blue,
+    filecolor=pink,
+    urlcolor=cyan,
+    citecolor=red,
 }
 \def\p{\partial}
 \title{引力波天文学笔记}
@@ -28,24 +27,7 @@
     \maketitle
     \include{copyright.tex}
     \tableofcontents
-    %---------------------------------------------------------------------------
-    \chapter{引力波}
-    \section{Linear Gravity}
-    \cite{Wald1984}. 流形$\mathbb{R}^{4}$. 任意坐标系$\{x^{\mu}\}$, $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\gamma_{\mu\nu}s+\text{O}(s^2)$, 得
-    \begin{equation}
-        R_{\mu\nu\lambda\sigma}=\p_\sigma\p_{[\mu}h_{\lambda]\nu}-\p_\nu\p_{[\mu}h_{\lambda]\sigma}+\text{O}(s^2).
-    \end{equation}
-    $\bar{h}_{\mu\nu}:=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}\eta^{\lambda\sigma}h_{\lambda\sigma}$.
-    \begin{equation}
-        -\frac{1}{2} \partial^{\lambda} \partial_{\lambda} \bar{h}_{\mu \nu}+\partial^{\lambda} \partial_{(\mu} \bar{h}_{\nu) \lambda}-\frac{1}{2} \eta_{\mu \nu} \partial^{\lambda} \partial^{\sigma} \bar{h}_{\lambda \sigma}+\text{O}(s^2)=8 \pi T_{\mu \nu}.
-    \end{equation}
-    存在$\{x^{\mu}\}$, 使得$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$ (Lorentz gauge). 
-    令$\{x^{\mu}\}$满足$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$, 则
-    \begin{equation}
-        \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}+\text{O}(s^2)=-16\pi T_{\mu \nu}.
-    \end{equation}
-    略去$\text{O}(s^2)$条件: $h_{\mu\nu}$, $\p_\lambda h_{\mu\nu}$\dots{}小.
-    %---------------------------------------------------------------------------
+    \include{GW.c.tex}
     \bibliographystyle{plain}
     \bibliography{GWAstroNotes}
 \end{document}
