@@ -1,18 +1,62 @@
 \chapter{引力波}
 
-\section{Linear Gravity}
+\cite{Wald1984}.
 
-\cite{Wald1984}. 流形$\mathbb{R}^{4}$. 任意坐标系$\{x^{\mu}\}$, $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\gamma_{\mu\nu}s+\text{O}(s^2)$, 得
+\section{Linearized Gravity}
+
+流形$\mathbb{R}^{4}$. 任意坐标系$\{x^{\mu}\}$, $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\gamma_{\mu\nu}s+\text{O}(s^2)$, 得
 \begin{equation}
     R_{\mu\nu\lambda\sigma}=\p_\sigma\p_{[\mu}h_{\lambda]\nu}-\p_\nu\p_{[\mu}h_{\lambda]\sigma}+\text{O}(s^2).
 \end{equation}
-$\bar{h}_{\mu\nu}:=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}\eta^{\lambda\sigma}h_{\lambda\sigma}$.
+$\bar{h}_{\mu\nu}:=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}\eta^{\lambda\sigma}h_{\lambda\sigma}=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}h$.
 \begin{equation}
     -\frac{1}{2} \partial^{\lambda} \partial_{\lambda} \bar{h}_{\mu \nu}+\partial^{\lambda} \partial_{(\mu} \bar{h}_{\nu) \lambda}-\frac{1}{2} \eta_{\mu \nu} \partial^{\lambda} \partial^{\sigma} \bar{h}_{\lambda \sigma}+\text{O}(s^2)=8 \pi T_{\mu \nu}.
 \end{equation}
 存在$\{x^{\mu}\}$, 使得$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$ (Lorentz gauge). 
 令$\{x^{\mu}\}$满足$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$, 则
 \begin{equation}
-    \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}+\text{O}(s^2)=-16\pi T_{\mu \nu}.
+    \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}+\text{O}(s^2)=-16\pi T_{\mu \nu}.\label{linear_gravity}
 \end{equation}
 略去$\text{O}(s^2)$条件: $h_{\mu\nu}$, $\p_\lambda h_{\mu\nu}$\dots{}小.
+
+\section{Radiation Gauge}
+
+存在$\{x^{\mu}\}$, 使得$h+\text{O}(s^2)=0$ (TT gauge \cite{Wang2020})且$h_{0\mu}+\text{O}(s^2)=0$. 
+
+\section{quadrupole Approximation}
+
+下略$\text{O}(s^2)$. 由\eqref{linear_gravity}得
+\begin{equation}
+    \bar{h}_{\mu\nu}(t,\vec{r}) = 4\int 
+    \frac{T_{\mu\nu}(t-\left\lvert\vec{r}-\vec{r}'\right\rvert,\vec{r}')}{\left\lvert\vec{r}-\vec{r}'\right\rvert}\,\d V'.
+\end{equation}
+\begin{align}
+    \hat{\bar{h}}_{\mu\nu}(\omega,\vec{r})&:=\frac{1}{\sqrt{2\pi}}
+    \int\bar{h}_{\mu\nu}(t,\vec{r})e^{i\omega t}\d t\\
+    &=4\int 
+    \frac{\hat{T}_{\mu\nu}(\omega,\vec{r}')}{\left\lvert\vec{r}-\vec{r}'\right\rvert}e^{i\omega\left\lvert\vec{r}-\vec{r}'\right\rvert}\,\d V'.
+\end{align}
+由$\p^{\nu}\bar{h}_{\mu\nu}=0$,
+\begin{equation}
+    -i\omega\hat{\bar{h}}_{0\mu}=\sum_{i}\frac{\p\hat{\bar{h}}_{i\mu}}{\p x^{i}}.
+\end{equation}
+$\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega\ll1/\left\lvert \vec{r}'\right\rvert$,
+\begin{equation}
+    \hat{\bar{h}}_{ij}(\omega,\vec{r}) = 4
+    \frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}
+    \int \hat{T}_{ij}(\omega,\vec{r}')\,\d V'.
+\end{equation}
+\begin{align}
+    \int \hat{T}_{ij}\,\d V'
+    &= -\frac{\omega^2}{2}\int \hat{T}_{00}\,x^ix^j\,\d V',\quad\text{?}
+\end{align}
+\begin{equation}
+    q_{ij}(t):=\int\hat{T}_{00}\,x^ix^j\,\d V'
+\end{equation}
+\begin{equation}
+    \hat{\bar{h}}_{ij}(\omega,\vec{r}) = -2\omega^2\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}\hat{q}_{ij}(\omega),
+\end{equation}
+\begin{equation}
+    {\bar{h}}_{ij}(t,\vec{r}) = \frac{2}{\left\lvert\vec{r}\right\rvert}
+    \frac{\d^2}{\d t^2}{q}_{ij}(t-\left\lvert\vec{r}\right\rvert).
+\end{equation}
