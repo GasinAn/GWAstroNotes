@@ -1,0 +1,245 @@
+\documentclass[12pt]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{marginnote}
+\usepackage{mathrsfs}
+\usepackage{syntonly}
+\usepackage{textcomp}
+\usepackage{ulem}
+\usepackage{verbatim}
+%\syntaxonly
+%\geometry{a5paper}
+\hyphenation{}
+\normalem
+\hypersetup{
+    colorlinks,
+    linkcolor=blue,
+    filecolor=pink,
+    urlcolor=cyan,
+    citecolor=red,
+}
+\def\b{\boldsymbol}
+\def\d{\mathrm{d}}
+\def\p{\partial}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\atanxy}{atan2}
+\theoremstyle{definition}
+\newtheorem{definition}{定义}
+\newtheorem{proposition}{命题}
+\title{}
+\author{}
+\begin{document}
+\begin{eqnarray}
+    R_{ij}
+    =\Gamma^{\nu}_{ij,\nu}
+    -\Gamma^{\nu}_{\nu j,i}
+    +\Gamma^{\lambda}_{ij}\Gamma^{\nu}_{\lambda\nu}
+    -\Gamma^{\lambda}_{\nu j}\Gamma^{\nu}_{\lambda i}
+\end{eqnarray}
+\begin{eqnarray}
+    g_{ij}=a^2(\delta_{ij}+H_{ij})
+\end{eqnarray}
+\begin{eqnarray}
+    g^{ij}=a^{-2}(\delta^{ij}-H^{ij})
+\end{eqnarray}
+\begin{eqnarray}
+    g_{ij,0}=2a\dot{a}(\delta_{ij}+H_{ij})+a^2{H}_{ij,0}
+\end{eqnarray}
+\begin{eqnarray}
+    g_{ij,k}=a^2H_{ij,k}
+\end{eqnarray}
+\begin{eqnarray}
+    g_{0\mu,\nu}=0
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{\sigma}_{00}=0
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{\sigma}_{0i}\\
+    =\frac{1}{2}g^{\sigma\rho}g_{i\rho,0}\\
+    =\frac{1}{2}g^{\sigma j}g_{ij,0}
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{k}_{0i}\\
+    =\frac{1}{2}g^{k j}g_{ij,0}\\
+    =\frac{1}{2}a^{-2}(\delta^{kj}-H^{kj})
+    (2a\dot{a}(\delta_{ij}+H_{ij})+a^2{H}_{ij,0})\\
+    =H\delta^k_{i}+\frac{1}{2}H^k_{i,0}
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{\sigma}_{ij}\\
+    =\frac{1}{2}g^{\sigma\rho}(g_{\rho i,j}+g_{j \rho,i}-g_{ij,\rho})
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{0}_{ij}\\
+    =-\frac{1}{2}g^{00}(g_{ij,0})
+    =-\frac{1}{2}(2a\dot{a}(\delta_{ij}+H_{ij})+a^2{H}_{ij,0})
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{k}_{ij}\\
+    =\frac{1}{2}g^{kl}(g_{l i,j}+g_{j 
+    l,i}-g_{ij,k})\\
+    =\frac{1}{2}a^{-2}(\delta^{kl}-H^{kl})a^2(H_{l i,j}+H_{j 
+    l,i}-H_{ij,l})\\
+    =\frac{1}{2}\delta^{kl}(H_{l i,j}+H_{j 
+    l,i}-H_{ij,l})
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{k}_{0i},\Gamma^{0}_{ij},\Gamma^{k}_{ij}
+\end{eqnarray}
+\begin{eqnarray}
+    R_{00}\\
+    =-\Gamma^{\nu}_{\nu0,0}
+    -\Gamma^{\lambda}_{\nu0}\Gamma^{\nu}_{\lambda0}\\
+    =\Gamma^{i}_{i0,0}
+    -\Gamma^{j}_{i0}\Gamma^{i}_{j0}
+\end{eqnarray}
+\begin{eqnarray}
+    R_{0j}\\
+    =\Gamma^{\nu}_{0j,\nu}-\Gamma^{\nu}_{\nu j,0}
+    +\Gamma^{\lambda}_{0j}\Gamma^{\nu}_{\lambda\nu}
+    -\Gamma^{\lambda}_{\nu j}\Gamma^{\nu}_{\lambda0}\\
+    =\Gamma^{i}_{0j,i}-\Gamma^{\nu}_{\nu j,0}
+    +\Gamma^{k}_{0j}\Gamma^{\nu}_{k\nu}
+    -\Gamma^{k}_{\nu j}\Gamma^{\nu}_{k0}\\
+    =\Gamma^{i}_{0j,i}-\Gamma^{i}_{i j,0}
+    +\Gamma^{k}_{0j}\Gamma^{i}_{ki}
+    -\Gamma^{k}_{i j}\Gamma^{i}_{k0}
+\end{eqnarray}
+\begin{eqnarray}
+    R_{ij}\\
+    =\Gamma^{\nu}_{ij,\nu}-\Gamma^{\nu}_{\nu j,i}
+    +\Gamma^{\lambda}_{ij}\Gamma^{\nu}_{\lambda\nu}
+    -\Gamma^{\lambda}_{\nu j}\Gamma^{\nu}_{\lambda i}\\
+    =\Gamma^{\nu}_{ij,\nu}-\Gamma^{k}_{k j,i}
+    +\Gamma^{\lambda}_{ij}\Gamma^{k}_{\lambda k}
+    -\Gamma^{\lambda}_{\nu j}\Gamma^{\nu}_{\lambda i}\\
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{\nu}_{ij,\nu}\\
+    =-\frac{1}{2}((2a\ddot{a}+2\dot{a}^2)(\delta_{ij}+H_{ij})+4a\dot{a}H_{ij,0}+a^2{H}_{ij,00})
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{k}_{k j,i}=(\frac{1}{2}\delta^{kl}(H_{l k,j}+H_{j 
+    l,k}-H_{kj,l})),i\\
+    =(\frac{1}{2}(H_{11,j}+H_{j 
+    1,1}-H_{1j,1})),i\\+(\frac{1}{2}(H_{22,j}+H_{j 
+    2,2}-H_{2j,2})),i\\+(\frac{1}{2}(H_{33,j}+H_{j 
+    3,3}-H_{3j,3})),i\\
+    =(\frac{1}{2}H_{11,j}),i+(\frac{1}{2}H_{22,j}),i
+    =\frac{1}{2}(H_{11,ij}+H_{22,ij})=0
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{\lambda}_{ij}\Gamma^{k}_{\lambda k}\\
+    =\Gamma^{0}_{ij}\Gamma^{k}_{0 k}+\Gamma^{l}_{ij}\Gamma^{k}_{l k}
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{0}_{ij}\Gamma^{k}_{0 k}\\
+    =-\frac{1}{2}(2a\dot{a}(\delta_{ij}+H_{ij})+a^2{H}_{ij,0})
+    (H\delta^k_{k}+\frac{1}{2}H^k_{k,0})\\
+    =-\frac{1}{2}(2a\dot{a}(\delta_{ij}+H_{ij})+a^2{H}_{ij,0})3H
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{l}_{ij}\Gamma^{k}_{l k}\\
+    =\frac{1}{2}\delta^{lm}(H_{m i,j}+H_{j 
+    m,i}-H_{ij,m})\frac{1}{2}\delta^{km}(H_{m l,k}+H_{k
+    m,l}-H_{lk,m})\\
+    =\frac{1}{2}\delta^{lm}(H_{m i,j}+H_{j 
+    m,i}-H_{ij,m})\frac{1}{2}(H_{11,l}+H_{22,l})\\
+    =0
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{\lambda}_{\nu j}\Gamma^{\nu}_{\lambda i}\\
+    =\Gamma^{0}_{k j}\Gamma^{k}_{0 i}
+    +\Gamma^{k}_{0 j}\Gamma^{0}_{k i}
+    +\Gamma^{k}_{l j}\Gamma^{l}_{k i}
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{0}_{k j}\Gamma^{k}_{0 i}\\
+    =-\frac{1}{2}(2a\dot{a}(\delta_{kj}+H_{kj})+a^2{H}_{kj,0})
+    (H\delta^k_{i}+\frac{1}{2}H^k_{i,0})\\
+    =-\frac{1}{2}2a\dot{a}\delta_{kj}H\delta^k_{i}
+    -\frac{1}{2}(2a\dot{a}H_{kj}+a^2{H}_{kj,0})H\delta^k_{i}
+    -\frac{1}{2}2a\dot{a}\delta_{kj}\frac{1}{2}H^k_{i,0}\\
+    =-\frac{1}{2}2a\dot{a}\delta_{ij}H
+    -\frac{1}{2}(2a\dot{a}H_{ij}+a^2{H}_{ij,0})H
+    -\frac{1}{2}2a\dot{a}\frac{1}{2}H_{ij,0}
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{k}_{0 j}\Gamma^{0}_{k i}=-\frac{1}{2}2a\dot{a}\delta_{ij}H
+    -\frac{1}{2}(2a\dot{a}H_{ij}+a^2{H}_{ij,0})H
+    -\frac{1}{2}2a\dot{a}\frac{1}{2}H_{ij,0}
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{k}_{l j}\Gamma^{l}_{k i}\\
+    =\frac{1}{2}\delta^{km}(H_{m l,j}+H_{j 
+    m,l}-H_{lj,m})\frac{1}{2}\delta^{lm}(H_{m k,i}+H_{i 
+    m,k}-H_{ki,m})
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{k}_{l j}\\
+    =\frac{1}{2}\delta^{km}(H_{m l,j}+H_{j 
+    m,l}-H_{lj,m})\\
+    =\frac{1}{2}\delta^{k1}(H_{1 l,j}+H_{j 
+    1,l})\\
+    +\frac{1}{2}\delta^{k2}(H_{2 l,j}+H_{j 
+    2,l})
+\end{eqnarray}
+\begin{eqnarray}
+    \Gamma^{l}_{k i}\\
+    =\frac{1}{2}\delta^{lm}(H_{m k,i}+H_{i 
+    m,k}-H_{ki,m})\\
+    =\frac{1}{2}\delta^{l1}(H_{1 k,i}+H_{i 
+    1,k})\\
+    +\frac{1}{2}\delta^{l2}(H_{2 k,i}+H_{i 
+    2,k})
+\end{eqnarray}
+\begin{eqnarray}
+    (\frac{1}{2}\delta^{k1}(H_{1 l,j}+H_{j 
+    1,l})
+    +\frac{1}{2}\delta^{k2}(H_{2 l,j}+H_{j 
+    2,l}))
+    (\frac{1}{2}\delta^{l1}(H_{1 k,i}+H_{i 
+    1,k})
+    +\frac{1}{2}\delta^{l2}(H_{2 k,i}+H_{i 
+    2,k}))\\
+    =(\frac{1}{2}\delta^{11}(H_{1 1,j}))
+    (\frac{1}{2}\delta^{11}(H_{1 1,i}))\\
+    +(\frac{1}{2}\delta^{11}(H_{1 2,j}))
+    (\frac{1}{2}\delta^{22}(H_{2 1,i}))\\
+    +(\frac{1}{2}\delta^{22}(H_{2 1,j}))
+    (\frac{1}{2}\delta^{11}(H_{1 2,i}))\\
+    +(\frac{1}{2}\delta^{22}(H_{2 2,j}))
+    (\frac{1}{2}\delta^{22}(H_{2 2,i}))\\
+    =(\frac{1}{2}(H_{1 1,j}))
+    (\frac{1}{2}(H_{1 1,i}))
+    +(\frac{1}{2}(H_{1 2,j}))
+    (\frac{1}{2}(H_{2 1,i}))
+    +(\frac{1}{2}(H_{2 1,j}))
+    (\frac{1}{2}(H_{1 2,i}))
+    +(\frac{1}{2}(H_{2 2,j}))
+    (\frac{1}{2}(H_{2 2,i}))
+\end{eqnarray}
+\begin{eqnarray}
+    -\frac{1}{2}((2a\ddot{a}+2\dot{a}^2)(\delta_{ij}+H_{ij})+4a\dot{a}H_{ij,0}+a^2{H}_{ij,00})\\
+    -\frac{1}{2}(2a\dot{a}(\delta_{ij}+H_{ij})+a^2{H}_{ij,0})3H\\
+    +\frac{1}{2}2a\dot{a}\delta_{ij}H\\
+    +\frac{1}{2}(2a\dot{a}H_{ij}+a^2{H}_{ij,0})H\\
+    +\frac{1}{2}2a\dot{a}\frac{1}{2}H_{ij,0}
+\end{eqnarray}
+\begin{eqnarray}
+    -\frac{1}{2}a^2{H}_{ij,00}
+\end{eqnarray}
+\begin{eqnarray}
+    -\frac{4}{2}a\dot{a}H_{ij,0}
+    -\frac{3}{2}a\dot{a}{H}_{ij,0}
+    +\frac{1}{2}a\dot{a}{H}_{ij,0}
+    +\frac{1}{2}a\dot{a}H_{ij,0}
+\end{eqnarray}
+\end{document}
