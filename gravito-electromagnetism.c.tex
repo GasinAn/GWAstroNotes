@@ -8,17 +8,51 @@
     h_{ab}:=g_{ab}+Z_a Z_b.
 \end{equation}
 \begin{equation}
+    h_{a}^{\ph{a}b}=\delta_{a}^{\ph{a}b}+Z_aZ^b.
+\end{equation}
+\begin{equation}
+    Z^ah_{ab}=0.
+\end{equation}
+
+\begin{equation}
     V_{\langle a\rangle}:=h_a^{\ph{a}b}V_{b}.
 \end{equation}
+\begin{equation}
+    Z^aV_{\langle a\rangle}=0.
+\end{equation}
+
 \begin{equation}
     T_{\langle ab\rangle}:=h_{(a}^{\ph{(a}c}h_{b)}^{\ph{b)}d}T_{cd}-\frac{1}{3}h_{cd}T^{cd}h_{ab}.
 \end{equation}
 \begin{equation}
+    Z^a(h_{a}^{\ph{a}c}h_{b}^{\ph{b}d}T_{cd})=0.
+\end{equation}
+\begin{equation}
+    Z^a(h_{b}^{\ph{b}c}h_{a}^{\ph{a}d}T_{cd})=0.
+\end{equation}
+\begin{equation}
+    Z^a(h_{(a}^{\ph{(a}c}h_{b)}^{\ph{b)}d}T_{cd})=0.
+\end{equation}
+\begin{equation}
+    Z^a(h_{cd}T^{cd}h_{ab})=0.
+\end{equation}
+\begin{equation}
+    Z^aT_{\langle ab\rangle}=0.
+\end{equation}
+\begin{equation}
+    T_{\left(\langle ab\rangle\right)}=T_{\langle ab\rangle}.
+\end{equation}
+\begin{equation}
+    h^{ab}T_{\langle ab\rangle}=0.
+\end{equation}
+
+\begin{equation}
     \varepsilon_{abc}:=\varepsilon_{abcd}Z^d.
 \end{equation}
 \begin{equation}
-    \varepsilon_{0123}:=-\sqrt{\left\lvert g\right\rvert }
+    \varepsilon_{0123}:=-\sqrt{\left\lvert g\right\rvert }.
 \end{equation}
+
 \begin{equation}
     T_a:=\frac{1}{2}\varepsilon_{abc}T^{[bc]}.
 \end{equation}
@@ -26,65 +60,174 @@
     [U,V]_a:=\varepsilon_{abc}U^bV^c.
 \end{equation}
 \begin{equation}
-    [S,T]_a:=\varepsilon_{abc}S^b_{\ph{b}d}T^{cd}.
+    [S,T]_a:=\varepsilon_{abc}g_{de}S^{bd}T^{ce}.
 \end{equation}
+
 \begin{equation}
     \text{D}_tT^{a\dots}_{\ph{a\dots}b\dots}:=Z^c\nabla_c T^{a\dots}_{\ph{a\dots}b\dots}.
 \end{equation}
 \begin{equation}
     {}^3\nabla_a T^{b\dots}_{\ph{b\dots}c\dots}:=h_a^{\ph{a}p}h^b_{\ph{b}q}\dots h_c^{\ph{c}r}\dots\nabla_p T^{q\dots}_{\ph{q\dots}r\dots}.
 \end{equation}
+
 \begin{equation}
     (\text{div}\,V):={}^3\nabla^aV_a.
 \end{equation}
 \begin{equation}
-    (\text{curl}\,V)_a:=\varepsilon_{abc}{}^3\nabla^bV^c.
+    (\text{curl}\,V)_a:=\varepsilon_{bca}{}^3\nabla^bV^c.
 \end{equation}
 \begin{equation}
     (\text{div}\,T)_a:={}^3\nabla^bT_{ab}.
 \end{equation}
 \begin{equation}
-    (\text{curl}\,T)_{ab}:=\varepsilon_{cd(a}{}^3\nabla^cT_{b)}^{\ph{b)}d}.
+    (\text{curl}\,T)_{ab}:=
+    \varepsilon_{cd(a}{}^3\nabla^cg_{b)e}T^{ed}.
 \end{equation}
 
 \section{电磁空间矢量}
 
 \begin{equation}
-    E_a:=F_{ab}Z^b.
+    {}^*\!F_{ab}:=\frac{1}{2}\varepsilon_{abcd}F^{cd}
 \end{equation}
 \begin{equation}
-    B_a:={}^*\!F_{ab}Z^b.
+    E_a:=F_{ab}Z^b=E_{\langle a\rangle}.
 \end{equation}
 \begin{equation}
-    (\text{div}\,E)=\dots.
+    B_a:={}^*\!F_{ab}Z^b=B_{\langle a\rangle}.
+\end{equation}
+
+\begin{equation}
+    \rho=-Z^aJ_a.
 \end{equation}
 \begin{equation}
-    (\text{div}\,B)=\dots.
+    j_a=h_a^{\ph{a}b}J_{b}.
+\end{equation}
+
+\begin{equation}
+    \nabla_{[a}F_{bc]}=0.
 \end{equation}
 \begin{equation}
-    \text{D}_t E_{\langle a\rangle}-(\text{curl}\,E)_a=\dots.
+    \nabla^{a}F_{ab}=\mu J_{b}.
+\end{equation}
+
+\begin{equation}
+    (\text{div}\,E)=\mu\rho-\dots.
 \end{equation}
 \begin{equation}
-    \text{D}_t B_{\langle a\rangle}+(\text{curl}\,B)_a=\dots.
+    (\text{div}\,B)=+\dots.
+\end{equation}
+\begin{equation}
+    (\text{curl}\,E)_a+\dots=-\text{D}_t B_{\langle a\rangle}-\dots.
+\end{equation}
+\begin{equation}
+    (\text{curl}\,B)_a+\dots=\mu j_a+\text{D}_t E_{\langle a\rangle}+\dots.
 \end{equation}
 
 \section{引力空间张量}
 
 \begin{equation}
-    E_{ab}:=C_{abcd}Z^cZ^d.
+    {}^*\!C_{abcd}:=\frac{1}{2}\varepsilon_{abef}C^{ef}_{\ph{ef}cd}.
 \end{equation}
 \begin{equation}
-    B_{ab}:={}^*\!C_{abcd}Z^cZ^d.
+    E_{ab}:=C_{acbd}Z^cZ^d=E_{\langle ab\rangle}.
 \end{equation}
 \begin{equation}
-    (\text{div}\,E)_a=\dots.
+    B_{ab}:={}^*\!C_{acbd}Z^cZ^d=B_{\langle ab\rangle}.
+\end{equation}
+
+\begin{equation}
+    (\text{div}\,E)_a=\kappa\frac{1}{3}{}^3\nabla_a\rho-\dots.
 \end{equation}
 \begin{equation}
-    (\text{div}\,B)_a=\dots.
+    (\text{div}\,B)_a=\kappa(\rho+p)\omega_a+\dots.
 \end{equation}
 \begin{equation}
-    \text{D}_t E_{\langle ab\rangle}-(\text{curl}\,E)_{ab}=\dots.
+    (\text{curl}\,E)_{ab}+\dots=-\text{D}_t B_{\langle ab\rangle}-\dots.
 \end{equation}
 \begin{equation}
-    \text{D}_t B_{\langle ab\rangle}+(\text{curl}\,B)_{ab}=\dots.
+    (\text{curl}\,B)_{ab}+\dots=\kappa\frac{1}{2}(\rho+p)\sigma_{ab}+\text{D}_t E_{\langle ab\rangle}+\dots.
 \end{equation}
+
+%\section{近似}
+
+%\begin{equation}
+%    A^a=Z^b\nabla_bZ^a.
+%\end{equation}
+%\begin{equation}
+%    \Theta=\nabla_aZ^a
+%\end{equation}
+%\begin{equation}
+%    \sigma_{ab}=h_{(a}^ch_{b)}^d\nabla_dZ_c-\frac{1}{3}h_{ab}\nabla_eZ^e.
+%\end{equation}
+%\begin{equation}
+%    \omega_{ab}=h_{[a}^ch_{b]}^d\nabla_dZ_c
+%\end{equation}
+
+%\begin{equation}
+%    (\text{div}\,E)=\mu\rho.
+%\end{equation}
+%\begin{equation}
+%    (\text{div}\,B)=0.
+%\end{equation}
+%\begin{equation}
+%    (\text{curl}\,E)_a=-\text{D}_t B_{\langle a\rangle}.
+%\end{equation}
+%\begin{equation}
+%    (\text{curl}\,B)_a=\mu j_a+\text{D}_t E_{\langle a\rangle}.
+%\end{equation}
+
+%\begin{equation}
+%    (\text{div}\,E)_a=\kappa\frac{1}{3}{}^3\nabla_a\rho.
+%\end{equation}
+%\begin{equation}
+%    (\text{div}\,B)_a=\kappa(\rho+p)\omega_a.
+%\end{equation}
+%\begin{equation}
+%    (\text{curl}\,E)_{ab}=-\text{D}_t B_{\langle ab\rangle}.
+%\end{equation}
+%\begin{equation}
+%    (\text{curl}\,B)_{ab}=\kappa\frac{1}{2}(\rho+p)\sigma_{ab}+\text{D}_t E_%{\langle ab\rangle}.
+%\end{equation}
+
+%\begin{equation}
+%    \vec{\nabla}\cdot\vec{E}=\mu_0\rho.
+%\end{equation}
+%\begin{equation}
+%    \vec{\nabla}\cdot\vec{B}=0.
+%\end{equation}
+%\begin{equation}
+%    \vec{\nabla}\times\vec{E}=-\frac{\p}{\p t}\vec{B}.
+%\end{equation}
+%\begin{equation}
+%    \vec{\nabla}\times\vec{B}=\mu_0 \vec{j}+\frac{\p}{\p t}\vec{E}.
+%\end{equation}
+%
+%\begin{equation}
+%    \rho_\text{p}=-\vec{\nabla}\cdot\vec{P}.
+%\end{equation}
+%\begin{equation}
+%    \vec{D}=\frac{1}{\mu_0}\vec{E}+\vec{P}=\epsilon\vec{E}.
+%\end{equation}
+%
+%\begin{equation}
+%    \vec{j}_\text{m}=\vec{\nabla}\times\vec{M}.
+%\end{equation}
+%\begin{equation}
+%    \vec{j}_\text{p}=\frac{\p}{\p t}\vec{P}
+%\end{equation}
+%\begin{equation}
+%    \vec{H}=\frac{1}{\mu_0}\vec{B}-\vec{M}=\frac{1}{\mu}\vec{B}
+%\end{equation}
+%
+%\begin{equation}
+%    \vec{\nabla}\cdot\vec{D}=\rho_f.
+%\end{equation}
+%\begin{equation}
+%    \vec{\nabla}\cdot\vec{B}=0.
+%\end{equation}
+%\begin{equation}
+%    \vec{\nabla}\times\vec{E}=-\frac{\p}{\p t}\vec{B}.
+%\end{equation}
+%\begin{equation}
+%    \vec{\nabla}\times\vec{H}=\vec{j}_\text{f}+\frac{\p}{\p t}\vec{D}.
+%\end{equation}
