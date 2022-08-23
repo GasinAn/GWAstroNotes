@@ -46,10 +46,31 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \end{equation}
 \begin{align}
     \int \hat{T}_{ij}\,\d V'
-    &= -\frac{\omega^2}{2}\int \hat{T}_{00}\,x'^ix'^j\,\d V'?
+    &=\int \sum_{k}(\hat{T}_{kj}\frac{\p x'^i}{\p x'^k})\,\d V'\\
+    &= \sum_{k}\left[\int \frac{\p }{\p x'^k}(\hat{T}_{kj}x'^i)\,\d V'-\int \frac{\p \hat{T}_{kj}}{\p x'^k}x'^i\,\d V'\right]\\
+    &= \sum_{k}\int \p'_k\,(\hat{T}_{kj}x'^i)\,\d V' - \sum_{k}\int \frac{\p \hat{T}_{kj}}{\p x'^k}x'^i\,\d V'\\
+    &= \int \hat{T}_{kj}x'^i\,\d S' - \sum_{k}\int \frac{\p \hat{T}_{kj}}{\p x'^k}x'^i\,\d V'\\
+    &= -\sum_{k}\int \frac{\p \hat{T}_{kj}}{\p x'^k}x'^i\,\d V'\\
+    &= -\int (\sum_{k}\p'_k\hat{T}_{kj})x'^i\,\d V'\\
+    &= -\int (\p_0\hat{T}_{0j})x'^i\,\d V'\\
+    &= -i\omega\int \hat{T}_{0j}x'^i\,\d V'\\
+    &= \int \hat{T}_{(ij)}\,\d V'\\
+    &= -i\omega\int \hat{T}_{0(j}x'^{i)}\,\d V'\\
+    &= -\frac{i\omega}{2}\int (\hat{T}_{0j}x'^{i}+\hat{T}_{0i}x'^{j})\,\d V',\\
+\end{align}
+\begin{align}
+    -\frac{i\omega}{2}\int (\hat{T}_{0j}x'^{i}+\hat{T}_{0i}x'^{j})\,\d V'
+    &= -\frac{i\omega}{2}\int \sum_{k}(\hat{T}_{0k}x'^{i}\frac{\p x'^{j}}{\p x'^{k}}+\hat{T}_{0k}\frac{\p x'^{i}}{\p x'^{k}}x'^{j})\,\d V'\\
+    &= -\frac{i\omega}{2}\sum_{k}\left[\int \frac{\p }{\p x'^k}(\hat{T}_{0k}x'^ix'^j)\,\d V'-\int \frac{\p \hat{T}_{0k}}{\p x'^k}x'^ix'^j\,\d V'\right]\\
+    &= -\frac{i\omega}{2}\sum_{k}\int \p'_k\,(\hat{T}_{0k}x'^ix'^j)\,\d V' +\frac{i\omega}{2}\sum_{k}\int \frac{\p \hat{T}_{0k}}{\p x'^k}x'^ix'^j\,\d V'\\
+    &= -\frac{i\omega}{2}\sum_{k}\int \hat{T}_{0k}x'^ix'^j\,\d S' +\frac{i\omega}{2}\sum_{k}\int \frac{\p \hat{T}_{0k}}{\p x'^k}x'^ix'^j\,\d V'\\
+    &= \frac{i\omega}{2}\sum_{k}\int \frac{\p \hat{T}_{0k}}{\p x'^k}x'^ix'^j\,\d V'\\
+    &= \frac{i\omega}{2}\int (\sum_{k}\p'_k\hat{T}_{0k})x'^ix'^j\,\d V'\\
+    &= \frac{i\omega}{2}\int (\p_0\hat{T}_{00})x'^ix'^j\,\d V'\\
+    &= -\frac{\omega^2}{2}\int \hat{T}_{00}\,x'^ix'^j\,\d V'.
 \end{align}
 \begin{equation}
-    q_{ij}(t):=\int{T}_{00}\,x'^ix'^j\,\d V'
+    q_{ij}(t):=\int{T}_{00}\,x'^ix'^j\,\d V',
 \end{equation}
 \begin{equation}
     \hat{\bar{h}}_{ij}(\omega,\vec{r}) = -2\omega^2\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}\hat{q}_{ij}(\omega),
