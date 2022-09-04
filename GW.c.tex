@@ -99,3 +99,62 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \begin{equation}
     Q^{km}(t):=\int{T}_{00}\,\left(x'^kx'^m-\frac{1}{3}\delta^{km}\sum_nx'^nx'^n\right)\,\d V'
 \end{equation}
+
+\section{电磁---引力对比}
+
+\begin{equation}
+    A_\mu(t,\vec{r})=\frac{\mu_0}{4\pi}\int\frac{J_\mu(t-\left\lvert \vec{r}-\vec{r}'\right\rvert ,\vec{r}')}{\left\lvert \vec{r}-\vec{r}'\right\rvert}\d V'
+\end{equation}
+\begin{equation}
+    \bar{h}_{\mu\nu}(t,\vec{r})=4G\int\frac{T_{\mu\nu}(t-\left\lvert\vec{r}-\vec{r}'\right\rvert,\vec{r}')}{\left\lvert\vec{r}-\vec{r}'\right\rvert}\,\d V'
+\end{equation}
+
+\begin{equation}
+    A_\mu(t,\vec{r})=\frac{1}{\sqrt{2\pi}}
+    \int\hat{A}_{\mu}(\omega,\vec{r})e^{-i\omega t}\d t
+\end{equation}
+\begin{equation}
+    \hat{A}_{\mu}(\omega,\vec{r})=\frac{\mu_0}{4\pi}\int\frac{\hat{J}_{\mu}(\omega,\vec{r}')}{\left\lvert\vec{r}-\vec{r}'\right\rvert}e^{i\omega\left\lvert\vec{r}-\vec{r}'\right\rvert}\,\d V'
+\end{equation}
+\begin{equation}
+    \bar{h}_{\mu\nu}(t,\vec{r})=\frac{1}{\sqrt{2\pi}}
+    \int\hat{\bar{h}}_{\mu\nu}(\omega,\vec{r})e^{-i\omega t}\d t
+\end{equation}
+\begin{equation}
+    \hat{\bar{h}}_{\mu\nu}(\omega,\vec{r})=4G\int\frac{\hat{T}_{\mu\nu}(\omega,\vec{r}')}{\left\lvert\vec{r}-\vec{r}'\right\rvert}e^{i\omega\left\lvert\vec{r}-\vec{r}'\right\rvert}\,\d V'
+\end{equation}
+
+\begin{equation}
+    \hat{A}_{\mu}(\omega,\vec{r})=\frac{\mu_0}{4\pi}\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}\int\hat{J}_{\mu}(\omega,\vec{r}')e^{-i\omega(\frac{\vec{r}}{\left\lvert\vec{r}\right\rvert}\cdot\vec{r}')}\,\d V'
+\end{equation}
+\begin{equation}
+    \hat{\bar{h}}_{\mu\nu}(\omega,\vec{r})=4G\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}\int\hat{T}_{\mu\nu}(\omega,\vec{r}')e^{-i\omega(\frac{\vec{r}}{\left\lvert\vec{r}\right\rvert}\cdot\vec{r}')}\,\d V'
+\end{equation}
+
+\begin{equation}
+    \hat{A}_{\mu}(\omega,\vec{r})=\frac{\mu_0}{4\pi}\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}\int\hat{J}_{\mu}(\omega,\vec{r}')\left[1-i\omega(\frac{\vec{r}}{\left\lvert\vec{r}\right\rvert}\cdot\vec{r}')-\dots\right]\,\d V'
+\end{equation}
+\begin{equation}
+    \hat{\bar{h}}_{\mu\nu}(\omega,\vec{r})=4G\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}\int\hat{T}_{\mu\nu}(\omega,\vec{r}')\left[1-i\omega(\frac{\vec{r}}{\left\lvert\vec{r}\right\rvert}\cdot\vec{r}')-\dots\right]\,\d V'
+\end{equation}
+
+\begin{equation}
+    \hat{A}_{\mu}(\omega,\vec{r})=\frac{\mu_0}{4\pi}\frac{-i\omega e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}\int\hat{J}_{\mu}(\omega,\vec{r}')(\frac{\vec{r}}{\left\lvert\vec{r}\right\rvert}\cdot\vec{r}')\,\d V'
+\end{equation}
+\begin{equation}
+    \hat{\bar{h}}_{\mu\nu}(\omega,\vec{r})=4G\frac{-i\omega e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}\int\hat{T}_{\mu\nu}(\omega,\vec{r}')(\frac{\vec{r}}{\left\lvert\vec{r}\right\rvert}\cdot\vec{r}')\,\d V'
+\end{equation}
+
+\begin{equation}
+    \hat{\vec{A}}=\frac{\mu_0}{4\pi}\frac{-i\omega e^{i\omega r}}{r}\int\hat{\vec{J}}'(\vec{n}\cdot\vec{r}')\,\d V'
+\end{equation}
+\begin{equation}
+    \hat{\vec{\vec{\bar{h}}}}=4G\frac{-i\omega e^{i\omega r}}{r}\int\hat{\vec{\vec{T}}}'(\vec{n}\cdot\vec{r}')\,\d V'
+\end{equation}
+
+\begin{equation}
+    A_{i}=\frac{\mu_0}{4\pi}\frac{1}{\left\lvert\vec{r}\right\rvert}\frac{1}{6}\mathcal{P}_{ijk}\frac{\d^2}{\d t^2}{D}^{jk}(t-\left\lvert\vec{r}\right\rvert)
+\end{equation}
+\begin{equation}
+    h_{ij}=4G\frac{1}{\left\lvert\vec{r}\right\rvert}\frac{1}{6}\mathcal{P}_{ijkl}\frac{\d^2}{\d t^2}{Q}^{kl}(t-\left\lvert\vec{r}\right\rvert)
+\end{equation}
