@@ -1,0 +1,46 @@
+\documentclass[12pt]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{marginnote}
+\usepackage{mathrsfs}
+\usepackage{syntonly}
+\usepackage{textcomp}
+\usepackage{ulem}
+\usepackage{verbatim}
+%\syntaxonly
+%\geometry{a5paper}
+\hyphenation{}
+\normalem
+\hypersetup{
+    colorlinks,
+    linkcolor=blue,
+    filecolor=pink,
+    urlcolor=cyan,
+    citecolor=red,
+}
+\def\b{\boldsymbol}
+\def\d{\mathrm{d}}
+\def\p{\partial}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\atanxy}{atan2}
+\theoremstyle{definition}
+\newtheorem{definition}{定义}
+\newtheorem{proposition}{命题}
+\title{分赫兹引力波探测目标}
+\author{天文系\ 安嘉辰\ 202121160001}
+\begin{document}
+    \maketitle
+    \begin{enumerate}
+        \item IA型超新星前身天体: 通过引力波探测判断IA型超新星是由双白矮星并合产生还是单白矮星吸积产生. 若由双白矮星并合产生, 因为并合时双白矮星间距很小, 所以会产生较强的引力波, 而若由单白矮星吸积产生, 则最后白矮星和被吸积天体的距离较大, 引力波强度弱. 此外IA型超新星还可能由双白矮星碰撞产生, 此过程也没有强引力波信号. 低频旋近的双白矮星旋近时间长, 可以观测更长时间, 这可以使观测所需的最大单边噪声功率谱密度更大. 对分赫兹引力波探测器而言, 若单边噪声功率谱密度为$10^{-44}\text{Hz}^{-1}$, 则平均1年至少可观测1次IA型超新星爆发.
+        \item 三体系统中的并合: 若双星正在并合, 且此双星间距离远小于第三体和双星的距离, 则第三体会给引力波带上Doppler频移. 若第三体的质量远小于双星, 则Doppler频移的成因为Lidov--Kozai机制. 若第三体的质量远大于双星, 则Doppler频移的成因为作为波源的双星的视向速度在周期性变化. 若第三体为大质量黑洞而双星系统由两颗恒星组成, 因为若双星系统释放高频引力波, 则其并合时间过短, 视向速度变化不大, Doppler频移几乎不发生变化而和宇宙学红移简并, 所以除非第三体和双星系统的距离小, 否则就需要观测低频引力波. 即使是探测分赫兹引力波, 第三体和双星系统的距离也需要在约$1000\text{AU}$以内.
+        \item 中等质量黑洞: 极高光度X射线源可能是中等质量黑洞, 球状星团中心也可能有中等质量黑洞. 质量越大的双星引力波源, 在轨道为最内稳定圆轨道时的引力波频率越低,所以需要探测低频引力波. 若单边噪声功率谱密度为$10^{-43}\text{Hz}^{-1}$, 则分赫兹引力波探测可探测的引力波源的最大红移约为5.
+        \item 大质量黑洞形成: 星系并合时, 中心的大质量黑洞旋近并合成新大质量黑洞将释放引力波. 质量更大, 更需要观测低频引力波.
+    \end{enumerate}
+    参考文献: Ilya Mandel \textit{et al} 2018 \textit{Class. Quantum Grav.} \textbf{35} 054004
+\end{document}

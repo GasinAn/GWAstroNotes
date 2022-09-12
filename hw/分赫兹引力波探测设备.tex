@@ -1,0 +1,48 @@
+\documentclass[12pt]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{marginnote}
+\usepackage{mathrsfs}
+\usepackage{syntonly}
+\usepackage{textcomp}
+\usepackage{ulem}
+\usepackage{verbatim}
+%\syntaxonly
+%\geometry{a5paper}
+\hyphenation{}
+\normalem
+\hypersetup{
+    colorlinks,
+    linkcolor=blue,
+    filecolor=pink,
+    urlcolor=cyan,
+    citecolor=red,
+}
+\def\b{\boldsymbol}
+\def\d{\mathrm{d}}
+\def\p{\partial}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\atanxy}{atan2}
+\theoremstyle{definition}
+\newtheorem{definition}{定义}
+\newtheorem{proposition}{命题}
+\title{分赫兹引力波探测设备}
+\author{天文系\ 安嘉辰\ 202121160001}
+\begin{document}
+\maketitle
+\begin{enumerate}
+    \item DECIGO\cite{DECIGO}: 全称分赫兹干涉仪引力波天文台, 日本筹建的太空引力波探测器, 由四组日心轨道设备组成, 每组设备又由三个太空飞船组成, 三个太空飞船间组成三组较差Fabry--Perot Michelson干涉仪, 四组设备中两组距离较近, 另两组距离较远, 此设备需要其发射的激光的频率非常精确, 观测频段0.1$\sim$10Hz, 灵敏度目标$10^{-23}$.
+    \item LGWA\cite{LGWA}: 全称月球引力波天线, 其将月球本身视作一个Weber棒, 使用月震仪测量月球形变的``椭球模式'', 这需要对月球的内部结构有相当精确的了解, 不过已经有高精度的月球内部结构模型可供使用, 月震仪还需要工作在超低温环境下, 计划建在月球南极的永久阴影区, 或熔岩通道内以避免过大的温差, 观测频段0.01$\sim$1Hz, 灵敏度可达约$10^{-23}$.
+    \item LSGA\cite{LSGA}: 全称月震及引力波天线, 身兼引力波观测和月震观测二职, 方案提出者提出两种方案, 一是同样将月球本身视作一个Weber棒并使用月震仪测量月球形变的``椭球模式'', 观测频段0.01$\sim$3Hz, 二是在月球表面建设Michelson干涉仪, 方案提出者还未细致讨论此方案的技术细节.
+    \item GLOC\cite{GLOC}: 全称宇宙学月球引力波天文台, 预想建造在月面上或月球内部的熔岩通道里, 如果建造在月面上, 则计划由三角形排布的三个月面站点组成, 三个站点间两两组成共三个激光干涉仪, 和地面激光干涉仪结构上的区别是不需要让激光在真空腔中传播, 观测频段0.1$\sim$5Hz, 灵敏度可达约$10^{-21}$.
+    \item LION\cite{LION}: 全称月球激光干涉仪, 也是由三角形排布的三个月面站点两两组成共三个带Fabry--Perot腔的激光干涉仪, 选址在月球极地的火山口里, 观测频段0.7$\sim$10000Hz, 灵敏度可达约$10^{-22}$.
+\end{enumerate}
+\bibliographystyle{abbrv}
+\bibliography{hw}
+\end{document}
