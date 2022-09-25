@@ -342,15 +342,31 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 
 \subsection{experiment}
 
+双星系统引力辐射本为
 \begin{equation}
-    h=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{D_\text{L}}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
+    h=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{r}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
 \end{equation}
+设双星系统常量$c^*$, $\mu_\text{G}^*$, 则\footnote{$\mathcal{M}$和$c^*$, $\mu_\text{G}^*$简并, 所以可以笼统地仍记作$\mathcal{M}$.}
 \begin{equation}
-    h=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{D_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
+    h=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{r/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
 \end{equation}
+在双星系统参考系中, $S_\text{G}r^2\propto\omega^2h^2r^2/c\mu_\text{G}$守恒, $\omega$不变, 所以实验室处
 \begin{equation}
-    h=\sqrt{\frac{c^*\mu_\text{G}^*}{c\mu_\text{G}}}\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{D_\text{L}/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
+    h=\sqrt{\frac{c^*\mu_\text{G}^*}{c\mu_\text{G}}}\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
 \end{equation}
+实验室因宇宙学红移, 实际测得
 \begin{equation}
-    h=\sqrt{\frac{{c^{*3}}\mu_\text{G}^*}{c^3\mu_\text{G}}}\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{D_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
+    h=\sqrt{\frac{c^*\mu_\text{G}^*}{c\mu_\text{G}}}\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi \frac{F(t)}{1+z}\,\d t]
+\end{equation}
+记$F_\text{obs}(t)=F(t)/(1+z)$, $\mathcal{M}_\text{obs}=\mathcal{M}(1+z)$, 光度距离$d_\text{L}=d_\text{L}(1+z)$, 则
+\begin{equation}
+    h=\sqrt{\frac{c^*\mu_\text{G}^*}{c\mu_\text{G}}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]
+\end{equation}
+则
+\begin{equation}
+    h=\sqrt{\frac{{c^{*3}}\mu_\text{G}^*}{c^3\mu_\text{G}}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]
+\end{equation}
+用独立手段测得$d_\text{L}$, 引力波测距测得$d_\text{L}^*$, 则
+\begin{equation}
+    \frac{1}{d_\text{L}^*}=\sqrt{\frac{{c^{*3}}\mu_\text{G}^*}{c^3\mu_\text{G}}}\frac{1}{d_\text{L}}
 \end{equation}
