@@ -228,69 +228,129 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     {\bar{h}}_{ij}=\frac{4G}{c^4}\frac{1}{\left\lvert\vec{r}\right\rvert}\frac{1}{2}\frac{\d^2}{\d t^2}q_{ij}(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
 \end{equation}
 \begin{equation}
-    {A_\text{(E2)}}_i=\frac{\mu_0}{4\pi}\frac{1}{\left\lvert\vec{r}\right\rvert}\frac{\d}{\d t}p_i(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
+    {A_\text{(E2)}}_i=\frac{\mu}{4\pi}\frac{1}{\left\lvert\vec{r}\right\rvert}\frac{\d}{\d t}p_i(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
 \end{equation}
 \begin{equation}
-    {A_\text{(E4)}}_i=\frac{\mu_0}{4\pi}\frac{1}{\left\lvert\vec{r}\right\rvert}n^j\frac{1}{2}\frac{\d^2}{\d t^2}D_{ij}(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
+    {A_\text{(E4)}}_i=\frac{\mu}{4\pi}\frac{1}{\left\lvert\vec{r}\right\rvert}n^j\frac{1}{2}\frac{\d^2}{\d t^2}D_{ij}(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
+\end{equation}
+
+\subsection{definition}
+
+\begin{equation}
+    \frac{4G}{c^4}:=\frac{\mu_\text{G}}{4\pi}
+\end{equation}
+\begin{equation}
+    c:=\frac{1}{\sqrt{\epsilon_\text{G}\mu_\text{G}}}
+\end{equation}
+\begin{equation}
+    G:=\frac{\mu_\text{G}}{16\pi\epsilon_\text{G}^2\mu_\text{G}^2}
 \end{equation}
 
 \subsection{energy}
 
 \begin{equation}
-    \vec{S}=\frac{1}{\mu_0}\vec{E}\times\vec{B}
+    T_{ab}\propto F_{ac}F_b^{\ph{b}c}-\frac{1}{4}\eta_{ab}F_{cd}F^{cd}
 \end{equation}
 \begin{equation}
-    \vec{B}=\nabla\times\vec{A}
+    T_{0i}\propto F_{0c}F_i^{\ph{i}c}-\frac{1}{4}\eta_{0i}F_{cd}F^{cd}=F_{0c}F_i^{\ph{i}c}
 \end{equation}
 \begin{equation}
-    \vec{E}=-\frac{\p}{\p t}\vec{A}
+    F_{ab}=\p_aA_b-\p_bA_a
 \end{equation}
 \begin{equation}
-    \vec{S}=-\frac{1}{\mu_0}(\frac{\p}{\p t}\vec{A})\times(\nabla\times\vec{A})
+    F_{a}^{\ph{a}b}=\p_aA^b-\p^bA_a
 \end{equation}
 \begin{equation}
-    S_a=-\frac{c}{\mu_0}\epsilon_{abc}(\p_0A^b)\epsilon^{cde}\p_dA_e
+    F^{ab}=\p^aA^b-\p^bA^a
 \end{equation}
 \begin{equation}
-    S_a=-\frac{c}{\mu_0}(\p_0A^b)\epsilon_{cab}\epsilon^{cde}(\p_dA_e)
+    T_{0i}\propto (\p_0A_c-\p_cA_0)(\p_iA^c-\p^cA_i)
 \end{equation}
 \begin{equation}
-    S_a=-\frac{4c}{\mu_0}\delta^{[d}_a\delta^{e]}_b(\p_0A^b)(\p_dA_e)
+    A_0=0
 \end{equation}
 \begin{equation}
-    S_a=-\frac{2c}{\mu_0}(\delta^{d}_a\delta^{e}_b-\delta^{e}_a\delta^{d}_b)(\p_0A^b)(\p_dA_e)
+    T_{0i}\propto \p_0A_j(\p_iA^j-\p^jA_i)
 \end{equation}
 \begin{equation}
-    S_a=-\frac{2c}{\mu_0}[(\p_0A^b)(\p_aA_b)-(\p_0A^b)(\p_bA_a)]
+    A_i(t,\vec{r})=\Re[A_ie^{-i(\omega t-\vec{k}\cdot\vec{r})}]
 \end{equation}
 \begin{equation}
-    S\propto\frac{c}{\mu}\frac{\omega}{c}kA^2=\frac{\omega^2A^2}{c\mu}
+    \p_0A_j=\Re[-i\omega A_ie^{-i(\omega t-\vec{k}\cdot\vec{r})}]
 \end{equation}
 \begin{equation}
-    F\sim\frac{\left\lvert \dot{h}\right\rvert^2 }{16\pi}\sim\frac{E}{4\pi r^2T}
+    \p_iA^j=\Re[ik_iA^je^{-i(\omega t-\vec{k}\cdot\vec{r})}]
 \end{equation}
 \begin{equation}
-    F: [E][L]^{-2}[T]^{-1}=[M][T]^{-3}
+    \p^jA_i=\Re[ik^jA_ie^{-i(\omega t-\vec{k}\cdot\vec{r})}]
 \end{equation}
 \begin{equation}
-    \left\lvert \dot{h}\right\rvert^2: [T]^{-2}
+    \bar{T}_{0i}\propto(-i\omega A_j)[ik_iA^j-ik^jA_i]
+    =\omega[\lvert \vec{A}\rvert ^2\vec{k}-(\vec{k}\cdot\vec{A})\vec{A}]
 \end{equation}
 \begin{equation}
-    G: [L]^{3}[M]^{-1}[T]^{-2}
+    \p^aA_a=0
+\end{equation}
+\begin{equation}
+    \p^iA_i=0
+\end{equation}
+\begin{equation}
+    \p^iA_i=\Re[ik^iA_ie^{-i(\omega t-\vec{k}\cdot\vec{r})}]
+\end{equation}
+\begin{equation}
+    k^iA_i=\vec{k}\cdot\vec{A}=0
+\end{equation}
+\begin{equation}
+    S_\text{EM}\propto\left\lvert \bar{T}_{0i}\right\rvert \propto\omega k A^2=\omega^2 A^2
+\end{equation}
+\begin{equation}
+    S_\text{EM}:[M]\text[T]^{-3}
+\end{equation}
+\begin{equation}
+    \omega:\text[T]^{-1}
+\end{equation}
+\begin{equation}
+    A:[M][L][T]^{-2}[I]^{-1}
+\end{equation}
+\begin{equation}
+    c:[L][T]^{-1}
+\end{equation}
+\begin{equation}
+    \mu:[M][L][T]^{-2}[I]^{-2}
+\end{equation}
+\begin{equation}
+    S_\text{EM}\propto\frac{\omega^2 A^2}{c\mu}
+\end{equation}
+\begin{equation}
+    S_\text{G}\propto\dot{h}^2\propto\omega^2 h^2
+\end{equation}
+\begin{equation}
+    S_\text{G}:[M]\text[T]^{-3}
+\end{equation}
+\begin{equation}
+    \omega:\text[T]^{-1}
 \end{equation}
 \begin{equation}
     c: [L][T]^{-1}
 \end{equation}
 \begin{equation}
-    GF: [L]^{3}[T]^{-5}
+    G: [L]^{3}[M]^{-1}[T]^{-2}
 \end{equation}
 \begin{equation}
-    c^3\left\lvert \dot{h}\right\rvert^2: [L]^{3}[T]^{-5}
+    S_\text{G}\propto\frac{c^3\omega^2h^2}{G}\propto\frac{\omega^2h^2}{c\mu_\text{G}}
+\end{equation}
+
+\subsection{experiment}
+
+\begin{equation}
+    h=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{D_\text{L}}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
 \end{equation}
 \begin{equation}
-    F\propto \frac{c^3}{G}\left\lvert \dot{h}\right\rvert^2\propto\frac{c^3\omega^2h^2}{G}\propto\frac{\omega^2h^2}{c\mu_\text{G}}\,(!)
+    h=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{D_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
 \end{equation}
-
-\subsection{definition}
-
-$\frac{4G}{c^4}:=\frac{\mu_\text{G}}{4\pi}$, $c:=\frac{1}{\sqrt{\epsilon_\text{G}\mu_\text{G}}}$, $G:=\frac{\mu_\text{G}}{16\pi\epsilon_\text{G}^2\mu_\text{G}^2}$
+\begin{equation}
+    h=\sqrt{\frac{c^*\mu_\text{G}^*}{c\mu_\text{G}}}\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{D_\text{L}/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
+\end{equation}
+\begin{equation}
+    h=\sqrt{\frac{{c^{*3}}\mu_\text{G}^*}{c^3\mu_\text{G}}}\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{D_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
+\end{equation}
