@@ -1,0 +1,91 @@
+\chapter{Fisher矩阵法}
+
+\def\P{\mathbf{P} }
+\cite{Finn1992}, 论证见\href{https://github.com/GasinAn/GWAstroNotes/blob/main/Finn/FinnNotes.pdf}{FinnNotes}.
+
+\section{判断观测数据中有无信号}
+
+$\Omega=A_0\cup A_m$, $A_0$为事件``无信号'', $A_m$为事件``有信号'', 测量结果为$G_t(\omega)$, 噪声$N_t(\omega)$, 信号$M_t(\omega)$,
+\begin{equation}
+    G_t(\omega)=\begin{cases}
+        N_t(\omega)&\omega\in A_0,\\
+        N_t(\omega)+M_t(\omega)&\omega\in A_m,
+    \end{cases}
+\end{equation}
+实测得$g_t$, $A_g:=\{\omega:G_t(\omega)=g_t\}$, $A_g$为事件为``测得$g_t$'', 求$\P(A_m|A_g)$. 另认为信号依赖于参数$\vec{\mu}$, $A_m=\cup A_{\vec{\mu}}$, $A_{\vec{\mu}}$为事件``有信号且参数为$\mu$'', $p(\vec{\mu}):=p(A_{\vec{\mu}}|A_m)$
+\begin{equation}
+    \P(A_m|A_g)=\frac{\Lambda}{\Lambda+\P(A_0)/\P(A_m)},
+\end{equation}
+\begin{equation}
+    \Lambda:=\int\d\vec{\mu}\,\lambda(\vec{\mu}),
+\end{equation}
+\begin{equation}
+    \lambda(\vec{\mu}):=p(\vec{\mu})\exp[2\left\langle g(t)|m_{\vec{\mu}}(t)\right\rangle -\left\langle m_{\vec{\mu}}(t),m_{\vec{\mu}}(t)\right\rangle]
+\end{equation}
+\begin{equation}
+    \left\langle \xi(t),\zeta(t)\right\rangle:=\int\d f\,\frac{\tilde{\xi}(f)\tilde{\zeta}(f)^*}{S_n(\left\lvert f\right\rvert )},
+\end{equation}
+\begin{equation}
+    \tilde{q}(f):=\int\d t\,q(t)\exp[2\pi ift].
+\end{equation}
+
+\section{认定有信号后参数估计(MLE)}
+
+实测得$g_t$且认定有信号, 事件$A_g\cap A_m$, 求使$p({A_{\vec{\mu}}}|A_g\cap A_m)$最大的$\vec{\mu}$, 记作$\hat{\vec{\mu}}$.
+\begin{equation}
+    p({A_{\vec{\mu}}}|A_g)=\frac{\lambda(\vec{\mu})}{\Lambda+\P(A_0)/\P(A_m)},
+\end{equation}
+\begin{equation}
+    p({A_{\vec{\mu}}}|A_g\cap A_m)=\frac{\lambda(\vec{\mu})}{\Lambda},
+\end{equation}
+\begin{equation}
+    \frac{\p\ln p(\vec{\mu})}{\p \vec{\mu}}|_{\vec{\mu}=\hat{\vec{\mu}}}+2\left\langle \frac{\p m_{\vec{\mu}}}{\p \vec{\mu}}|_{\vec{\mu}=\hat{\vec{\mu}}}(t),g(t)-m_{\vec{\mu}}|_{\vec{\mu}=\hat{\vec{\mu}}}(t)\right\rangle=0.
+\end{equation}
+
+\section{灵敏度}
+
+若由$g_t$求得MLE为$\hat{\vec{\mu}}$, 则记$g\Rightarrow \hat{\vec{\mu}}$, $A_{\hat{\vec{\mu}}}:=\cup_{g\Rightarrow \hat{\vec{\mu}}}A_g$, $A_{\hat{\vec{\mu}}}$为事件``测得MLE为$\hat{\vec{\mu}}$'', $A_{\tilde{\vec{\mu}}}$为事件``有信号且参数为$\tilde{\vec{\mu}}$'', 求$p(A_{\tilde{\vec{\mu}}}|A_{\hat{\vec{\mu}}})$. 高SNR, $\tilde{\vec{\mu}}:=\hat{\vec{\mu}}+\delta\vec{\mu}$,
+\begin{equation}
+    p(A_{\hat{\vec{\mu}}+\delta\vec{\mu}}|A_{\hat{\vec{\mu}}})=\frac{\exp[-\frac{1}{2}\sum\mathcal{C}_{ij}^{-1}(\delta\mu_i-\overline{\delta\mu_i})(\delta\mu_j-\overline{\delta\mu_j})]}{[(2\pi)^N\text{det}(\mathcal{C}_{ij})^{1/2}]},
+\end{equation}
+\begin{equation}
+    \mathcal{C}_{ij}^{-1}=2\left\langle \frac{\p m_{\vec{\mu}}}{\p \mu_i}|_{\vec{\mu}=\hat{\vec{\mu}}}(t),\frac{\p m_{\vec{\mu}}}{\p \mu_j}|_{\vec{\mu}=\hat{\vec{\mu}}}(t)\right\rangle,
+\end{equation}
+\begin{equation}
+    \overline{\delta\mu_i}=-\sum\mathcal{C}_{ij}\frac{\p\ln p(\vec{\mu})}{\p \mu_j}|_{\vec{\mu}=\hat{\vec{\mu}}}.
+\end{equation}
+
+\section{认定有信号后参数估计(分布)}
+
+\cite{Poisson1995}, 
+\begin{equation}
+    p({A_{\vec{\mu}}}|A_g\cap A_m)\propto p^{(0)}(\vec{\mu})\exp[
+        -\frac{1}{2}\left\langle 
+            m_{\vec{\mu}}(t)-g(t)|m_{\vec{\mu}}(t)-g(t)
+        \right\rangle 
+    ],
+\end{equation}
+\begin{equation}
+    \left\langle \xi(t)|\zeta(t)\right\rangle:=2\int_0^\infty\frac{\tilde{\xi}(f)^*\tilde{\zeta}(f)+\tilde{\xi}(f)\tilde{\zeta}(f)^*}{S_n(f)}\,\d f,
+\end{equation}
+\begin{equation}
+    \tilde{q}(f):=\int_{-\infty}^{\infty}q(t)e^{2\pi ift}\,\d t,
+\end{equation}
+$\vec{\mu}$估计为$\hat{\vec{\mu}}$,
+\begin{equation}
+    \frac{\p\ln p^{(0)}(\vec{\mu})}{\p \vec{\mu}}|_{\vec{\mu}=\hat{\vec{\mu}}}+\left\langle \frac{\p m_{\vec{\mu}}}{\p \vec{\mu}}|_{\vec{\mu}=\hat{\vec{\mu}}}(t)\bigg|g(t)-m_{\vec{\mu}}|_{\vec{\mu}=\hat{\vec{\mu}}}(t)\right\rangle=0,
+\end{equation}
+高SNR, 
+\begin{equation}
+    \Gamma_{ab}:=\left\langle m_{,a}(t)|m_{,b}(t)\right\rangle
+\end{equation}
+\begin{equation}
+    p({A_{\mu^a}}|A_g\cap A_m)\propto p^{(0)}({\mu^a})\exp[
+        -\frac{1}{2}\Gamma_{ab}(\mu^a-\hat{\mu}^a)(\mu^b-\hat{\mu}^b)
+    ],
+\end{equation}
+\begin{equation}
+    p^{(0)}({\mu^a}):\propto\exp[
+        -\frac{1}{2}\Gamma^{(0)}_{ab}(\mu^a-\bar{\mu}^a)(\mu^b-\bar{\mu}^b)
+    ].
+\end{equation}
