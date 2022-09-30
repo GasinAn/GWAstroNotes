@@ -1,0 +1,318 @@
+\documentclass[12pt]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{marginnote}
+\usepackage{syntonly}
+\usepackage{textcomp}
+\usepackage{verbatim}
+\usepackage{ulem}
+%\syntaxonly
+%\geometry{a5paper}
+\hyphenation{}
+\normalem
+\hypersetup{
+    colorlinks,
+    linkcolor=blue,
+    filecolor=pink,
+    urlcolor=cyan,
+    citecolor=red,
+}
+\def\b{\boldsymbol}
+\def\d{\mathrm{d}}
+\def\p{\partial}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\atanxy}{atan2}
+\newtheorem{definition}{定义}
+\newtheorem{theorem}{命题}
+\title{利用引力波观测检验Ia型超新星爆发的双白矮星直接对撞模型}
+\author{天文系\ 安嘉辰\ 202121160001}
+\begin{document}
+\maketitle
+
+传统观点认为Ia型超新星爆发因含白矮星的双星绕转吸积而产生\cite{Carroll2007}. Kushnir等\cite{Kushnir2013}提出Ia型超新星爆发的双白矮星直接对撞模型. 该模型认为Ia型超新星爆发前可能白矮星轨道离心率变大并趋近于$1$, 进而导致双白矮星对撞. 两种Ia型超新星爆发模型中双星并合前运动状态不同, 应当可以通过引力波观测来区分. 以下探讨利用引力波观测区分Ia型超新星爆发前双星运动状态的可行性.
+
+首先需要了解两种模型下引力波的具体形式. 引力波``正比于质量四极矩'', ``反比于距离'', 这是为人熟知的结论, 然而许多书籍中并未给出完全明确的表达式\cite{Misner1973,Sathyaprakash2009,Wang2020}.
+
+已知若引力波张量$\gamma_{ab}$的反迹张量\cite{Wang2020} $\bar{\gamma}_{ab}$的分量满足
+\begin{equation}
+    \p^{\mu}\bar{\gamma}_{\mu\nu}=0,\label{1}
+\end{equation}
+则\cite{Wald1984}
+\begin{equation}
+    \p^{\sigma}\p_{\sigma}\bar{\gamma}_{\mu\nu}=0.\label{2}
+\end{equation}
+进一步可选择坐标系, 使得$\gamma=0$且$\gamma_{0\nu}=0$, 这被称为``辐射规范''. TT规范仅指$\gamma=0$ \cite{Wang2020}. 首先在辐射规范中, $\gamma_{\mu\nu}=\bar{\gamma}_{\mu\nu}$, 所以\eqref{1},\eqref{2}化为
+\begin{equation}
+    \p^{\mu}{\gamma}_{\mu\nu}=0,\label{3}
+\end{equation}
+\begin{equation}
+    \p^{\sigma}\p_{\sigma}{\gamma}_{\mu\nu}=0.\label{4}
+\end{equation}
+又因为$\gamma_{0\nu}=0$, 所以\eqref{3},\eqref{4}化为
+\begin{equation}
+    \p^{i}{\gamma}_{ij}=0,\label{5}
+\end{equation}
+\begin{equation}
+    \p^{\sigma}\p_{\sigma}{\gamma}_{ij}=0.\label{6}
+\end{equation}
+
+我们没有办法直接由\eqref{5},\eqref{6}得到引力波的具体形式, 因为\eqref{5},\eqref{6}不考虑波源的情况, 而只考虑引力波在真空中的传播. 已知若$\bar{\gamma}_{ab}$的分量满足\eqref{1}, 则一般情形下有
+\begin{equation}
+    \p^{\sigma}\p_{\sigma}\bar{\gamma}_{\mu\nu}=-16\pi T_{\mu\nu}.\label{7}
+\end{equation}
+同样地, 在辐射规范中有
+\begin{equation}
+    \p^{i}{\gamma}_{ij}=0,\label{8}
+\end{equation}
+\begin{equation}
+    \p^{\sigma}\p_{\sigma}{\gamma}_{ij}=-16\pi T_{ij}.\label{9}
+\end{equation}
+
+\eqref{1},\eqref{7}有解\cite{Wald1984}
+\begin{equation}
+    \bar{\gamma}_{\mu\nu}(t,\vec{r})=4\int\frac{T_{\mu\nu}(t-\left\lvert\vec{r}-\vec{r}'\right\rvert,\vec{r}')}{\left\lvert\vec{r}-\vec{r}'\right\rvert}\,\d V'.\label{10}
+\end{equation}
+定义Fourier变换
+\begin{equation}
+    \hat{\bar{\gamma}}_{\mu\nu}(\omega,\vec{r})=\frac{1}{\sqrt{2\pi}}\int\bar{\gamma}_{\mu\nu}(t,\vec{r})e^{i\omega t}\,\d t,
+\end{equation}
+则
+\begin{equation}
+    \hat{\bar{\gamma}}_{\mu\nu}(\omega,\vec{r})=4\int\frac{\hat{T}_{\mu\nu}(\omega,\vec{r}')}{\left\lvert\vec{r}-\vec{r}'\right\rvert}e^{i\omega\left\lvert\vec{r}-\vec{r}'\right\rvert}\,\d V'.\label{12}
+\end{equation}
+因有规范条件存在, 所以解空间--空间分量即可. 这里只关心$\left\lvert\vec{r}\right\rvert\gg\left\lvert\vec{r}'\right\rvert$且$2\pi/\omega\gg\left\lvert\vec{r}'\right\rvert$的情况. 此时可以认为$\frac{e^{i\omega\left\lvert\vec{r}-\vec{r}'\right\rvert}}{\left\lvert\vec{r}-\vec{r}'\right\rvert}\approx\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}$, 从而
+\begin{equation}
+    \hat{\bar{\gamma}}_{\mu\nu}(\omega,\vec{r})=4\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}\int\hat{T}_{\mu\nu}(\omega,\vec{r}')\,\d V',\label{13}
+\end{equation}
+又有\cite{Wald1984}
+\begin{equation}
+    \int\hat{T}_{ij}(\omega,\vec{r}')\,\d V'=\int\hat{T}^{ij}(\omega,\vec{r}')\,\d V'=-\frac{\omega^2}{2}\int\hat{T}^{00}(\omega,\vec{r}')x'^{i}x'^{j}\,\d V',
+\end{equation}
+定义
+\begin{equation}
+    q_{ij}(t)=\int T^{00}(t,\vec{r}')x'^{i}x'^{j}\,\d V'=\int\rho(t,\vec{r}')x'^{i}x'^{j}\,\d V',
+\end{equation}
+则
+\begin{equation}
+    \hat{\bar{\gamma}}_{ij}(\omega,\vec{r})=-2\omega^2\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}\hat{q}_{ij}(\omega),
+\end{equation}
+所以
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=\frac{2}{\left\lvert\vec{r}\right\rvert}\frac{\d^2}{\d t^2}{q}_{ij}(t-\left\lvert\vec{r}\right\rvert).\label{exact_qp}
+\end{equation}
+\eqref{exact_qp}即明确的引力波四极矩公式. 注意\eqref{exact_qp}可自动得出(近似条件下)满足\eqref{1}的解, 但辐射规范不能保证\cite{Wald1984}.
+
+对``绕转模型'', 考虑理想的情况, 即双星轨道都是圆轨道, 且Newton力学适用. 此时对双星$\text{I}$, $\text{II}$, 可设
+\begin{align}
+    \vec{r}'_\text{I}(t)=\frac{M_\text{II}}{M}d\left[\cos\left(\sqrt{\frac{ M}{d^3}}t\right)\hat{e}_x+\sin\left(\sqrt{\frac{ M}{d^3}}t\right)\hat{e}_y\right],\\
+    \vec{r}'_\text{II}(t)=-\frac{M_\text{I}}{M}d\left[\cos\left(\sqrt{\frac{ M}{d^3}}t\right)\hat{e}_x+\sin\left(\sqrt{\frac{ M}{d^3}}t\right)\hat{e}_y\right],
+\end{align}
+其中$M=M_\text{I}+M_\text{II}$. 可得
+\begin{equation}
+    {q}_{ij}(t)=\frac{M_\text{I}M_\text{II}d^2}{M}\begin{bmatrix}
+        \cos^2\left(\sqrt{\frac{ M}{d^3}}t\right)&\cos\left(\sqrt{\frac{ M}{d^3}}t\right)\sin\left(\sqrt{\frac{ M}{d^3}}t\right)\\
+        \cos\left(\sqrt{\frac{ M}{d^3}}t\right)\sin\left(\sqrt{\frac{ M}{d^3}}t\right)&\sin^2\left(\sqrt{\frac{ M}{d^3}}t\right)
+    \end{bmatrix},
+\end{equation}
+其中$i,j=1,2$, 所以
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=\frac{4 M_\text{I}M_\text{II}}{\left\lvert\vec{r}\right\rvert d}\begin{bmatrix}
+        -\cos\left[2\sqrt{\frac{ M}{d^3}}\left(t-\left\lvert\vec{r}\right\rvert\right)\right]&-\sin\left[2\sqrt{\frac{ M}{d^3}}\left(t-\left\lvert\vec{r}\right\rvert\right)\right]\\
+        -\sin\left[2\sqrt{\frac{ M}{d^3}}\left(t-\left\lvert\vec{r}\right\rvert\right)\right]&\cos\left[2\sqrt{\frac{ M}{d^3}}\left(t-\left\lvert\vec{r}\right\rvert\right)\right]
+    \end{bmatrix}.\label{model1_t}
+\end{equation}
+由\eqref{model1_t}求辐射规范下的引力波张量的分量, 需把分量矩阵投影到垂直于$\vec{r}$的平面, 后去除分量矩阵的迹\cite{Sathyaprakash2009}. 用并矢可将\eqref{model1_t}表示成
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=-A\left[
+        \cos\Phi\left(\hat{e}_x\hat{e}_x-\hat{e}_y\hat{e}_y\right)+\sin\Phi\left(\hat{e}_x\hat{e}_y+\hat{e}_y\hat{e}_x\right)
+    \right],
+\end{equation}
+其中$A=\frac{4 M_\text{I}M_\text{II}}{\left\lvert\vec{r}\right\rvert d}$, $\Phi=2\sqrt{\frac{ M}{d^3}}\left(t-\left\lvert\vec{r}\right\rvert\right)$. 又有
+\begin{align}
+    \hat{e}_r&=\sin\theta\cos\phi\,\hat{e}_x+\sin\theta\sin\phi\,\hat{e}_y+\cos\theta\,\hat{e}_z,\label{e_r}\\
+    \hat{e}_\theta&=-\cos\theta\cos\phi\,\hat{e}_x-\cos\theta\sin\phi\,\hat{e}_y+\sin\theta\,\hat{e}_z,\label{e_theta}\\
+    \hat{e}_\phi&=-\sin\phi\,\hat{e}_x+\cos\phi\,\hat{e}_y,\label{e_phi}
+\end{align}
+由\eqref{e_r}, \eqref{e_theta}, \eqref{e_phi}得
+\begin{align}
+    \hat{e}_x&=\sin\theta\cos\phi\,\hat{e}_r-\cos\theta\cos\phi\,\hat{e}_\theta-\sin\phi\,\hat{e}_\phi,\\
+    \hat{e}_y&=\sin\theta\sin\phi\,\hat{e}_r-\cos\theta\sin\phi\,\hat{e}_\theta+\cos\phi\,\hat{e}_\phi,
+\end{align}
+则球坐标中引力波张量的分量为
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=-A
+    \begin{bmatrix}
+        \dots&\dots&\dots\\
+        \dots&\cos^2\theta\cos(\Phi-2\phi)&-\cos\theta\sin(\Phi-2\phi)\\
+        \dots&-\cos\theta\sin(\Phi-2\phi)&-\cos(\Phi-2\phi)
+    \end{bmatrix},
+\end{equation}
+投影到$\theta,\phi$面, 得
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=A
+    \begin{bmatrix}
+        -\cos^2\theta\cos(\Phi-2\phi)&\cos\theta\sin(\Phi-2\phi)\\
+        \cos\theta\sin(\Phi-2\phi)&\cos(\Phi-2\phi)
+    \end{bmatrix},\label{model1_t_proj}
+\end{equation}
+重新定义$\Phi=2\left[\sqrt{\frac{ M}{d^3}}\left(t-\left\lvert\vec{r}\right\rvert\right)-\phi\right]$, 则\eqref{model1_t_proj}右式的迹为$\sin^2\theta\cos\Phi$, 将\eqref{model1_t_proj}右式的对角元减去$\frac{\sin^2\theta}{2}\cos\Phi$ (去除\eqref{model1_t_proj}右式的迹)得
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=\frac{4 M_\text{I}M_\text{II}}{\left\lvert\vec{r}\right\rvert d}
+    \begin{bmatrix}
+        -\frac{1+\cos^2\theta}{2}\cos\Phi&\cos\theta\sin\Phi\\
+        \cos\theta\sin\Phi&\frac{1+\cos^2\theta}{2}\cos\Phi
+    \end{bmatrix},\label{1f}
+\end{equation}
+即
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=A\left[-\frac{1+\cos^2\theta}{2}\cos\Phi\left(\hat{e}_\theta\hat{e}_\theta-\hat{e}_\phi\hat{e}_\phi\right)+\cos\theta\sin\Phi\left(\hat{e}_\theta\hat{e}_\phi+\hat{e}_\phi\hat{e}_\theta\right)\right].\label{model_1_final_}
+\end{equation}
+\eqref{model_1_final_}也是为人熟知的结论\cite{Apostolatos1994}.
+
+对``碰撞模型'', 同样考虑理想的情况, 即双星轨道都是直线, 且Newton力学适用. 此时可设
+\begin{align}
+    \vec{r}'_\text{I}(t)=\frac{M_\text{II}}{M}d(t)\hat{e}_z,\\
+    \vec{r}'_\text{II}(t)=-\frac{M_\text{I}}{M}d(t)\hat{e}_z.
+\end{align}
+其中
+\begin{align}
+    \frac{1}{2}\dot{d}(t)^2-\frac{M}{d(t)}=E,
+\end{align}
+可得
+\begin{equation}
+    {q}_{ij}(t)=\frac{M_\text{I}M_\text{II}}{M}\begin{bmatrix}
+        0&0&0\\
+        0&0&0\\
+        0&0&d(t)^2
+    \end{bmatrix},
+\end{equation}
+所以
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=\frac{4M_\text{I}M_\text{II}}{\left\lvert\vec{r}\right\rvert M}\begin{bmatrix}
+        0&0&0\\
+        0&0&0\\
+        0&0&2E+\frac{M}{d(t-\left\lvert\vec{r}\right\rvert)}
+    \end{bmatrix}.\label{e=1}
+\end{equation}
+同样由\eqref{e=1}求辐射规范下的引力波张量的分量. 用并矢可将\eqref{e=1}表示成
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=\frac{4M_\text{I}M_\text{II}}{\left\lvert\vec{r}\right\rvert M}\left[2E+\frac{M}{d(t-\left\lvert\vec{r}\right\rvert)}\right]\hat{e}_z\hat{e}_z,
+\end{equation}
+由\eqref{e_r}, \eqref{e_theta}, \eqref{e_phi}得
+\begin{align}
+    \hat{e}_z=\cos\theta\,\hat{e}_r+\sin\theta\,\hat{e}_\theta,
+\end{align}
+则球坐标中引力波张量的分量为
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=\frac{4M_\text{I}M_\text{II}}{\left\lvert\vec{r}\right\rvert M}\left[2E+\frac{M}{d(t-\left\lvert\vec{r}\right\rvert)}\right]
+    \begin{bmatrix}
+        \dots&\dots&\dots\\
+        \dots&\sin^2\theta&0\\
+        \dots&0&0
+    \end{bmatrix},
+\end{equation}
+投影到$\theta,\phi$面, 得
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=\frac{4M_\text{I}M_\text{II}}{\left\lvert\vec{r}\right\rvert M}\left[2E+\frac{M}{d(t-\left\lvert\vec{r}\right\rvert)}\right]
+    \begin{bmatrix}
+        \sin^2\theta&0\\
+        0&0
+    \end{bmatrix},\label{model2_t_proj}
+\end{equation}
+去除\eqref{model2_t_proj}右式的迹, 得
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=\frac{2M_\text{I}M_\text{II}}{\left\lvert\vec{r}\right\rvert M}\left[2E+\frac{M}{d(t-\left\lvert\vec{r}\right\rvert)}\right]
+    \begin{bmatrix}
+        \sin^2\theta&0\\
+        0&-\sin^2\theta
+    \end{bmatrix}.\label{model_2_final_}
+\end{equation}
+\eqref{model_2_final_}中有一``常量部分''
+\begin{equation}
+    \frac{4M_\text{I}M_\text{II}E}{\left\lvert\vec{r}\right\rvert M}
+    \begin{bmatrix}
+        \sin^2\theta&0\\
+        0&-\sin^2\theta
+    \end{bmatrix},
+\end{equation}
+因为引力波的观测效应只与引力波张量的时间导数有关\cite{Wald1984,Sathyaprakash2009}, 且这个``常量部分''可以通过坐标变换消去\cite{Wald1984}, 所以不妨令这部分为$0$, 从而\eqref{model_2_final_}化为
+\begin{equation}
+    \bar{\gamma}_{ij}(t,\vec{r})=\frac{4M_\text{I}M_\text{II}}{\left\lvert\vec{r}\right\rvert d(t-\left\lvert\vec{r}\right\rvert)}
+    \begin{bmatrix}
+        \frac{\sin^2\theta}{2}&0\\
+        0&-\frac{\sin^2\theta}{2}
+    \end{bmatrix}.\label{2f}
+\end{equation}
+
+由\eqref{1f}和\eqref{2f}, 我们可以先定性地分析通过引力波观测区分两种模型的可能. 首先可以注意到在\eqref{2f}中令$\theta=0$, 可得$\bar{\gamma}_{ij}=0$, 也就是说, 对``碰撞模型'', $z$轴方向是没有引力波的(由对称性也能得到这个结论), 但对\eqref{1f}, 任意$\theta$都有$\bar{\gamma}_{ij}\ne0$. 也就是说, 在仪器足够灵敏的前提下, 如果在观测到Ia型超新星爆发时没有观测到引力波(准确来说, 是观测到的引力波强度远小于$\frac{M_\text{I}M_\text{II}}{\left\lvert\vec{r}\right\rvert R_\text{WD}}$, 其中$R_\text{WD}$是白矮星半径), 则我们可以立即断定此次Ia型超新星爆发不能用``绕转模型''来解释, 但如果观测到引力波, 则还需进一步分析.
+
+对``绕转模型'', 由\eqref{1f}, 引力波角频率为$2\sqrt{\frac{ M}{d^3}}$, 是轨道角频率的$2$倍. 对``碰撞模型'', 由\eqref{2f}, 引力波角频率和轨道角频率一样, 并且$\frac{a^3}{T^2}=\frac{M}{4\pi^2}$, 所以引力波强度最大时, 对``碰撞模型''来说, $a$比``绕转模型''大得多(后者约为$R_\text{WD}$), 所以引力波是超低频的. 因为目前的引力波探测器主要的工作目标都是密近绕转的双星, 所以可以预想目前的引力波探测器是不能探测到``碰撞模型''的引力波的, 不过这一预想仍待进一步考察.
+
+另外, 虽然在理论中, 对``碰撞模型'', 我们假定$e=1$, 此时$d(t)$可以趋于$0$. 但实际情况中, $d(t)$最小也得是$R_\text{WD}$的量级(否则就碰撞了), 所以``绕转模型''和``碰撞模型''引力波强度的最大值差不多, 我们不能期待通过观测到一个极强的引力波来排除``绕转模型''.
+
+可以这么设想: 对``碰撞模型'', 双星还未碰撞前, 会出现双星接近, 迅速绕过彼此, 然后远离的情况. 按\eqref{2f}, 这种情况下, 引力波会出现一个``峰'', 然后很长时间后才会出现下一个. 不过双星绕过彼此时, 两者运动速度的方向不是沿两者连线方向, 所以此时的引力波不能用\eqref{2f}刻画, 但接近和远离时是可以的.
+
+已知
+\begin{align}
+    d&=a\sqrt{(\cos E-e)^2+(1-e^2)\sin^2E}\\
+    &=a(1-e\cos E),\label{d}
+\end{align}
+且
+\begin{equation}
+    E-e\sin E=\sqrt{\frac{M}{a^2}}t,\label{E}
+\end{equation}
+则$d_\text{min}=a(1-e)$, 所以可以将\eqref{d}和\eqref{E}重写为
+\begin{equation}
+    d=a\left[1-\left(1-\frac{d_\text{min}}{a}\right)\cos E\right],
+\end{equation}
+\begin{equation}
+    E-\left(1-\frac{d_\text{min}}{a}\right)\sin E=\sqrt{\frac{M}{a^3}}t.
+\end{equation}
+我们期待比较$\frac{1}{d(t)}$和$\frac{1}{d_\text{min}}\cos\left(2\sqrt{\frac{ M}{d_\text{min}^3}}t\right)$在$t\simeq0$处的表现. 令$ E=\arctan\frac{(1-e^2)a}{ea}=\arctan\frac{1-e^2}{e}\approx\frac{1-e^2}{e}\approx2(1-e)\approx2\frac{d_\text{min}}{a}$, 可得$d=(1-e^2)a\approx2d_\text{min}$, 又因为$\sin E\approx E$, 所以$t\approx\sqrt{\frac{a^3}{M}}\frac{d_\text{min}}{a}E\sim\sqrt{\frac{d_\text{min}^3}{M}}\sqrt{\frac{d_\text{min}}{a}}$, 而对于$\frac{1}{d_\text{min}}\cos\left(2\sqrt{\frac{ M}{d_\text{min}^3}}t\right)$有$T\sim\sqrt{\frac{d_\text{min}^3}{M}}$. 由上面的简单分析可见, ``碰撞模型''引力波强度在峰值处的变化相较于``绕转模型''是极迅速的, 仪器无法响应.
+
+我们还可以研究``碰撞模型''在$t\sim\sqrt{\frac{d_\text{min}^3}{M}}$时的引力波强度. 此时$\sqrt{\frac{M}{a^3}}t\sim\sqrt{\frac{d_\text{min}^3}{a^3}}$是小量, 因为$\sin E\approx E-\frac{E^3}{6}$, 所以$\frac{d_\text{min}}{a}E+\left(1-\frac{d_\text{min}}{a}\right)\frac{E^3}{6}\approx\frac{d_\text{min}}{a}E+\frac{E^3}{6}\sim\sqrt{\frac{d_\text{min}^3}{a^3}}$, $E\sim\sqrt{\frac{d_\text{min}}{a}}$, $d\approx aE\sim d_\text{min}\sqrt{\frac{a}{d_\text{min}}}$, 可见此时``碰撞模型''的引力波强度是很小的. 进一步来说, 当$t\lesssim\sqrt{\frac{d_\text{min}^3}{M}}$时$\sqrt{\frac{M}{a^3}}t$都是小量, 所以总有$\frac{d_\text{min}}{a}E\sim\sqrt{\frac{M}{a^3}}t$, $E\sim\frac{a}{d_\text{min}}\sqrt{\frac{M}{a^3}}t$, $d\approx aE\sim d_\text{min}\sqrt{\frac{a}{d_\text{min}}}\sqrt{\frac{M}{d_\text{min}^3}}t$, 可见在此时段``碰撞模型''的引力波强度大致是反比例函数.
+
+因此我们可以转而比较$\frac{1}{d_\text{min}}\sqrt{\frac{d_\text{min}}{a}}\frac{1}{\sqrt{\frac{M}{d_\text{min}^3}}t}$和$\frac{1}{d_\text{min}}\cos\left(2\sqrt{\frac{ M}{d_\text{min}^3}}t\right)$. 不妨计$\tau=\sqrt{\frac{ M}{d_\text{min}^3}}t$, 则可以转而比较$\sqrt{\frac{d_\text{min}}{a}}\frac{1}{\tau}$, $\tau\in[\sqrt{\frac{d_\text{min}}{a}},1]$, 和$\cos\left(2\tau\right)$, $\tau\in[0,\frac{\pi}{4}]$. 我们关注一特殊值$\tau=\sqrt{\sqrt{\frac{d_\text{min}}{a}}}$, $\tau\in[\sqrt{\frac{d_\text{min}}{a}},\sqrt{\sqrt{\frac{d_\text{min}}{a}}}]$, 则$\sqrt{\frac{d_\text{min}}{a}}\frac{1}{\tau}\in[1,\sqrt{\sqrt{\frac{d_\text{min}}{a}}}]$, 平均导数约为$\frac{1}{\sqrt{\sqrt{\frac{d_\text{min}}{a}}}}$, 这是个极大值, 而$\tau\in[\sqrt{\sqrt{\frac{d_\text{min}}{a}}},1]$则刚好反过来, 平均导数约为$\sqrt{\sqrt{\frac{d_\text{min}}{a}}}$, 这是个极小值. 上面的论述表明, $\sqrt{\frac{d_\text{min}}{a}}\frac{1}{\tau}$是一个极尖锐的``峰'', 和$\cos\left(2\tau\right)$截然不同. 因此, 目前的引力波探测器不能探测到``碰撞模型''的引力波.
+
+综上所述, 用目前的引力波探测器进行观测, 如果在观测到Ia型超新星爆发时没有观测到引力波, 则可以确认此系统符合``碰撞模型''且不符合``绕转模型'', 反之则可以确认此系统符合``绕转模型''且不符合``碰撞模型''.
+
+我们还关心引力波探测器对绕转双白矮星的探测能力. 我们现在需要探测强度(指振幅)为$\frac{M_\text{I}M_\text{II}}{r R_\text{WD}}$, 角频率为$2\sqrt{\frac{ M}{R_\text{WD}^3}}$的引力波, 其中$r=\left\lvert\vec{r}\right\rvert$. 假定双白矮星质量一样, 则需要探测强度为$\frac{M_\text{WD}^2}{r R_\text{WD}}$, 角频率为$\sqrt{\frac{ 8M_\text{WD}}{R_\text{WD}^3}}$的引力波. 用典型值$M_\text{WD}\sim1M_\odot$和$R_\text{WD}\sim0.008R_\odot$\cite{Carroll2007}, 估计引力波角频率约$2.5\text{Hz}$. 这个频率其实颇为尴尬, 因为这个频率刚好大致夹在地面引力波探测器和空间引力波探测器的最佳观测频段之间, 两者都不太好观测. 保守估计, Einstein望远镜在此频率的应变约为$10^{-21}/\text{Hz}^{-1/2}$, 而LISA在此频率的应变比Einstein望远镜低\cite{Wang2020}. 令$\frac{M_\text{WD}^2}{r R_\text{WD}}\sim10^{-21}$, 可得$r\sim4\times10^{20}\text{m}\approx12.7\text{kpc}$, 就这么看目前只能对银河系内的双白矮星进行引力波探测来检验``绕转模型''和``碰撞模型'', 而且其实信噪比也不算高.
+
+因为Einstein望远镜在此频率的应变随频率的变化较大, 所以仍有希望选择合适的目标源. 对白矮星有$M_\text{WD}V_\text{WD}=\text{const}$\cite{Carroll2007}, 所以$M_\text{WD}R_\text{WD}^3\sim0.008^3M_\odot R_\odot^3$, 所以引力波频率为$\sqrt{\frac{2}{0.008^3\pi^2M_\odot R_\odot^3}}M_\text{WD}$, 所以必须放弃对低质量双白矮星的引力波探测, 因为探测器不灵敏且引力波强度还低. 代入$M_\text{WD}=1.4M_\odot$, 得引力波频率约为$0.5\text{Hz}$. 这个值比之前估计的结果还尴尬, LISA在此频率的应变不高\cite{Wang2020}, 此频率也不在天琴\cite{Luo2016}计划的工作频段内. 但这个频率在太极\cite{Luo2020}计划的工作频段内, 而Einstein望远镜实际上无法观测\cite{Wang2020}. 话虽如此, 从应变曲线上看, 天琴和太极都可能实施对绕转双白矮星的观测, 应变大约为$10^{-19}/\text{Hz}^{-1/2}$. 需要探测强度为$\frac{M_\text{WD}^2}{0.008r R_\odot}\sqrt[3]{\frac{M_\text{WD}}{M_\odot}}$的引力波, 令$\frac{M_\text{WD}^2}{0.008r R_\odot}\sqrt[3]{\frac{M_\text{WD}}{M_\odot}}\sim10^{-19}$, 得$r\sim4.4\times10^{18}\text{m}\approx0.142\text{kpc}$, 这样看起来就没法观测了. 但还可以利用时间累积效应来提高信噪比. 假如我们要观测银河系内的绕转双白矮星, 且信噪比要求达到$10^3$, 则至少需要$10000\text{s}$的观测时长. 所以现在需要研究绕转双白矮星并合前一段时间内辐射的引力波.
+
+因为双白矮星的引力场不强, 绕转速度(相对于光速)也不快, 所以可以用PN近似来刻画绕转双白矮星的引力波. 以并合时刻为时间零点, 计$\tau=(-\frac{t}{40M_\text{WD}})^{-1/8}$, 则由PN公式\cite{Sathyaprakash2009}有$v^2\approx\frac{\tau^2}{4}$, 且引力波强度约为$\frac{2M_\text{WD}v^2}{r}$, 频率约为$\frac{v^3}{2\pi M_\text{WD}}$. 令$\frac{2M_\text{WD}v^2}{r}\sim\frac{4M_\text{I}M_\text{II}}{r R_\text{WD}}\sim\frac{4M_\text{WD}^2}{0.008r R_\odot}\sqrt[3]{\frac{M_\text{WD}}{M_\odot}}$, 得$v\sim0.03c$, $t\sim-2.26\times10^6\text{s}$, 这个值相对于$10000\text{s}$来说还是很大的, 也就是说可以认为绕转双白矮星在接近并合时, 引力波强度和频率几乎不变. 这么看来, 利用时间累积效应来提高信噪比, 从而通过引力波观测检验``绕转模型''和``碰撞模型''是可能的.
+
+我们还可以更定量地估计绕转双白矮星辐射的引力波的振幅的观测精度. \cite{Cutler1998}用Fisher矩阵法估计了用LISA观测``同步波源''的引力波的观测精度, 双白矮星属于\cite{Cutler1998}中所说的``同步波源''. \cite{Cutler1998}关心的是波源空间定位的精度, 但其方法也可用于确定振幅的观测精度. 由\cite{Cutler1998}, 在只关心引力波振幅的情况下, 振幅(定义为$A=\frac{M_\text{I}M_\text{II}}{rd}$)的不确定度$\sigma_A$为
+\begin{equation}
+    \sigma_A=\sqrt{\left(\frac{\p \b{h}}{\p A}\Big|\frac{\p \b{h}}{\p A}\right)^{-1}},\label{fisher}
+\end{equation}
+其中$\b{h}$和$\left(\cdot|\cdot\right)$已在\cite{Cutler1998}中明确定义. \eqref{fisher}成立要求探测器是空间的, 地球轨道的``三角探测器'', 天琴和太极自然是这样的探测器, 所以\eqref{fisher}是适用的. 只不过\eqref{fisher}定义中的应变函数的平方, 噪声单侧功率谱密度$S_n(f)$\cite{Wang2020}要由仪器决定.
+
+\cite{Cutler1998}中将``三角探测器''视作两个独立的探测器, 这里计两个探测器分别为$\text{i}$和$\text{ii}$, 则\cite{Cutler1998}给出
+\begin{equation}
+    \left(\frac{\p \b{h}}{\p \ln A}\Big|\frac{\p \b{h}}{\p \ln A}\right)
+    =\frac{3}{4}S_n(f_0)^{-1}\sum_{\alpha=\text{i},\text{ii}}\int_{-\infty}^{\infty}A_\alpha(t)^2\,\d t.\label{fisher_}
+\end{equation}
+其中$f_0$是引力波频率, 显然可以代入先前得到的估计结果$0.5\text{Hz}$. $A_\text{i}(t)$和$A_\text{ii}(t)$则已在\cite{Cutler1998}中给出.
+
+我们不想那么精确地得出振幅$A$的相对不确定度$\frac{\sigma_A}{A}$. 由\eqref{fisher}和\eqref{fisher_}我们可以得到一个大致的关系式
+\begin{equation}
+    \frac{\sigma_A}{A}=\sqrt{\left(\frac{A^2}{S_n(f_0)}t\right)^{-1}},\label{sigma_A/A}
+\end{equation}
+由\eqref{sigma_A/A}可得
+\begin{equation}
+    t=\frac{S_n(f_0)}{A^2}\left(\frac{A}{\sigma_A}\right)^2,\label{t}
+\end{equation}
+由\eqref{t}可以大致估计出, 若要达到振幅千分之一的相对不确定度, 观测时间$t$大约需要四十年, 这着实困难, 不过达到百分之一的相对不确定度只需约150天的观测. 尚可接受.
+
+我们还关心是否能通过引力波观测来预测银河系内Ia型超新星爆发. 第一反应是这是颇为困难的, 因为绕转双白矮星近似是``同步波源'', 所以并合前绕转双白矮星辐射的引力波的振幅和频率的变化是很微弱的. 已知引力波振幅约为$\frac{2M_\text{WD}v^2}{r}$, 频率约为$\frac{v^3}{2\pi M_\text{WD}}$, 其中$v^2\approx\frac{\tau^2}{4}$, $\tau=(-\frac{t}{40M_\text{WD}})^{-1/8}$, $t$以并合时刻为时间零点. 又已知对$M_\text{WD}\sim1.4M_\odot$, $t\sim-2.26\times10^6\text{s}$. 可知引力波振幅变化率约为$\frac{1}{4}\frac{(-\frac{t}{40M_\text{WD}})^{-5/4}}{40r}$, 取$r\sim10\text{kpc}$, 得引力波振幅变化率约为$2.5\times10^{-27}/\text{s}$, 可见通过测量引力波振幅变化率来预测银河系内Ia型超新星爆发不靠谱. 又可知引力波频率变化率约为$\frac{3}{8}\frac{(-\frac{t}{40M_\text{WD}})^{-11/8}}{640\pi M_\text{WD}^2}$, 可得引力波频率变化率约为$9\times10^{-8}\text{Hz}/\text{s}$, 所以通过测量引力波频率变化率来预测银河系内Ia型超新星爆发也不靠谱.
+
+总结: 本文主要探讨利用引力波观测区分Ia型超新星爆发模型的可行性, 首先由\cite{Wald1984}和\cite{Sathyaprakash2009}, 得出``绕转模型''和``碰撞模型''对应的双白矮星引力波张量\eqref{1f}和\eqref{2f}; 随后由\eqref{1f}和\eqref{2f}, 得出目前的引力波探测器能探测到``绕转模型''对应的引力波, 且不能探测到``碰撞模型''对应的引力波, 从而论证了利用引力波观测区分``绕转模型''和``碰撞模型''的一般可行性; 再后由\eqref{1f}, 探讨观测精度, 发现对银河系内的大质量绕转双白矮星, 使用天琴或太极, 可以在观测一定时间后较高信噪比地测得引力波, 这表明利用引力波观测区分Ia型超新星爆发模型是较为可能得以实现的; 最后本文还附带说明目前利用引力波观测预测Ia型超新星爆发并无可能.
+
+\bibliographystyle{abbrv}
+\bibliography{wd}
+\end{document}
