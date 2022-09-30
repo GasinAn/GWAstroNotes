@@ -1,0 +1,262 @@
+\documentclass[a3paper]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{marginnote}
+\usepackage{syntonly}
+\usepackage{textcomp}
+\usepackage{verbatim}
+\usepackage{ulem}
+%\syntaxonly
+%\geometry{a5paper}
+\hyphenation{}
+\normalem
+\hypersetup{
+    colorlinks,
+    linkcolor=blue,
+    filecolor=pink,
+    urlcolor=cyan,
+    citecolor=red,
+}
+\def\b{\boldsymbol}
+\def\d{\mathrm{d}}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\atanxy}{atan2}
+\newtheorem{definition}{定义}
+\newtheorem{theorem}{命题}
+\title{}
+\author{}
+\begin{document}
+\section{Memory}
+\begin{align*}
+    h_{l0}\vert_{t_1}^{t_2}&=\dots\Re\left[
+        \frac{4}{D}\int\Psi_2^\circ\vert_{t_1}^{t_2}\dots\,d\theta d\phi
+        -D\dots\times\left(
+            \int_{t_1}^{t_2}\dot{h}\dot{\bar{h}}\,dt
+            -(\dot{h}\bar{h})\vert_{t_1}^{t_2}
+        \right)
+    \right]\\
+    &=\dots\Re\left[
+        \frac{4}{D}\int_{t_1}^{t_2}\left(\int\frac{\partial}{\partial t}\Psi_2^\circ\dots\,d\theta d\phi\right)\,dt
+        -D\dots\times\left(
+            \int_{t_1}^{t_2}\dot{h}\dot{\bar{h}}\,dt
+            -\int_{t_1}^{t_2}(\ddot{h}\bar{h}+\dot{h}\dot{\bar{h}})\,dt
+        \right)
+    \right]\\
+    &=\dots\Re\left[
+        \frac{4}{D}\int_{t_1}^{t_2}\left(\int\frac{\partial}{\partial t}\Psi_2^\circ\dots\,d\theta d\phi\right)\,dt
+        +D\dots\times\left(
+            \int_{t_1}^{t_2}\ddot{h}\bar{h}\,dt
+        \right)
+    \right]
+\end{align*}
+\begin{equation*}
+    \dot{h}_{l0}=\dots\Re\left[
+        \frac{4}{D}\int\frac{\partial}{\partial t}\Psi_2^\circ\dots\,d\theta d\phi
+        +D\dots\times\ddot{h}\bar{h}
+    \right]
+\end{equation*}
+\begin{equation*}
+    \Psi_2^\circ=-\frac{M}{\gamma^4}(1-v_x\sin\theta\cos\phi-v_y\sin\theta\sin\phi-v_z\cos\theta)^{-3}
+\end{equation*}
+\begin{equation*}
+    \Psi_2^\circ=-\frac{M(1-v_x^2-v_y^2-v_z^2)^2}{(1-v_x\sin\theta\cos\phi-v_y\sin\theta\sin\phi-v_z\cos\theta)^3}
+\end{equation*}
+\begin{equation*}
+    \Psi_2^\circ=-\frac{M(\frac{M^2-p_x^2-p_y^2-p_z^2}{M^2})^2}
+    {(\frac{M-p_x\sin\theta\cos\phi-p_y\sin\theta\sin\phi-p_z\cos\theta}{M})^3}
+\end{equation*}
+\begin{equation*}
+    \Psi_2^\circ=-\frac{(M^2-p_x^2-p_y^2-p_z^2)^2}
+    {(M-p_x\sin\theta\cos\phi-p_y\sin\theta\sin\phi-p_z\cos\theta)^3}
+\end{equation*}
+\begin{align*}
+    \frac{\partial}{\partial t}\Psi_2^\circ&=
+    -\frac{2(M^2-p_x^2-p_y^2-p_z^2)
+    (2M\frac{\partial M}{\partial t}-2p_x\frac{\partial p_x}{\partial t}-2p_y\frac{\partial p_y}{\partial t}-2p_z\frac{\partial p_z}{\partial t})}
+    {(M-p_x\sin\theta\cos\phi-p_y\sin\theta\sin\phi-p_z\cos\theta)^3}\\
+    &-\frac{-3(M^2-p_x^2-p_y^2-p_z^2)^2
+    (\frac{\partial M}{\partial t}-\frac{\partial p_x}{\partial t}\sin\theta\cos\phi-\frac{\partial p_y}{\partial t}\sin\theta\sin\phi-\frac{\partial p_z}{\partial t}\cos\theta)}
+    {(M-p_x\sin\theta\cos\phi-p_y\sin\theta\sin\phi-p_z\cos\theta)^4}
+\end{align*}
+\begin{align*}
+    \frac{\partial}{\partial t}\Psi_2^\circ&=
+    -\frac{4
+    (M\frac{\partial M}{\partial t}-p_x\frac{\partial p_x}{\partial t}-p_y\frac{\partial p_y}{\partial t}-p_z\frac{\partial p_z}{\partial t})}
+    {M}\\
+    &+3(\frac{\partial M}{\partial t}-\frac{\partial p_x}{\partial t}\sin\theta\cos\phi-\frac{\partial p_y}{\partial t}\sin\theta\sin\phi-\frac{\partial p_z}{\partial t}\cos\theta)
+\end{align*}
+\begin{align*}
+    \frac{\partial}{\partial t}\Psi_2^\circ&=-\frac{\partial M}{\partial t}
+    -3(\frac{\partial p_x}{\partial t}\sin\theta\cos\phi+\frac{\partial p_y}{\partial t}\sin\theta\sin\phi+\frac{\partial p_z}{\partial t}\cos\theta)
+\end{align*}
+\begin{align*}
+    \frac{\partial}{\partial t}\Psi_2^\circ&=\frac{\partial E_\text{GW}}{\partial t}
+    -3(\frac{\partial p_x}{\partial t}\sin\theta\cos\phi+\frac{\partial p_y}{\partial t}\sin\theta\sin\phi+\frac{\partial p_z}{\partial t}\cos\theta)
+\end{align*}
+\begin{equation*}
+    l=2,\quad\vec{p}=0
+\end{equation*}
+\begin{equation*}
+    \frac{\partial}{\partial t}\Psi_2=\frac{\partial E_\text{GW}}{\partial t}=\frac{D^2}{16\pi}(\left\lvert\dot{h}_{2-2}\right\rvert^2+\left\lvert\dot{h}_{22}\right\rvert^2)=\frac{D^2}{8\pi}\left\lvert\dot{h}_{22}\right\rvert^2
+\end{equation*}
+\begin{align*}
+    h_{20}\vert_{t_1}^{t_2}&=-\frac{1}{\sqrt{24}}\Re\left[
+        \frac{4}{D}\left(\int_{t_1}^{t_2}\frac{D^2}{8\pi}\left\lvert\dot{h}_{22}\right\rvert^2\,dt\right)
+        \left(\int[{}^0Y_{20}]\sin\theta\,d\theta d\phi\right)
+        +D\dots\times\left(\int_{t_1}^{t_2}\ddot{h}\bar{h}\right)
+    \right]\\
+    &=-\frac{1}{\sqrt{24}}\Re\left[
+        D\dots\times\left(\int_{t_1}^{t_2}\ddot{h}\bar{h}\right)
+    \right]\\
+    &=-\frac{1}{\sqrt{24}}\Re\left[
+        D\sum_{\substack{-2\le{m'}\le{2}\\m'\ne0}}\sum_{\substack{-2\le{m''}\le{2}\\m''\ne0}}
+        G_{222m'-m''0}\left(\int_{t_1}^{t_2}\ddot{h}_{2m'}\bar{h}_{2m''}\,dt\right)
+    \right]\\
+    &=-\frac{1}{\sqrt{24}}\Re\left[D
+        [G_{222-220}\left(\int_{t_1}^{t_2}\ddot{h}_{2-2}\bar{h}_{2-2}\,dt\right)
+        +G_{2222-20}\left(\int_{t_1}^{t_2}\ddot{h}_{22}\bar{h}_{22}\,dt\right)]
+    \right]\\
+    &=\frac{2G_{2222-20}D}{\sqrt{24}}
+    \left(\int_{t_1}^{t_2}\left\lvert\dot{h}_{22}\right\rvert^2\,dt\right)\\
+    &=\frac{16\pi G_{2222-20}}{\sqrt{24}D}
+    \left(\int_{t_1}^{t_2}\frac{D^2}{8\pi}\left\lvert\dot{h}_{22}\right\rvert^2\,dt\right)\\
+    &=\frac{8\pi }{\sqrt{6}}G_{2222-20}\frac{E_\text{GW}\vert_{t_1}^{t_2}}{D}
+\end{align*}
+\begin{align*}
+    G_{2222-20}
+    &=\int[{}^{-2}Y_{22}][{}^{-2}\overline{Y}_{22}][{}^{0}\overline{Y}_{20}]\sin\theta\,d\theta d\phi\\
+    &=\int[\frac{1}{2}\sqrt{\frac{15}{48\pi}}(1+\cos\theta)^2e^{2i\phi}]
+    [\frac{1}{2}\sqrt{\frac{15}{48\pi}}(1+\cos\theta)^2e^{-2i\phi}]
+    [\frac{1}{2}\sqrt{\frac{5}{4\pi}}(3\cos^2\theta-1)]\sin\theta\,d\theta d\phi\\
+    &=\frac{\sqrt{5}}{7\sqrt{\pi}}
+\end{align*}
+\begin{equation*}
+    h_{20}\vert_{t_1}^{t_2}=\frac{8}{7}\sqrt{\frac{5\pi}{6}}\frac{E_\text{GW}\vert_{t_1}^{t_2}}{D}
+\end{equation*}
+\begin{equation*}
+    \dot{h}_{20}=\frac{8}{7}\sqrt{\frac{5\pi}{6}}\frac{L_\text{GW}}{D}
+    =\frac{32\pi}{7}\sqrt{\frac{5\pi}{6}}\bar{F}_\text{GW}D
+\end{equation*}
+\section{Waveform}
+\begin{align*}
+    h_{22}&=\int h\left[{}^{-2}\overline{Y}_{22}\right]dS\\
+    &=\iint\left\{\frac{2\nu M}{r}v^2(1+\cos^2\theta)\cos[2(\varphi-\phi)]
+    -i\frac{4\nu M}{r}v^2\cos\theta\sin[2(\varphi-\phi)]\right\}
+    \left[\frac{1}{2}\sqrt{\frac{15}{48\pi}}(1+\cos\theta)^2e^{-2i\phi}\right]\sin\theta\,d\theta\,d\phi\\
+    &=\frac{1}{2}\sqrt{\frac{15}{48\pi}}\frac{4\nu M}{r}v^2
+    \left\{\int\frac{1+\cos^2\theta}{2}(1+\cos\theta)^2\sin\theta\,d\theta
+    \int\cos[2(\varphi-\phi)]e^{-2i\phi}\,d\phi
+    -i\int\cos\theta(1+\cos\theta)^2\sin\theta\,d\theta
+    \int\sin[2(\varphi-\phi)]e^{-2i\phi}\,d\phi\right\}\\
+    &=\frac{1}{2}\sqrt{\frac{15}{48\pi}}\frac{4\nu M}{r}v^2
+    \left\{\left(\frac{28}{15}\right)
+    \left(\pi e^{-2i\varphi}\right)
+    -i\left(\frac{4}{3}\right)
+    \left(i\pi e^{-2i\varphi}\right)\right\}\\
+    &=\frac{1}{2}\sqrt{\frac{15}{48\pi}}\frac{4\nu M}{r}v^2
+    \left\{\frac{16}{5}\pi e^{-2i\varphi}\right\}\\
+    &=\frac{\sqrt{4\pi}}{5}\frac{4\nu M}{r}v^2e^{-2i\varphi}
+\end{align*}
+\begin{align*}
+    h_{2-2}&=\int h\left[{}^{-2}\overline{Y}_{2-2}\right]dS\\
+    &=\iint\left\{\frac{2\nu M}{r}v^2(1+\cos^2\theta)\cos[2(\varphi-\phi)]
+    -i\frac{4\nu M}{r}v^2\cos\theta\sin[2(\varphi-\phi)]\right\}
+    \left[\frac{1}{2}\sqrt{\frac{15}{48\pi}}(1-\cos\theta)^2e^{2i\phi}\right]\sin\theta\,d\theta\,d\phi\\
+    &=\frac{1}{2}\sqrt{\frac{15}{48\pi}}\frac{4\nu M}{r}v^2
+    \left\{\int\frac{1+\cos^2\theta}{2}(1-\cos\theta)^2\sin\theta\,d\theta
+    \int\cos[2(\varphi-\phi)]e^{2i\phi}\,d\phi
+    -i\int\cos\theta(1-\cos\theta)^2\sin\theta\,d\theta
+    \int\sin[2(\varphi-\phi)]e^{2i\phi}\,d\phi\right\}\\
+    &=\frac{1}{2}\sqrt{\frac{15}{48\pi}}\frac{4\nu M}{r}v^2
+    \left\{\left(\frac{28}{15}\right)
+    \left(\pi e^{2i\varphi}\right)
+    -i\left(-\frac{4}{3}\right)
+    \left(-i\pi e^{2i\varphi}\right)\right\}\\
+    &=\frac{1}{2}\sqrt{\frac{15}{48\pi}}\frac{4\nu M}{r}v^2
+    \left\{\frac{16}{5}\pi e^{2i\varphi}\right\}\\
+    &=\frac{\sqrt{4\pi}}{5}\frac{4\nu M}{r}v^2e^{2i\varphi}
+\end{align*}
+\begin{equation*}
+    \dot{h}_{22}=\frac{\sqrt{4\pi}}{5}\frac{4\nu M}{r}
+    (2v\frac{d v}{d\tau}e^{-2i\varphi}
+    -v^2e^{-2i\varphi}2i\frac{d \varphi}{d\tau})
+    \frac{d\tau}{d t}
+\end{equation*}
+\begin{equation*}
+    \dot{h}_{2-2}=\frac{\sqrt{4\pi}}{5}\frac{4\nu M}{r}
+    (2v\frac{d v}{d\tau}e^{2i\varphi}
+    +v^2e^{2i\varphi}2i\frac{d \varphi}{d\tau})
+    \frac{d\tau}{d t}
+\end{equation*}
+
+$\varphi=\frac{-1}{\nu\tau^{5}}\{1+(\frac{3715}{8064}+\frac{55}{96}\nu)\tau^{2}-\frac{3\pi}{4}\tau^{3}+(\frac{9275495}{14450688}+\frac{284875}{258048}\nu+\frac{1855}{2048}\nu^{2})\tau^{4}+(-\frac{38645}{172032}+\frac{65}{2048}\nu)\pi\tau^{5}\ln\tau+[\frac{831032450749357}{57682522275840}-\frac{53}{40}\pi^{2}-\frac{107}{56}(\gamma+\ln(2\tau))+(-\frac{126510089885}{4161798144}+\frac{2255}{2048}\pi^{2})\nu+\frac{154565}{1835008}\nu^{2}-\frac{1179625}{1769472}\nu^{3}]\tau^{6}+(\frac{188516689}{173408256}+\frac{488825}{516096}\nu-\frac{141769}{516096}\nu^{2})\pi\tau^{7}\}$
+
+$v^{2}=\frac{\tau^{2}}{4}\{1+(\frac{743}{4032}+\frac{11}{48}\nu)\tau^{2}-\frac{\pi}{5}\tau^{3}+(\frac{19583}{254016}+\frac{24401}{193536}\nu+\frac{31}{288}\nu^{2})\tau^{4}+(-\frac{11891}{53760}+\frac{109}{1920}\nu)\pi\tau^{5}+[-\frac{10052469856691}{6008596070400}+\frac{\pi^{2}}{6}+\frac{107}{420}(\gamma+\ln{2\tau})+(\frac{3147553127}{780337152}-\frac{451}{3072}\pi^{2})\nu-\frac{15211}{442368}\nu^{2}+\frac{25565}{331776}\nu^{3}]\tau^{6}+(-\frac{113868647}{433520640}-\frac{31821}{143360}\nu+\frac{294941}{3870720}\nu^{2})\pi\tau^{7}\}$
+
+$\tau=[\nu/(5M)]^{-1/8}(t_\text{c}-t)^{-1/8}$
+
+$\frac{d\tau}{d t}=(1/8)[\nu/(5M)]^{-1/8}(t_\text{c}-t)^{-1/8-1}$
+
+$\tau=[\nu/(5M)]^{-1/8}[-(t_?+t)]^{-1/8}$
+
+$\frac{d\tau}{d t}=(1/8)[\nu/(5M)]^{-1/8}[-(t_?+t)]^{-9/8}$
+
+$\tau=[\nu/(5M)]^{-1/8}[-t_?-t]^{-1/8}$
+
+$\frac{d\tau}{d t}=(1/8)[\nu/(5M)]^{-1/8}[-t_?-t]^{-9/8}$
+
+$\tau=[\nu/(5M)]^{-1/8}[-t_?]^{-1/8}\frac{[-t_?-t]^{-1/8}}{[-t_?]^{-1/8}}$
+
+$\frac{d\tau}{d t}=(1/8)[\nu/(5M)]^{-1/8}[-t_?]^{-9/8}\frac{[-t_?-t]^{-9/8}}{[-t_?]^{-9/8}}$
+
+$\tau=[\nu/(5M)]^{-1/8}[-t_?]^{-1/8}[1+\frac{t}{t_?}]^{-1/8}$
+
+$\frac{d\tau}{d t}=(1/8)[\nu/(5M)]^{-1/8}[-t_?]^{-9/8}[1+\frac{t}{t_?}]^{-9/8}$
+\end{document}
+------------------------------------------------------------------------------------------------------------------------
+\begin{equation*}
+    p^a=u^i\quad q^a=-w^i
+\end{equation*}
+Angular resolution of the LISA gravitational wave detector
+\begin{equation*}
+    p_ap_b-q_aq_b=-(w_iw_j-u_iu_j)\quad p_aq_b+q_ap_b=-(w_iu_j+w_ju_i)
+\end{equation*}
+
+\begin{equation*}
+    h_+=\Re[h]=\frac{2\nu M}{r}v^2(1+\cos^2\theta)\cos[2(\varphi-\phi)]\quad
+    h_\times=-\Im[h]=\frac{4\nu M}{r}v^2\cos\theta\sin[2(\varphi-\phi)]
+\end{equation*}
+GW Schutz \& arXiv:0806.1037v2 [gr-qc]
+\begin{equation*}
+    h=\sum\sum\left(h_{lm}\left[{}^{-2}Y_{lm}\right]\right)
+\end{equation*}
+\begin{align*}
+    h_{22}&=\int h\left[{}^{-2}\overline{Y}_{22}\right]dS\\
+    &=\iint\left\{\frac{2\nu M}{r}v^2(1+\cos^2\theta)\cos[2(\varphi-\phi)]
+    -i\frac{4\nu M}{r}v^2\cos\theta\sin[2(\varphi-\phi)]\right\}
+    \left[\frac{1}{2}\sqrt{\frac{15}{48\pi}}(1+\cos\theta)^2e^{-2i\phi}\right]
+    \sin\theta\,d\theta\,d\phi\\
+    &=\frac{1}{2}\sqrt{\frac{15}{48\pi}}\frac{4\nu M}{r}v^2
+    \left\{\int\frac{1+\cos^2\theta}{2}(1+\cos\theta)^2\sin\theta\,d\theta
+    \int\cos[2(\varphi-\phi)]e^{-2i\phi}\,d\phi
+    -i\int\cos\theta(1+\cos\theta)^2\sin\theta\,d\theta
+    \int\sin[2(\varphi-\phi)]e^{-2i\phi}\,d\phi\right\}\\
+    &=\frac{1}{2}\sqrt{\frac{15}{48\pi}}\frac{4\nu M}{r}v^2
+    \left\{\left(\frac{28}{15}\right)
+    \left(\pi e^{-2i\varphi}\right)
+    -i\left(\frac{4}{3}\right)
+    \left(i\pi e^{-2i\varphi}\right)\right\}\\
+    &=\frac{1}{2}\sqrt{\frac{15}{48\pi}}\frac{4\nu M}{r}v^2
+    \left\{\frac{16}{5}\pi e^{-2i\varphi}\right\}\\
+    &=\frac{\sqrt{4\pi}}{5}\frac{4\nu M}{r}v^2e^{-2i\varphi}
+\end{align*}
+
+\begin{equation*}
+    h_+=\Re[h]=\frac{4\nu M}{r}v^2\cos[2\varphi]\quad
+    h_\times=-\Im[h]=\frac{4\nu M}{r}v^2\sin[2\varphi]
+\end{equation*}
+arXiv:2203.08998v1 [gr-qc]

@@ -1,0 +1,233 @@
+%\documentclass[aspectratio=169]{ctexbeamer}
+\documentclass{ctexbeamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{marginnote}
+\usepackage{syntonly}
+\usepackage{textcomp}
+\usepackage{verbatim}
+\usepackage{ulem}
+%\syntaxonly
+%\geometry{a5paper}
+\hyphenation{}
+\normalem
+\hypersetup{
+    colorlinks,
+    linkcolor=blue,
+    filecolor=pink,
+    urlcolor=cyan,
+    citecolor=red,
+}
+\def\b{\boldsymbol}
+\def\d{\mathrm{d}}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\atanxy}{atan2}
+\title{$\dot{h}_{20}$ of Inspiral Binary}
+\author{Gasin An}
+\date{}
+\begin{document}
+    \begin{frame}
+        \titlepage
+    \end{frame}
+    \begin{frame}
+        If $\dot{h}_{l0}\approx0$,
+        \small
+        \begin{equation}
+            h_{l0}\vert_{t_1}^{t_2}=\dots\Re\left[
+            \frac{4}{D}\int\Psi_2^\circ\vert_{t_1}^{t_2}\dots\,d\theta d\phi
+            -D\dots\times\left(
+            \int_{t_1}^{t_2}\dot{h}\dot{\bar{h}}\,dt
+            -(\dot{h}\bar{h})\vert_{t_1}^{t_2}
+            \right)
+            \right].
+        \end{equation}
+        \begin{align}
+            \left(
+            \int_{t_1}^{t_2}\dot{h}\dot{\bar{h}}\,dt
+            -(\dot{h}\bar{h})\vert_{t_1}^{t_2}
+            \right)
+            &=\left(
+            \int_{t_1}^{t_2}\dot{h}\dot{\bar{h}}\,dt
+            -\int_{t_1}^{t_2}(\ddot{h}\bar{h}+\dot{h}\dot{\bar{h}})\,dt
+            \right)\\
+            &=-\left(
+            \int_{t_1}^{t_2}\ddot{h}\bar{h}\,dt
+            \right),
+        \end{align}
+        \begin{align}
+            h_{l0}\vert_{t_1}^{t_2}&=\dots\Re\left[
+            \frac{4}{D}\int\Psi_2^\circ\vert_{t_1}^{t_2}\dots\,d\theta d\phi
+            +D\dots\times\left(
+            \int_{t_1}^{t_2}\ddot{h}\bar{h}\,dt
+            \right)
+            \right]\\
+            &=\dots\Re\left[
+            \frac{4}{D}\int\left(\int_{t_1}^{t_2}\frac{\partial\Psi_2^\circ}{\partial t}\,dt\right)\dots\,d\theta d\phi
+            +D\dots\times\left(
+            \int_{t_1}^{t_2}\ddot{h}\bar{h}\,dt
+            \right)
+            \right]\\
+            &=\dots\Re\left[
+            \frac{4}{D}\int_{t_1}^{t_2}\left(\int\frac{\partial\Psi_2^\circ}{\partial t}\dots\,d\theta d\phi\right)\,dt
+            +D\dots\times\int_{t_1}^{t_2}\ddot{h}\bar{h}\,dt
+            \right].
+        \end{align}
+    \end{frame}
+    \begin{frame}
+        \begin{align}
+            \Psi_2^\circ&=-\frac{M}{\gamma^4}(1-v_x\sin\theta\cos\phi-v_y\sin\theta\sin\phi-v_z\cos\theta)^{-3}\\
+            &=-\frac{M(1-v_x^2-v_y^2-v_z^2)^2}{(1-v_x\sin\theta\cos\phi-v_y\sin\theta\sin\phi-v_z\cos\theta)^3}\\
+            &=-\frac{M(\frac{M^2-p_x^2-p_y^2-p_z^2}{M^2})^2}
+            {(\frac{M-p_x\sin\theta\cos\phi-p_y\sin\theta\sin\phi-p_z\cos\theta}{M})^3}\quad(\vec{p}:=M\vec{v})\\
+            &=-\frac{(M^2-p_x^2-p_y^2-p_z^2)^2}
+            {(M-p_x\sin\theta\cos\phi-p_y\sin\theta\sin\phi-p_z\cos\theta)^3},
+        \end{align}
+    \end{frame}
+    \begin{frame}
+        \scriptsize
+        \begin{equation*}
+            \Psi_2^\circ=-\frac{(M^2-p_x^2-p_y^2-p_z^2)^2}
+            {(M-p_x\sin\theta\cos\phi-p_y\sin\theta\sin\phi-p_z\cos\theta)^3},
+        \end{equation*}
+        \begin{align}
+            \frac{\partial\Psi_2^\circ}{\partial t}&=
+            -\frac{2(M^2-p_x^2-p_y^2-p_z^2)
+            (2M\frac{dM}{dt}-2p_x\frac{dp_x}{dt}-2p_y\frac{dp_y}{dt}-2p_z\frac{dp_z}{dt})}
+            {(M-p_x\sin\theta\cos\phi-p_y\sin\theta\sin\phi-p_z\cos\theta)^3}\nonumber\\
+            &-\frac{-3(M^2-p_x^2-p_y^2-p_z^2)^2
+            (\frac{dM}{dt}-\frac{dp_x}{dt}\sin\theta\cos\phi-\frac{dp_y}{dt}\sin\theta\sin\phi-\frac{dp_z}{dt}\cos\theta)}
+            {(M-p_x\sin\theta\cos\phi-p_y\sin\theta\sin\phi-p_z\cos\theta)^4}.
+        \end{align}
+        \normalsize
+        If $\left\lvert\vec{p}\right\rvert\approx E_\text{GW}\ll M$, $\left\lvert\frac{d\vec{p}}{dt}\right\rvert\approx\frac{dE_\text{GW}}{dt}$,
+        \scriptsize
+        \begin{align}
+            \frac{\partial\Psi_2^\circ}{\partial t}&=
+            -\frac{2(M^2)
+            (2M\frac{dM}{dt})}
+            {(M)^3}\nonumber\\
+            &-\frac{-3(M^2)^2
+            (\frac{dM}{dt}-\frac{dp_x}{dt}\sin\theta\cos\phi-\frac{dp_y}{dt}\sin\theta\sin\phi-\frac{dp_z}{dt}\cos\theta)}
+            {(M)^4}.\\
+            &=-4\frac{dM}{dt}+3(\frac{dM}{dt}-\frac{dp_x}{dt}\sin\theta\cos\phi-\frac{dp_y}{dt}\sin\theta\sin\phi-\frac{dp_z}{dt}\cos\theta),\\
+            &=-\frac{dM}{dt}-3(\frac{dp_x}{dt}\sin\theta\cos\phi-\frac{dp_y}{dt}\sin\theta\sin\phi-\frac{dp_z}{dt}\cos\theta).
+        \end{align}
+    \end{frame}
+    \begin{frame}
+        \begin{equation*}
+            \frac{\partial\Psi_2^\circ}{\partial t}=-\frac{dM}{dt}-3(\frac{dp_x}{dt}\sin\theta\cos\phi-\frac{dp_y}{dt}\sin\theta\sin\phi-\frac{dp_z}{dt}\cos\theta).
+        \end{equation*}
+        \begin{equation}
+            \frac{4}{D}\int_{t_1}^{t_2}\left(\int\frac{\partial\Psi_2^\circ}{\partial t}[{}^0\!Y_{l0}]\sin\theta\,d\theta d\phi\right)\,dt=0.
+        \end{equation}
+        \begin{equation*}
+            \int_0^{\pi}\left[{}^0\!Y_{l0}\right]\sin\theta\,d\theta\propto\int_{-1}^{1}P_l(x)\,dx\propto\int_{-1}^{1}P_l(x)P_0(x)\,dx=0,
+        \end{equation*}
+        \begin{equation*}
+            \int_0^{2\pi}\cos\phi\,d\phi=0,\quad\int_0^{2\pi}\sin\phi\,d\phi=0,
+        \end{equation*}
+        \begin{equation*}
+            \int_0^{\pi}\left[{}^0\!Y_{l0}\right]\cos\theta\sin\theta\,d\theta\propto\int_{-1}^{1}P_l(x)x\,dx\propto\int_{-1}^{1}P_l(x)P_1(x)\,dx=0.
+        \end{equation*}
+    \end{frame}
+    \begin{frame}
+        \small
+        \begin{align}
+            h_{l0}\vert_{t_1}^{t_2}&=\sqrt{\frac{(l-2)!}{(l+2)!}}D\,\Re\left[
+            \sum_{\substack{l'\geqslant2\\l''\geqslant2\\0<\left\lvert m'\right\rvert\leqslant l'\\0<\left\lvert m''\right\rvert\leqslant l''}}
+            \Gamma^{2-20}_{l'l''lm'-m''0}\left(-\int_{t_1}^{t_2}\ddot{h}_{l'm'}\bar{h}_{l''m''}\,dt\right)
+            \right],
+        \end{align}
+        \begin{equation}
+            -\int_{t_1}^{t_2}\ddot{h}_{l'm'}\bar{h}_{l''m''}\,dt=\int_{t_1}^{t_2}\dot{h}_{l'm'}\dot{\bar{h}}_{l''m''}\,dt-(\dot{h}_{l'm'}\bar{h}_{l''m''})\vert_{t_1}^{t_2}.
+        \end{equation}
+        \normalsize
+        If (2,2) mode dominants,
+        \small
+        \begin{align}
+            h_{l0}\vert_{t_1}^{t_2}&=-2\sqrt{\frac{(l-2)!}{(l+2)!}}\Gamma^{2-20}_{22l2-20}D\,\Re\left[
+            \int_{t_1}^{t_2}\ddot{h}_{22}\bar{h}_{22}\,dt
+            \right]\\
+            &=2\sqrt{\frac{(l-2)!}{(l+2)!}}\Gamma^{2-20}_{22l2-20}D\,\Re\left[
+            \int_{t_1}^{t_2}\dot{h}_{22}\dot{\bar{h}}_{22}\,dt-(\dot{h}_{22}\bar{h}_{22})\vert_{t_1}^{t_2}
+            \right].
+        \end{align}
+        This formula is used in code.
+    \end{frame}
+    \begin{frame}
+        If $f_\text{GW}\approx\text{const}$,
+        $\int_{t_1}^{t_2}\ddot{h}_{22}\bar{h}_{22}\,dt
+        =-\int_{t_1}^{t_2}\dot{h}_{22}\dot{\bar{h}}_{22}\,dt
+        =-\int_{t_1}^{t_2}\left\lvert\dot{h}_{22}\right\rvert^2\,dt$,
+        ($\left\lvert\int_{t_1}^{t_2}\ddot{h}_{22}\bar{h}_{22}\,dt+\int_{t_1}^{t_2}\dot{h}_{22}\dot{\bar{h}}_{22}\,dt\right\rvert
+        =\left\lvert(\dot{h}_{22}\bar{h}_{22})\vert_{t_1}^{t_2}\right\rvert\ll\int_{t_1}^{t_2}\left\lvert\dot{h}_{22}\right\rvert^2\,dt$),
+        \begin{equation}
+            h_{l0}\vert_{t_1}^{t_2}=2\sqrt{\frac{(l-2)!}{(l+2)!}}\Gamma^{2-20}_{22l2-20}D\!\int_{t_1}^{t_2}\left\lvert\dot{h}_{22}\right\rvert^2\,dt.
+        \end{equation}
+    \end{frame}
+    \begin{frame}
+        By the way,
+        \small
+        \begin{equation}
+            h=\sum h_{lm}\left[{}^0\!Y_{lm}\right],
+        \end{equation}
+        \begin{equation}
+            \dot{h}=\sum \dot{h}_{lm}\left[{}^0\!Y_{lm}\right],
+        \end{equation}
+        \begin{equation}
+            \dot{\bar{h}}\dot{h}=\sum\overline{\left[{}^0\!Y_{\tilde{l}\tilde{m}}\right]}\dot{\bar{h}}_{\tilde{l}\tilde{m}}\dot{h}_{lm}\left[{}^0\!Y_{lm}\right],
+        \end{equation}
+        \begin{equation}
+            \int\frac{\left\lvert\dot{h}\right\rvert^2}{16\pi}D^2\sin\theta\,d\theta d\phi
+            =\int\sum\overline{\left[{}^0\!Y_{\tilde{l}\tilde{m}}\right]}\frac{\dot{\bar{h}}_{\tilde{l}\tilde{m}}\dot{h}_{lm}}{16\pi}\left[{}^0\!Y_{lm}\right]D^2\sin\theta\,d\theta d\phi,
+        \end{equation}
+        \begin{equation}
+            \frac{d E_\text{GW}}{dt}
+            =D^2\sum\left(\frac{\dot{\bar{h}}_{\tilde{l}\tilde{m}}\dot{h}_{lm}}{16\pi}\int\overline{\left[{}^0\!Y_{\tilde{l}\tilde{m}}\right]}\left[{}^0\!Y_{lm}\right]\sin\theta\,d\theta d\phi\right),
+        \end{equation}
+        \begin{equation}
+            \frac{d E_\text{GW}}{dt}
+            =\frac{D^2}{16\pi}\sum\left\lvert \dot{h}_{lm}\right\rvert^2.
+        \end{equation}
+    \end{frame}
+    \begin{frame}
+        \begin{equation}
+            L_\text{GW}=\frac{d E_\text{GW}}{dt}
+            =\frac{D^2}{16\pi}\sum\left\lvert \dot{h}_{lm}\right\rvert^2,
+        \end{equation}
+        \begin{equation}
+            \bar{F}_\text{GW}:=\frac{L_\text{GW}}{4\pi D^2}=\frac{1}{64\pi^2}\sum\left\lvert \dot{h}_{lm}\right\rvert^2.
+        \end{equation}
+
+        If (2,2) mode dominants,
+        \begin{equation}
+            L_\text{GW}=\frac{D^2}{8\pi}\left\lvert\dot{h}_{22}\right\rvert^2,
+        \end{equation}
+        \begin{equation}
+            \bar{F}_\text{GW}=\frac{1}{32\pi^2}\left\lvert\dot{h}_{22}\right\rvert^2.
+        \end{equation}
+    \end{frame}
+    \begin{frame}
+        \begin{equation*}
+            h_{l0}\vert_{t_1}^{t_2}=2\sqrt{\frac{(l-2)!}{(l+2)!}}\Gamma^{2-20}_{22l2-20}D\!\int_{t_1}^{t_2}\left\lvert\dot{h}_{22}\right\rvert^2\,dt,
+        \end{equation*}
+        \begin{align}
+            \dot{h}_{l0}&=2\sqrt{\frac{(l-2)!}{(l+2)!}}\Gamma^{2-20}_{22l2-20}D\left\lvert\dot{h}_{22}\right\rvert^2\\
+            &=64\pi^2\sqrt{\frac{(l-2)!}{(l+2)!}}\Gamma^{2-20}_{22l2-20}\bar{F}_\text{GW}D\\
+            &=16\pi\sqrt{\frac{(l-2)!}{(l+2)!}}\Gamma^{2-20}_{22l2-20}\frac{L_\text{GW}}{D}
+        \end{align}
+    \end{frame}
+    \begin{frame}
+        If $l=2$, $\Gamma^{2-20}_{2222-20}=\frac{1}{7}\sqrt{\frac{5}{\pi}}$,
+        \begin{equation}
+            \dot{h}_{20}
+            =\frac{8}{7}\sqrt{\frac{5\pi}{6}}\frac{L_\text{GW}}{D}
+            =\frac{32\pi}{7}\sqrt{\frac{5\pi}{6}}\bar{F}_\text{GW}D
+            =\frac{1}{7}\sqrt{\frac{5}{6\pi}}D\left\lvert\dot{h}_{22}\right\rvert^2.
+        \end{equation}
+    \end{frame}
+\end{document}
