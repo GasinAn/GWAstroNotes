@@ -71,13 +71,17 @@ $\Omega=A_0\cup A_m$, $A_0$为事件``无信号'', $A_m$为事件``有信号'', 
 \begin{equation}
     \tilde{q}(f):=\int_{-\infty}^{\infty}q(t)e^{2\pi ift}\,\d t,
 \end{equation}
-$\vec{\mu}$估计为$\hat{\vec{\mu}}$,
 \begin{equation}
-    \frac{\p\ln p^{(0)}(\vec{\mu})}{\p \vec{\mu}}|_{\vec{\mu}=\hat{\vec{\mu}}}+\left\langle \frac{\p m_{\vec{\mu}}}{\p \vec{\mu}}|_{\vec{\mu}=\hat{\vec{\mu}}}(t)\bigg|g(t)-m_{\vec{\mu}}|_{\vec{\mu}=\hat{\vec{\mu}}}(t)\right\rangle=0,
+    \frac{\p}{\p\vec{\mu}}\left\langle 
+        m_{\vec{\mu}}(t)-g(t)|m_{\vec{\mu}}(t)-g(t)
+    \right\rangle =\left\langle \frac{\p }{\p \vec{\mu}}m_{\vec{\mu}}(t)|m_{\vec{\mu}}(t)-g(t)\right\rangle,
 \end{equation}
-高SNR, 
+$\mu^a$估计为$\hat{\mu}^a$, 高SNR,
 \begin{equation}
-    \Gamma_{ab}:=\left\langle m_{,a}(t)|m_{,b}(t)\right\rangle
+    \left\langle m_{,a}(t;\mu^b)|g(t)-m(t;\mu^b)\right\rangle|_{\mu^b=\hat{\mu}^b}=0,
+\end{equation}
+\begin{equation}
+    \Gamma_{ab}:=\left\langle m_{,a}(t)|m_{,b}(t)\right\rangle,
 \end{equation}
 \begin{equation}
     p({A_{\mu^a}}|A_g\cap A_m)\propto p^{(0)}({\mu^a})\exp[
