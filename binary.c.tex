@@ -24,8 +24,26 @@
 
 \cite{Poisson1995}, if $\zeta(t)$ varies slowly near $t=t_0$ where the phase has a stationary point: $\phi'(t_0)=0$,
 \begin{align}
-    \int\zeta(t)e^{i\phi(t;f)}\,\d t&=\int\zeta(t)e^{i[\phi(t_0;f)+\phi'(t_0;f)(t-t_0)+\frac{1}{2}\phi''(t_0;f)(t-t_0)^2+\dots]}\,\d t\\
-    &\simeq e^{i\phi(t_0;f)}\int\zeta(t)e^{i[\frac{1}{2}\phi''(t_0;f)(t-t_0)^2]}\,\d t\\
-    &\simeq e^{i\phi(t_0;f)}\int\zeta(t_0)e^{\frac{-\sqrt{-i\phi''(t_0;f)}^2(t-t_0)^2}{2}}\,\d t\\
-    &=\frac{\sqrt{2\pi}}{\sqrt{-i\phi''(t_0;f)}}\zeta(t_0)e^{i\phi(t_0;f)}.
+    \int\zeta(t)e^{i\phi(t;f)}\,\d t&=\int\zeta(t)e^{i[\phi(t_0)+\phi'(t_0)(t-t_0)+\frac{1}{2}\phi''(t_0)(t-t_0)^2+\dots]}\,\d t\\
+    &\simeq e^{i\phi(t_0)}\int\zeta(t)e^{i[\frac{1}{2}\phi''(t_0)(t-t_0)^2]}\,\d t\\
+    &\simeq e^{i\phi(t_0)}\int\zeta(t_0)e^{\frac{-\sqrt{-i\phi''(t_0)}^2(t-t_0)^2}{2}}\,\d t\\
+    &=\frac{\sqrt{2\pi}}{\sqrt{-i\phi''(t_0)}}\zeta(t_0)e^{i\phi(t_0)}.
 \end{align}
+\begin{align}
+    h&=\frac{\mathcal{M}}{D}[\pi \mathcal{M}F(t)]^{2/3}Q\cos\Phi(t)\\
+    &=\frac{\mathcal{M}}{D}[\pi \mathcal{M}F(t)]^{2/3}Q\frac{1}{2}[e^{i\Phi(t)}+e^{-i\Phi(t)}]
+\end{align}
+\begin{align}
+    \tilde{h}(f)&=\int h(t)e^{i2\pi ft}\,\d t\\
+    &=\int \frac{\mathcal{M}}{D}[\pi \mathcal{M}F(t)]^{2/3}Q\frac{1}{2}[e^{i\Phi(t)}+e^{-i\Phi(t)}]e^{i2\pi ft}\,\d t\\
+    &=\int\frac{\mathcal{M}}{D}[\pi \mathcal{M}F(t)]^{2/3}Q\frac{1}{2}\{e^{i[2\pi ft+\Phi(t)]}+e^{i[2\pi ft-\Phi(t)]}\}\,\d t\\
+    &\simeq\int\frac{\mathcal{M}}{D}[\pi \mathcal{M}F(t)]^{2/3}Q\frac{1}{2}e^{i[2\pi ft-\Phi(t)]}\,\d t\\
+    &=\int\frac{\mathcal{M}}{D}[\pi \mathcal{M}F]^{2/3}Q\frac{1}{2}e^{i[2\pi ft(F)-\Phi(F)]}\frac{\d t}{\d F}\,\d F\\
+    &\simeq\frac{\sqrt{2\pi}}{\sqrt{-i[2\pi ft(F)-\Phi(F)]''_{F=f}}}\\
+    &\left[\frac{\mathcal{M}}{D}(\pi \mathcal{M}F)^{2/3}Q\frac{1}{2}\frac{\d t}{\d F}\right]_{F=f}e^{i[2\pi ft(f)-\Phi(f)]}\\
+    &\simeq\frac{\sqrt{2\pi}}{\sqrt{-i\left\{2\pi f\left[-\frac{5}{256}\M(\pi \M F)^{-8/3}\right]-\left[\frac{1}{16}(\pi\M F)^{-5/3}\right]\right\}''_{F=f}}}\\
+    &\left\{\frac{\mathcal{M}}{D}(\pi \mathcal{M}F)^{2/3}Q\frac{1}{2}\left[\frac{5\pi\M^2}{96}(\pi\M F)^{-11/3}\right]\right\}_{F=f}e^{i[2\pi ft(f)-\Phi(f)]}\\
+    &=\frac{\sqrt{30}}{48\pi^{2/3}}\frac{\mathcal{M}^{5/6}Q}{D}f^{-7/6}e^{i[2\pi ft(f)-\Phi(f)-\frac{\pi}{4}]}\quad(\texttt{pnspa.py})
+\end{align}
+
+或\cite{Arun2005}, $h(t)=2A(t)\cos\phi(t)$, $\d\ln A/\d t\ll\d\phi/\d t$且$\left\lvert \d^2\phi/\d t^2\right\rvert \ll(\d\phi/\d t)^2$.
