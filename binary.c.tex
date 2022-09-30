@@ -7,11 +7,25 @@
     \M:=\mu^{3/5}M^{2/5}
 \end{equation}
 \begin{equation}
-    h_+=\frac{4\nu \M}{D}[\pi \M F(t)]^{2/3}\frac{1+\cos^2\iota}{2}\cos\Phi(t)
+    h_+=\frac{4\M}{D}[\pi \M F(t)]^{2/3}\frac{1+\cos^2\iota}{2}\cos\Phi(t)
 \end{equation}
 \begin{equation}
-    h_\times=\frac{4\nu \M}{D}[\pi \M F(t)]^{2/3}\cos\iota\sin\Phi(t)
+    h_\times=\frac{4\M}{D}[\pi \M F(t)]^{2/3}\cos\iota\sin\Phi(t)
 \end{equation}
 \begin{equation}
     h=F_+h_++F_\times h_\times
 \end{equation}
+
+\section{Post-Newtonian Approximation}
+
+2PN: \cite{Blanchet1995,Poisson1995}
+
+\section{Stationary Phase Approximation}
+
+\cite{Poisson1995}, if $\zeta(t)$ varies slowly near $t=t_0$ where the phase has a stationary point: $\phi'(t_0)=0$,
+\begin{align}
+    \int\zeta(t)e^{i\phi(t;f)}\,\d t&=\int\zeta(t)e^{i[\phi(t_0;f)+\phi'(t_0;f)(t-t_0)+\frac{1}{2}\phi''(t_0;f)(t-t_0)^2+\dots]}\,\d t\\
+    &\simeq e^{i\phi(t_0;f)}\int\zeta(t)e^{i[\frac{1}{2}\phi''(t_0;f)(t-t_0)^2]}\,\d t\\
+    &\simeq e^{i\phi(t_0;f)}\int\zeta(t_0)e^{\frac{-\sqrt{-i\phi''(t_0;f)}^2(t-t_0)^2}{2}}\,\d t\\
+    &=\frac{\sqrt{2\pi}}{\sqrt{-i\phi''(t_0;f)}}\zeta(t_0)e^{i\phi(t_0;f)}.
+\end{align}
