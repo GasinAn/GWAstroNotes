@@ -1,3 +1,4 @@
+%编译方式: xelatex -> bibtex -> xelatex*2
 \documentclass{ctexbook}
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -30,11 +31,10 @@
     \maketitle
     \include{copyright.tex}
     \tableofcontents
-    \include{GW.c.tex}
-    \include{binary.c.tex}
-    %\include{cosmology.c.tex}
-    \include{gravito-electromagnetism.c.tex}
-    \include{Fisher.c.tex}
+    \include{__chapter__/GW.tex}
+    \include{__chapter__/binary.tex}
+    \include{__chapter__/gravito-electromagnetism.tex}
+    \include{__chapter__/Fisher.tex}
     \bibliographystyle{abbrv}
     \bibliography{GWAstro}
 \end{document}
