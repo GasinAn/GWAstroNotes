@@ -346,31 +346,40 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \begin{equation}
     h=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{r}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
 \end{equation}
-设双星系统常量$c^*$, $\mu_\text{G}^*$, 则\footnote{$\mathcal{M}$和$c^*$, $\mu_\text{G}^*$简并, 所以可以笼统地仍记作$\mathcal{M}$.}
+设双星系统常量$c^*$, $\mu^*$, $\mu_\text{G}^*$, 一观者临近双星系统且与双星系统相对静止, 其与双星系统距离为$r$, 测得强度$h_r$, 频率$F_r$, 则\footnote{$\mathcal{M}$和$c^*$, $\mu_\text{G}^*$简并, 所以可以笼统地仍记作$\mathcal{M}$.}
 \begin{equation}
-    h=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{r/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
+    h_r=\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{r/c^*}Q(\theta,\phi,\psi,\iota)
 \end{equation}
-在双星系统参考系中, $S_\text{G}r^2\propto\omega^2h^2r^2/c\mu_\text{G}$守恒, $\omega$不变, 所以实验室处
+对与双星系统距离为$r$的观者而言, 引力辐射光度正比于$4\pi r^2(F_r^2 h_r^2/c^*\mu_\text{G}^*)$, 设地球观者与双星系统距离为$d$, 双星系统红移为$z$, 测得强度$h_d$, 频率$F_d$, 则对地球观者而言, 引力辐射光度正比于$4\pi d^2(F_d^2 h_d^2/c\mu_\text{G})$, 且是对与双星系统距离为$r$的观者而言的引力辐射光度的$1/(1+z)^2$倍, 所以$4\pi r^2(F_r^2 h_r^2/c^*\mu_\text{G}^*)/(1+z)^2=4\pi d^2(F_d^2 h_d^2/c\mu_\text{G})$,又有$F_d=F_r/(1+z)$, 所以$r^2(h_r^2/c^*\mu_\text{G}^*)=d^2(h_d^2/c\mu_\text{G})$, 则
+\begin{align}
+    h_d&=\sqrt{\frac{c\mu_\text{G}}{c^*\mu_\text{G}^*}}\frac{r^2}{d^2}h_r\\
+    &=\sqrt{\frac{c\mu_\text{G}}{c^*\mu_\text{G}^*}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)
+\end{align}
+所以地球观者测得
 \begin{equation}
-    h=\sqrt{\frac{c^*\mu_\text{G}^*}{c\mu_\text{G}}}\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
+    h=\sqrt{\frac{c\mu_\text{G}}{c^*\mu_\text{G}^*}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi \frac{F_r(t)}{1+z}\,\d t]
 \end{equation}
-实验室因红移, 实际测得
-\begin{equation}
-    h=\sqrt{\frac{c^*\mu_\text{G}^*}{c\mu_\text{G}}}\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi \frac{F(t)}{1+z}\,\d t]
-\end{equation}
-记$F_\text{obs}(t)=F(t)/(1+z)$, $\mathcal{M}_\text{obs}=\mathcal{M}(1+z)$, 光度距离$d_\text{L}=d_\text{L}(1+z)$, 则
-\begin{equation}
-    h=\sqrt{\frac{c^*\mu_\text{G}^*}{c\mu_\text{G}}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]
-\end{equation}
-则
-\begin{equation}
-    h=\sqrt{\frac{{c^{*3}}\mu_\text{G}^*}{c^3\mu_\text{G}}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]
-\end{equation}
+记$F_\text{obs}(t)=F_r(t)/(1+z)$, $\mathcal{M}_\text{obs}=\mathcal{M}(1+z)$, 光度距离$d_\text{L}=d(1+z)$, 则
+\begin{align}
+    h&=\sqrt{\frac{c\mu_\text{G}}{c^*\mu_\text{G}^*}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d(1+z)/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
+    &=\sqrt{\frac{c\mu_\text{G}}{c^*\mu_\text{G}^*}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
+    &=\sqrt{\frac{c^*\mu_\text{G}}{c\mu_\text{G}^*}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]
+\end{align}
 用引力波测距测得$d_\text{L,G}$, 则
 \begin{equation}
-    \frac{1}{d_\text{L,G}}=\sqrt{\frac{{c^{*3}}\mu_\text{G}^*}{c^3\mu_\text{G}}}\frac{1}{d_\text{L}}
+    d_\text{L,G}=d_\text{L}\sqrt{\frac{c\mu_\text{G}^*}{c^*\mu_\text{G}}}
 \end{equation}
 电磁波也有类似的效应, 用电磁波测距测得$d_\text{L,EM}$, 则
 \begin{equation}
-    \frac{1}{d_\text{L,EM}}=\sqrt{\frac{{c^{*3}}\mu^*}{c^3\mu}}\frac{1}{d_\text{L}}
+    d_\text{L,EM}=d_\text{L}\sqrt{\frac{c\mu^*}{c^*\mu}}
+\end{equation}
+即
+\begin{equation}
+    \frac{d_\text{L,G}}{d_\text{L,EM}}
+    =\frac{\sqrt{\frac{\mu_\text{G}^*}{\mu_\text{G}}}}{\sqrt{\frac{\mu^*}{\mu}}}
+\end{equation}
+设$\mu^*=\mu$, 则
+\begin{equation}
+    \frac{d_\text{L,G}}{d_\text{L,EM}}
+    =\sqrt{\frac{\mu_\text{G}^*}{\mu_\text{G}}}
 \end{equation}
