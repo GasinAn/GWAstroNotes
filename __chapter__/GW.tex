@@ -370,3 +370,74 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     d_\text{L,G}=d_\text{L}\sqrt{\frac{c\mu_\text{G}^*}{c^*\mu_\text{G}}}
 \end{equation}
 电磁波也有类似的效应, 因为$c^*\ne c$, 似乎会认为用电磁波测距测得$d_\text{L,EM}\ne d_\text{L}$, 但猜测电磁效应和引力效应会是独立的, 所以$c^*$只是波源双星系统处的引力辐射传播速度, 波源双星系统处的电磁辐射传播速度仍为$c$, 因此认为用电磁波测距测得$d_\text{L,EM}=d_\text{L}$
+
+\subsection{fisher matrix}
+
+\cite{Poisson1995}
+\begin{equation}
+    h(t)=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{\eta\,d_\text{L}}Q(\text{angles})\cos\Phi(t)
+\end{equation}
+\begin{equation}
+    \tilde{h}(f)=\frac{\sqrt{30}}{48\pi^{2/3}}\frac{\mathcal{M}^{5/6}Q}{\eta\,d_\text{L}}f^{-7/6}e^{i[2\pi ft(f)-\Phi(f)-\frac{\pi}{4}]}
+\end{equation}
+\begin{equation}
+    p(\mu)\propto p^{(0)}(\mu)\exp[
+        -\frac{1}{2}\Gamma_{ab}(\mu^a-\hat{\mu}^a)(\mu^b-\hat{\mu}^b)
+    ]
+\end{equation}
+\begin{equation}
+    p^{(0)}(\mu)\propto\exp[
+        -\frac{1}{2}\Gamma^{(0)}_{ab}(\mu^a-\bar{\mu}^a)(\mu^b-\bar{\mu}^b)
+    ]
+\end{equation}
+\begin{equation}
+    \mu=(\ln\eta,\ln d_\text{L},\ln Q,f_0t_\text{c},\phi_\text{c},\ln\mathcal{M})
+\end{equation}
+\begin{equation}
+    \tilde{h}_{,1}=-\tilde{h}
+\end{equation}
+\begin{equation}
+    \tilde{h}_{,2}=-\tilde{h}
+\end{equation}
+\begin{equation}
+    \tilde{h}_{,3}=\tilde{h}
+\end{equation}
+\begin{equation}
+    \tilde{h}_{,4}=2\pi i(f/f_0)\tilde{h}
+\end{equation}
+\begin{equation}
+    \tilde{h}_{,5}=-i\tilde{h}
+\end{equation}
+\begin{equation}
+    \tilde{h}_{,6}=-\frac{5i}{128}(\pi\mathcal{M}f)^{-5/3}\tilde{h}
+\end{equation}
+\begin{equation}
+    \Gamma_{ab}=\begin{bmatrix}
+        \rho^2&\rho^2&-\rho^2&0&0&0\\
+        \rho^2&\rho^2&-\rho^2&0&0&0\\
+        -\rho^2&-\rho^2&\rho^2&0&0&0\\
+        0&0&0&?&?&?\\
+        0&0&0&?&?&?\\
+        0&0&0&?&?&?\\
+    \end{bmatrix}
+\end{equation}
+\begin{equation}
+    \Gamma^{(0)}_{ab}=\begin{bmatrix}
+        0&0&0&0&0&0\\
+        0&1/\sigma_{\ln d_\text{L}}^2&0&0&0&0\\
+        0&0&1/\sigma_{\ln Q}^2&0&0&0\\
+        0&0&0&0&0&0\\
+        0&0&0&0&0&0\\
+        0&0&0&0&0&0\\
+    \end{bmatrix}
+\end{equation}
+\begin{equation}
+    \Sigma_{ab}=\begin{bmatrix}
+        \begin{bmatrix}
+            \rho^2&\rho^2&-\rho^2\\
+\rho^2&\rho^2+1/\sigma_{\ln d_\text{L}}^2&-\rho^2\\
+-\rho^2&-\rho^2&\rho^2+1/\sigma_{\ln Q}^2
+        \end{bmatrix}^{-1}&0\\
+        0&[?]^{-1}
+    \end{bmatrix}
+\end{equation}
