@@ -375,10 +375,10 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 
 \cite{Poisson1995}
 \begin{equation}
-    h(t)=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{\eta\,d_\text{L}}Q(\text{angles})\cos\Phi(t)
+    h(t)=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{\xi\,d_\text{L}}Q(\text{angles})\cos\Phi(t)
 \end{equation}
 \begin{equation}
-    \tilde{h}(f)=\frac{\sqrt{30}}{48\pi^{2/3}}\frac{\mathcal{M}^{5/6}Q}{\eta\,d_\text{L}}f^{-7/6}e^{i[2\pi ft(f)-\Phi(f)-\frac{\pi}{4}]}
+    \tilde{h}(f)=\frac{\sqrt{30}}{48\pi^{2/3}}\frac{\mathcal{M}^{5/6}Q}{\xi\,d_\text{L}}f^{-7/6}e^{i[2\pi ft(f)-\Phi(f)-\frac{\pi}{4}]}
 \end{equation}
 \begin{equation}
     p(\mu)\propto p^{(0)}(\mu)\exp[
@@ -391,7 +391,7 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     ]
 \end{equation}
 \begin{equation}
-    \mu=(\ln\eta,\ln d_\text{L},\ln Q,f_0t_\text{c},\phi_\text{c},\ln\mathcal{M})
+    \mu=(\ln\xi,\ln (d_\text{L}/{d_\text{L}}_0),\ln Q,f_0t_\text{c},\phi_\text{c},\ln\mathcal{M})
 \end{equation}
 \begin{equation}
     \tilde{h}_{,1}=-\tilde{h}
@@ -424,7 +424,7 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \begin{equation}
     \Gamma^{(0)}_{ab}=\begin{bmatrix}
         0&0&0&0&0&0\\
-        0&1/\sigma_{\ln d_\text{L}}^2&0&0&0&0\\
+        0&1/\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&0&0&0&0\\
         0&0&1/\sigma_{\ln Q}^2&0&0&0\\
         0&0&0&0&0&0\\
         0&0&0&0&0&0\\
@@ -441,3 +441,15 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
         0&[?]^{-1}
     \end{bmatrix}
 \end{equation}
+\begin{eqnarray}
+    \begin{bmatrix}
+        \rho^2&\rho^2&-\rho^2\\
+\rho^2&\rho^2+1/\sigma_{\ln d_\text{L}}^2&-\rho^2\\
+-\rho^2&-\rho^2&\rho^2+1/\sigma_{\ln Q}^2
+    \end{bmatrix}
+    =\begin{bmatrix}
+        1/\rho^2+\sigma_{\ln d_\text{L}}^2+\sigma_{\ln Q}^2&-\sigma_{\ln d_\text{L}}^2&\sigma_{\ln Q}^2\\
+        -\sigma_{\ln d_\text{L}}^2&\sigma_{\ln d_\text{L}}^2&0\\
+        \sigma_{\ln Q}^2&0&\sigma_{\ln Q}^2
+    \end{bmatrix}
+\end{eqnarray}
