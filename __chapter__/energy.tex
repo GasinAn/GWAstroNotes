@@ -1,10 +1,22 @@
 \chapter{能量}
 
-\section{BMS代数}
-
-\def\Ip{\mathcal{I}^+}
-\def\L{\mathcal{L}}
-$\Gamma^{ab}_{\ph{ab}cd}:=n^an^b\tilde{h}_{cd}$, 若$\Ip$上光滑切矢场$\hat{\xi}^a$满足$\L_{\hat{\xi}}\Gamma^{ab}_{\ph{ab}cd}=0$, 则称$\hat{\xi}^a$为$\Ip$上的无限小对称性, 若$M$上光滑矢量场${\xi}^a$可光滑延拓至$\Ip$, $\Omega^2\L_{{\xi}}g_{ab}$也可光滑延拓至$\Ip$且在$\Ip$上为$0$, 则称${\xi}^a$为$M$上的无限小渐进对称性, 由$\L_{[u,v]}=[\L_u,\L_v]$可知$\Ip$上全体无限小对称性的集合上可定义Lie括号, 称得到的Lie代数为BMS代数.
-
-\section{SPI代数}
-若$\tilde{M}$上切矢$\eta^a$为单位切矢的类空曲线满足$\lim_{\to i_0}\tilde{h}_{ab}(\tilde{A}^b+\Omega^{-1}\tilde{\nabla}^b\Omega)=0$和其他必要条件, 则称曲线为正规曲线. 若两正规曲线在$i_0$处$\eta^a$和$\tilde{A}^a$相等, 则称两正规曲线等价, 4维流形$S:=\{\text{正规曲线等价类}\}$称为$i_0$的吹胀, S上有两个特殊场$v^a$和$h_{ab}$, 若$S$上矢量场${\xi}^a$满足$\L_{{\xi}}v^a=0$且$\L_{{\xi}}h_{ab}=0$, 则称${\xi}^a$为$i_0$上的无限小对称性, 由$\L_{[u,v]}=[\L_u,\L_v]$可知$i_0$上全体无限小对称性的集合上可定义Lie括号, 称得到的Lie代数为SPI代数.
+\cite{Wald1984}. 流形$\mathbb{R}^{4}$, 任意坐标系$\{x^\mu\}$, $g_{\mu\nu}=g^{(0)}_{\mu\nu}+g^{(1)}_{\mu\nu}s+g^{(2)}_{\mu\nu}s^2+\text{O}(s^3)$, $g^{(0)}_{\mu\nu}=\eta_{\mu\nu}$, 展开$G_{\mu\nu}$, 0阶小为$0$, 1阶小只含$g^{(1)}_{\mu\nu}s$, 记作$G_{\mu\nu}^{(1)}[g^{(1)}_{\mu\nu}s]$, 2阶小可分两部分, 只含$g^{(2)}_{\mu\nu}s^2$的部分记作$G_{\mu\nu}^{(1)}[g^{(2)}_{\mu\nu}s^2]$, 只含$g^{(1)}_{\mu\nu}s$的部分记作$G_{\mu\nu}^{(2)}[g^{(1)}_{\mu\nu}s]$, 则
+\begin{equation}
+    G_{\mu\nu}^{(1)}[g^{(1)}_{\mu\nu}s]+G_{\mu\nu}^{(1)}[g^{(2)}_{\mu\nu}s^2]+G_{\mu\nu}^{(2)}[g^{(1)}_{\mu\nu}s]+\text{O}(s^3)=8\pi T_{\mu\nu}
+\end{equation}
+则
+\begin{align}
+    G_{\mu\nu}^{(1)}[g^{(1)}_{\mu\nu}s+g^{(2)}_{\mu\nu}s^2]+\text{O}(s^3)&=8\pi (T_{\mu\nu}-\frac{1}{8\pi}G_{\mu\nu}^{(2)}[g^{(1)}_{\mu\nu}s])\\
+    &:=8\pi (T_{\mu\nu}+t_{\mu\nu})
+\end{align}
+可定义
+\begin{equation}
+    E_{\Sigma}=\int_\Sigma t_{00}\,\d^3\Sigma
+\end{equation}
+\begin{equation}
+    \Delta E_{S}=-\int_S t_{i0}\,\d S^i
+\end{equation}
+对GW, TT gauge 下
+\begin{equation}
+    t_{\mu\nu}=\frac{1}{32\pi}{h_{ij}}_{,\mu}{h^{ij}}_{,\nu}
+\end{equation}
