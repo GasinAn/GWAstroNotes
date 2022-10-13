@@ -380,6 +380,7 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \begin{equation}
     \tilde{h}(f)=\frac{\sqrt{30}}{48\pi^{2/3}}\frac{\mathcal{M}^{5/6}Q}{\xi\,d_\text{L}}f^{-7/6}e^{i[2\pi ft(f)-\Phi(f)-\frac{\pi}{4}]}
 \end{equation}
+问题转化为估计$\xi$
 \begin{equation}
     p(\mu)\propto p^{(0)}(\mu)\exp[
         -\frac{1}{2}\Gamma_{ab}(\mu^a-\hat{\mu}^a)(\mu^b-\hat{\mu}^b)
@@ -390,66 +391,47 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
         -\frac{1}{2}\Gamma^{(0)}_{ab}(\mu^a-\bar{\mu}^a)(\mu^b-\bar{\mu}^b)
     ]
 \end{equation}
-\begin{equation}
-    \mu=(\ln\xi,\ln (d_\text{L}/{d_\text{L}}_0),\ln Q,f_0t_\text{c},\phi_\text{c},\ln\mathcal{M})
-\end{equation}
-\begin{equation}
-    \tilde{h}_{,1}=-\tilde{h}
-\end{equation}
-\begin{equation}
-    \tilde{h}_{,2}=-\tilde{h}
-\end{equation}
-\begin{equation}
-    \tilde{h}_{,3}=\tilde{h}
-\end{equation}
-\begin{equation}
-    \tilde{h}_{,4}=2\pi i(f/f_0)\tilde{h}
-\end{equation}
-\begin{equation}
-    \tilde{h}_{,5}=-i\tilde{h}
-\end{equation}
-\begin{equation}
-    \tilde{h}_{,6}=-\frac{5i}{128}(\pi\mathcal{M}f)^{-5/3}\tilde{h}
-\end{equation}
+设待估参数为$\mu=(\ln\xi,\ln (d_\text{L}/{d_\text{L}}_0),\ln Q,\dots)$, $\dots$为其他参数(如$\mathcal{M}$), 则$\tilde{h}_{,\ln\xi}=\tilde{h}_{,\ln (d_\text{L}/{d_\text{L}}_0)}=-\tilde{h}_{,\ln Q}=-\tilde{h}$, $\tilde{h}$对其他参数求偏导皆为纯虚数, 则由$\Gamma_{ab}=\left\langle h_{,a}|h_{,b}\right\rangle $和$\text{SNR}:=\rho=\sqrt{\left\langle h|h\right\rangle}$得
 \begin{equation}
     \Gamma_{ab}=\begin{bmatrix}
-        \rho^2&\rho^2&-\rho^2&0&0&0\\
-        \rho^2&\rho^2&-\rho^2&0&0&0\\
-        -\rho^2&-\rho^2&\rho^2&0&0&0\\
-        0&0&0&?&?&?\\
-        0&0&0&?&?&?\\
-        0&0&0&?&?&?\\
+        \rho^2&\rho^2&-\rho^2&0&\dots\\
+        \rho^2&\rho^2&-\rho^2&0&\dots\\
+        -\rho^2&-\rho^2&\rho^2&0&\dots\\
+        0&0&0&?&\ldots\\
+        \vdots&\vdots&\vdots&\vdots&\ddots 
     \end{bmatrix}
 \end{equation}
+又设
 \begin{equation}
     \Gamma^{(0)}_{ab}=\begin{bmatrix}
-        0&0&0&0&0&0\\
-        0&1/\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&0&0&0&0\\
-        0&0&1/\sigma_{\ln Q}^2&0&0&0\\
-        0&0&0&0&0&0\\
-        0&0&0&0&0&0\\
-        0&0&0&0&0&0\\
+        0&0&0&0&\dots\\
+        0&1/\sigma_{\ln d_\text{L}}^2&0&0&\dots\\
+        0&0&1/\sigma_{\ln Q}^2&0&\dots\\
+        0 &0&0&0&\ldots\\
+        \vdots&\vdots&\vdots&\vdots&\ddots 
     \end{bmatrix}
 \end{equation}
+则由$\Sigma_{ab}=(\Gamma^{(0)}_{ab}+\Gamma_{ab})^{-1}$得
 \begin{equation}
     \Sigma_{ab}=\begin{bmatrix}
         \begin{bmatrix}
             \rho^2&\rho^2&-\rho^2\\
-\rho^2&\rho^2+1/\sigma_{\ln d_\text{L}}^2&-\rho^2\\
--\rho^2&-\rho^2&\rho^2+1/\sigma_{\ln Q}^2
+            \rho^2&\rho^2+1/\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&-\rho^2\\
+            -\rho^2&-\rho^2&\rho^2+1/\sigma_{\ln Q}^2
         \end{bmatrix}^{-1}&0\\
         0&[?]^{-1}
     \end{bmatrix}
 \end{equation}
-\begin{eqnarray}
+而
+\begin{equation}
     \begin{bmatrix}
         \rho^2&\rho^2&-\rho^2\\
-\rho^2&\rho^2+1/\sigma_{\ln d_\text{L}}^2&-\rho^2\\
--\rho^2&-\rho^2&\rho^2+1/\sigma_{\ln Q}^2
-    \end{bmatrix}
+        \rho^2&\rho^2+1/\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&-\rho^2\\
+        -\rho^2&-\rho^2&\rho^2+1/\sigma_{\ln Q}^2
+    \end{bmatrix}^{-1}
     =\begin{bmatrix}
-        1/\rho^2+\sigma_{\ln d_\text{L}}^2+\sigma_{\ln Q}^2&-\sigma_{\ln d_\text{L}}^2&\sigma_{\ln Q}^2\\
-        -\sigma_{\ln d_\text{L}}^2&\sigma_{\ln d_\text{L}}^2&0\\
+        1/\rho^2+\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2+\sigma_{\ln Q}^2&-\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&\sigma_{\ln Q}^2\\
+        -\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&0\\
         \sigma_{\ln Q}^2&0&\sigma_{\ln Q}^2
     \end{bmatrix}
-\end{eqnarray}
+\end{equation}

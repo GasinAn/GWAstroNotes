@@ -29,7 +29,9 @@ $\Omega=A_0\cup A_m$, $A_0$为事件``无信号'', $A_m$为事件``有信号'', 
     \tilde{q}(f):=\int\d t\,q(t)\exp[2\pi ift].
 \end{equation}
 
-\section{认定有信号后参数估计(MLE)}
+\section{认定有信号后参数估计}
+
+\subsection{MLE}
 
 实测得$g_t$且认定有信号, 事件$A_g\cap A_m$, 求使$p({A_{\vec{\mu}}}|A_g\cap A_m)$最大的$\vec{\mu}$, 记作$\hat{\vec{\mu}}$.
 \begin{equation}
@@ -42,20 +44,7 @@ $\Omega=A_0\cup A_m$, $A_0$为事件``无信号'', $A_m$为事件``有信号'', 
     \frac{\p\ln p(\vec{\mu})}{\p \vec{\mu}}|_{\vec{\mu}=\hat{\vec{\mu}}}+2\left\langle \frac{\p m_{\vec{\mu}}}{\p \vec{\mu}}|_{\vec{\mu}=\hat{\vec{\mu}}}(t),g(t)-m_{\vec{\mu}}|_{\vec{\mu}=\hat{\vec{\mu}}}(t)\right\rangle=0.
 \end{equation}
 
-\section{灵敏度}
-
-若由$g_t$求得MLE为$\hat{\vec{\mu}}$, 则记$g\Rightarrow \hat{\vec{\mu}}$, $A_{\hat{\vec{\mu}}}:=\cup_{g\Rightarrow \hat{\vec{\mu}}}A_g$, $A_{\hat{\vec{\mu}}}$为事件``测得MLE为$\hat{\vec{\mu}}$'', $A_{\tilde{\vec{\mu}}}$为事件``有信号且参数为$\tilde{\vec{\mu}}$'', 求$p(A_{\tilde{\vec{\mu}}}|A_{\hat{\vec{\mu}}})$. 高SNR, $\tilde{\vec{\mu}}:=\hat{\vec{\mu}}+\delta\vec{\mu}$,
-\begin{equation}
-    p(A_{\hat{\vec{\mu}}+\delta\vec{\mu}}|A_{\hat{\vec{\mu}}})=\frac{\exp[-\frac{1}{2}\sum\mathcal{C}_{ij}^{-1}(\delta\mu_i-\overline{\delta\mu_i})(\delta\mu_j-\overline{\delta\mu_j})]}{[(2\pi)^N\text{det}(\mathcal{C}_{ij})^{1/2}]},
-\end{equation}
-\begin{equation}
-    \mathcal{C}_{ij}^{-1}=2\left\langle \frac{\p m_{\vec{\mu}}}{\p \mu_i}|_{\vec{\mu}=\hat{\vec{\mu}}}(t),\frac{\p m_{\vec{\mu}}}{\p \mu_j}|_{\vec{\mu}=\hat{\vec{\mu}}}(t)\right\rangle,
-\end{equation}
-\begin{equation}
-    \overline{\delta\mu_i}=-\sum\mathcal{C}_{ij}\frac{\p\ln p(\vec{\mu})}{\p \mu_j}|_{\vec{\mu}=\hat{\vec{\mu}}}.
-\end{equation}
-
-\section{认定有信号后参数估计(分布)}
+\subsection{分布}
 
 \cite{Poisson1995}, 
 \begin{equation}
@@ -92,4 +81,17 @@ $\mu^a$估计为$\hat{\mu}^a$, 高SNR,
     p^{(0)}({\mu^a}):\propto\exp[
         -\frac{1}{2}\Gamma^{(0)}_{ab}(\mu^a-\bar{\mu}^a)(\mu^b-\bar{\mu}^b)
     ].
+\end{equation}
+
+\section{探测前预估仪器灵敏度}
+
+若由$g_t$求得MLE为$\hat{\vec{\mu}}$, 则记$g\Rightarrow \hat{\vec{\mu}}$, $A_{\hat{\vec{\mu}}}:=\cup_{g\Rightarrow \hat{\vec{\mu}}}A_g$, $A_{\hat{\vec{\mu}}}$为事件``测得MLE为$\hat{\vec{\mu}}$'', $A_{\tilde{\vec{\mu}}}$为事件``有信号且参数为$\tilde{\vec{\mu}}$'', 求$p(A_{\tilde{\vec{\mu}}}|A_{\hat{\vec{\mu}}})$. 高SNR, $\tilde{\vec{\mu}}:=\hat{\vec{\mu}}+\delta\vec{\mu}$,
+\begin{equation}
+    p(A_{\hat{\vec{\mu}}+\delta\vec{\mu}}|A_{\hat{\vec{\mu}}})=\frac{\exp[-\frac{1}{2}\sum\mathcal{C}_{ij}^{-1}(\delta\mu_i-\overline{\delta\mu_i})(\delta\mu_j-\overline{\delta\mu_j})]}{[(2\pi)^N\text{det}(\mathcal{C}_{ij})^{1/2}]},
+\end{equation}
+\begin{equation}
+    \mathcal{C}_{ij}^{-1}=2\left\langle \frac{\p m_{\vec{\mu}}}{\p \mu_i}|_{\vec{\mu}=\hat{\vec{\mu}}}(t),\frac{\p m_{\vec{\mu}}}{\p \mu_j}|_{\vec{\mu}=\hat{\vec{\mu}}}(t)\right\rangle,
+\end{equation}
+\begin{equation}
+    \overline{\delta\mu_i}=-\sum\mathcal{C}_{ij}\frac{\p\ln p(\vec{\mu})}{\p \mu_j}|_{\vec{\mu}=\hat{\vec{\mu}}}.
 \end{equation}
