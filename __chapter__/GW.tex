@@ -222,49 +222,61 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 
 \section{常数变易}
 
-\subsection{formula}
+\subsection{analogy between EMW \&{} GW}
 
 \begin{equation}
-    {\bar{h}}_{ij}=\frac{4G}{c^4}\frac{1}{\left\lvert\vec{r}\right\rvert}\frac{1}{2}\frac{\d^2}{\d t^2}q_{ij}(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
+    \p^{\nu}\p_{\nu}A_{\mu}=-\mu J_{\mu},\quad\p^{\mu}A_{\mu}=0
 \end{equation}
 \begin{equation}
-    {A_\text{(E2)}}_i=\frac{\mu}{4\pi}\frac{1}{\left\lvert\vec{r}\right\rvert}\frac{\d}{\d t}p_i(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
+    \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}=-16\pi \frac{G}{c^4}T_{\mu \nu},\quad\p^{\nu}\bar{h}_{\mu\nu}=0
 \end{equation}
 \begin{equation}
-    {A_\text{(E4)}}_i=\frac{\mu}{4\pi}\frac{1}{\left\lvert\vec{r}\right\rvert}n^j\frac{1}{2}\frac{\d^2}{\d t^2}D_{ij}(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
+    A_{\mu}\leftrightarrow\bar{h}_{\mu\nu},\quad \mu \leftrightarrow16\pi\frac{G}{c^4},\quad J_{\mu}\leftrightarrow T_{\mu \nu}
+\end{equation}
+\begin{equation}
+    A_0:([E]/[Q])/([L]/[T]),\quad J_{0}:([L]/[T])([Q]/[L^3])
+\end{equation}
+\begin{equation}
+    \bar{h}_{00}:1,\quad T_{00}:([E]/[L^3])
+\end{equation}
+\begin{equation}
+    \p^{\nu}\p_{\nu}(cA_{\mu})=-c^2\mu \left(\frac{J_{\mu}}{c}\right),\quad\p^{\mu}(cA_{\mu})=0
+\end{equation}
+\begin{equation}
+    \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}=-16\pi \frac{G}{c^4}T_{\mu \nu},\quad\p^{\nu}\bar{h}_{\mu\nu}=0
+\end{equation}
+\begin{equation}
+    cA_{\mu}\leftrightarrow \bar{h}_{\mu\nu},\quad c^2\mu\leftrightarrow16\pi\frac{G}{c^4},\quad\frac{J_{\mu}}{c}\leftrightarrow T_{\mu \nu}
+\end{equation}
+\begin{equation}
+    A_0:([M]/[Q])([L]/[T]),\quad J_{0}:([L]/[T])([Q]/[L^3])
+\end{equation}
+\begin{equation}
+    \bar{h}_{00}:1,\quad T_{00}:([M]/[L^3])([L]/[T])^2
+\end{equation}
+\begin{equation}
+    \p^{\nu}\p_{\nu}\left(\frac{A_{\mu}}{c}\right)=-\mu \left(\frac{J_{\mu}}{c}\right),\quad\p^{\mu}\left(\frac{A_{\mu}}{c}\right)=0
+\end{equation}
+\begin{equation}
+    \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}=-16\pi \frac{G}{c^2}\left(\frac{T_{\mu \nu}}{c^2}\right),\quad\p^{\nu}\bar{h}_{\mu\nu}=0
+\end{equation}
+\begin{equation}
+    \frac{A_{\mu}}{c}\leftrightarrow \bar{h}_{\mu\nu},\quad \mu\leftrightarrow16\pi\frac{G}{c^2},\quad\frac{J_{\mu}}{c}\leftrightarrow \frac{T_{\mu \nu}}{c^2}
 \end{equation}
 
-\subsection{definition}
+\subsection{energy propagation}
 
 \begin{equation}
-    \frac{4G}{c^4}:=\frac{\mu_\text{G}}{4\pi}
+    T_{\mu\nu}\propto F_{\mu\lambda}F_\nu^{\ph{\nu}\lambda}-\frac{1}{4}\eta_{\mu\nu}F_{\lambda\sigma}F^{\lambda\sigma}
 \end{equation}
 \begin{equation}
-    c:=\frac{1}{\sqrt{\epsilon_\text{G}\mu_\text{G}}}
+    T_{0i}\propto F_{0\mu}F_i^{\ph{i}\mu}
 \end{equation}
 \begin{equation}
-    G:=\frac{\mu_\text{G}}{16\pi\epsilon_\text{G}^2\mu_\text{G}^2}
-\end{equation}
-
-\subsection{energy}
-
-\begin{equation}
-    T_{ab}\propto F_{ac}F_b^{\ph{b}c}-\frac{1}{4}\eta_{ab}F_{cd}F^{cd}
+    F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
 \end{equation}
 \begin{equation}
-    T_{0i}\propto F_{0c}F_i^{\ph{i}c}-\frac{1}{4}\eta_{0i}F_{cd}F^{cd}=F_{0c}F_i^{\ph{i}c}
-\end{equation}
-\begin{equation}
-    F_{ab}=\p_aA_b-\p_bA_a
-\end{equation}
-\begin{equation}
-    F_{a}^{\ph{a}b}=\p_aA^b-\p^bA_a
-\end{equation}
-\begin{equation}
-    F^{ab}=\p^aA^b-\p^bA^a
-\end{equation}
-\begin{equation}
-    T_{0i}\propto (\p_0A_c-\p_cA_0)(\p_iA^c-\p^cA_i)
+    T_{0i}\propto (\p_0A_\mu-\p_\mu A_0)(\p_iA^\mu-\p^\mu A_i)
 \end{equation}
 \begin{equation}
     A_0=0
@@ -276,68 +288,29 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     A_i(t,\vec{r})=\Re[A_ie^{-i(\omega t-\vec{k}\cdot\vec{r})}]
 \end{equation}
 \begin{equation}
-    \p_0A_j=\Re[-i\omega A_ie^{-i(\omega t-\vec{k}\cdot\vec{r})}]
-\end{equation}
-\begin{equation}
-    \p_iA^j=\Re[ik_iA^je^{-i(\omega t-\vec{k}\cdot\vec{r})}]
-\end{equation}
-\begin{equation}
-    \p^jA_i=\Re[ik^jA_ie^{-i(\omega t-\vec{k}\cdot\vec{r})}]
-\end{equation}
-\begin{equation}
     \bar{T}_{0i}\propto(-i\omega A_j)[ik_iA^j-ik^jA_i]
     =\omega[\lvert \vec{A}\rvert ^2\vec{k}-(\vec{k}\cdot\vec{A})\vec{A}]
 \end{equation}
 \begin{equation}
-    \p^aA_a=0
+    \p^\mu A_\mu=0
 \end{equation}
 \begin{equation}
     \p^iA_i=0
 \end{equation}
 \begin{equation}
-    \p^iA_i=\Re[ik^iA_ie^{-i(\omega t-\vec{k}\cdot\vec{r})}]
-\end{equation}
-\begin{equation}
     k^iA_i=\vec{k}\cdot\vec{A}=0
 \end{equation}
 \begin{equation}
-    S_\text{EM}\propto\left\lvert \bar{T}_{0i}\right\rvert \propto\omega k A^2=\omega^2 A^2
+    \bar{S}_\text{EM}\propto\left\lvert \bar{T}_{0i}\right\rvert \propto\omega k A^2=\omega^2 A^2
 \end{equation}
 \begin{equation}
-    S_\text{EM}:[M]\text[T]^{-3}
-\end{equation}
-\begin{equation}
-    \omega:\text[T]^{-1}
-\end{equation}
-\begin{equation}
-    A:[M][L][T]^{-2}[I]^{-1}
-\end{equation}
-\begin{equation}
-    c:[L][T]^{-1}
-\end{equation}
-\begin{equation}
-    \mu:[M][L][T]^{-2}[I]^{-2}
-\end{equation}
-\begin{equation}
-    S_\text{EM}\propto\frac{\omega^2 A^2}{c\mu}
+    S_\text{EM}\propto\frac{1}{c\mu}\omega^2 A^2
 \end{equation}
 \begin{equation}
     S_\text{G}\propto\dot{h}^2\propto\omega^2 h^2
 \end{equation}
 \begin{equation}
-    S_\text{G}:[M]\text[T]^{-3}
-\end{equation}
-\begin{equation}
-    \omega:\text[T]^{-1}
-\end{equation}
-\begin{equation}
-    c: [L][T]^{-1}
-\end{equation}
-\begin{equation}
-    G: [L]^{3}[M]^{-1}[T]^{-2}
-\end{equation}
-\begin{equation}
-    S_\text{G}\propto\frac{c^3\omega^2h^2}{G}\propto\frac{\omega^2h^2}{c\mu_\text{G}}
+    S_\text{G}\propto\frac{c^3}{G}\omega^2h^2
 \end{equation}
 
 \subsection{experiment}
@@ -346,30 +319,29 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \begin{equation}
     h=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{r}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
 \end{equation}
-设双星系统常量$c^*$, $\mu_\text{G}^*$, 一观者临近双星系统且与双星系统相对静止, 其与双星系统距离为$r$, 测得强度$h_r$, 频率$F_r$, 则\footnote{$\mathcal{M}$和$c^*$, $\mu_\text{G}^*$简并, 所以可以笼统地仍记作$\mathcal{M}$.}
+设双星系统常量$c^*$, $G^*$, 一观者临近双星系统且与双星系统相对静止, 其与双星系统距离为$r$, 测得强度$h_r$, 频率$F_r$, 则\footnote{$\mathcal{M}$和$c^*$, $G^*$简并, 所以可以笼统地仍记作$\mathcal{M}$.}
 \begin{equation}
     h_r=\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{r/c^*}Q(\theta,\phi,\psi,\iota)
 \end{equation}
-与双星系统距离为$r$的观者测得的引力辐射光度$L_r\propto4\pi r^2(F_r^2 h_r^2/c^*\mu_\text{G}^*)$, 设地球观者与双星系统距离为$d$, 双星系统红移为$z$, 测得强度$h_d$, 频率$F_d$, 则地球观者测得的引力辐射光度正比于$L_d\propto4\pi d^2(F_d^2 h_d^2/c\mu_\text{G})$, 且有$L_d=L_r/(1+z)^2$, 所以$4\pi r^2(F_r^2 h_r^2/c^*\mu_\text{G}^*)/(1+z)^2=4\pi d^2(F_d^2 h_d^2/c\mu_\text{G})$,又有$F_d=F_r/(1+z)$, 所以$r^2(h_r^2/c^*\mu_\text{G}^*)=d^2(h_d^2/c\mu_\text{G})$, 则
+与双星系统距离为$r$的观者测得的引力辐射光度$L_r\propto4\pi r^2({c^*}^3/G^*)F_r^2 h_r^2$, 设地球观者与双星系统距离为$d$, 双星系统红移为$z$, 测得强度$h_d$, 频率$F_d$, 则地球观者测得的引力辐射光度正比于$L_d\propto4\pi d^2(c^3/G)F_d^2 h_d^2$, 且有$L_d=L_r/(1+z)^2$, 所以$r^2({c^*}^3/G^*)F_r^2 h_r^2/(1+z)^2=d^2(c^3/G)F_d^2 h_d^2$,又有$F_d=F_r/(1+z)$, 所以$r^2({c^*}^3/G^*)h_r^2=d^2(c^3/G)h_d^2$, 则
 \begin{align}
-    h_d&=\sqrt{\frac{c\mu_\text{G}}{c^*\mu_\text{G}^*}}\frac{r^2}{d^2}h_r\\
-    &=\sqrt{\frac{c\mu_\text{G}}{c^*\mu_\text{G}^*}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)
+    h_d&=\sqrt{\frac{{c^*}^3/G^*}{c^3/G}}\frac{r^2}{d^2}h_r\\
+    &=\sqrt{\frac{{c^*}^3/G^*}{c^3/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)
 \end{align}
 所以地球观者测得
 \begin{equation}
-    h=\sqrt{\frac{c\mu_\text{G}}{c^*\mu_\text{G}^*}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi \frac{F_r(t)}{1+z}\,\d t]
+    h=\sqrt{\frac{{c^*}^3/G^*}{c^3/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi \frac{F_r(t)}{1+z}\,\d t]
 \end{equation}
 记$F_\text{obs}(t)=F_r(t)/(1+z)$, $\mathcal{M}_\text{obs}=\mathcal{M}(1+z)$, 光度距离$d_\text{L}=d(1+z)$, 则
 \begin{align}
-    h&=\sqrt{\frac{c\mu_\text{G}}{c^*\mu_\text{G}^*}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d(1+z)/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
-    &=\sqrt{\frac{c\mu_\text{G}}{c^*\mu_\text{G}^*}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
-    &=\sqrt{\frac{c^*\mu_\text{G}}{c\mu_\text{G}^*}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]
+    h&=\sqrt{\frac{{c^*}^3/G^*}{c^3/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d(1+z)/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
+    &=\sqrt{\frac{{c^*}^3/G^*}{c^3/G}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
+    &=\sqrt{\frac{{c^*}^5/G^*}{c^5/G}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]
 \end{align}
 用引力波测距测得$d_\text{L,G}$, 则
 \begin{equation}
-    d_\text{L,G}=d_\text{L}\sqrt{\frac{c\mu_\text{G}^*}{c^*\mu_\text{G}}}
+    d_\text{L,G}=d_\text{L}\sqrt{\frac{c^5/G}{{c^*}^5/G^*}}
 \end{equation}
-电磁波也有类似的效应, 因为$c^*\ne c$, 似乎会认为用电磁波测距测得$d_\text{L,EM}\ne d_\text{L}$, 但猜测电磁效应和引力效应会是独立的, 所以$c^*$只是波源双星系统处的引力辐射传播速度, 波源双星系统处的电磁辐射传播速度仍为$c$, 因此认为用电磁波测距测得$d_\text{L,EM}=d_\text{L}$
 
 \subsection{fisher matrix}
 
@@ -423,15 +395,15 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     \end{bmatrix}
 \end{equation}
 而
-\begin{equation}
-    \begin{bmatrix}
+\begin{align}
+    &\begin{bmatrix}
         \rho^2&\rho^2&-\rho^2\\
         \rho^2&\rho^2+1/\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&-\rho^2\\
         -\rho^2&-\rho^2&\rho^2+1/\sigma_{\ln Q}^2
-    \end{bmatrix}^{-1}
-    =\begin{bmatrix}
+    \end{bmatrix}^{-1}\\
+    &=\begin{bmatrix}
         1/\rho^2+\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2+\sigma_{\ln Q}^2&-\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&\sigma_{\ln Q}^2\\
         -\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&0\\
         \sigma_{\ln Q}^2&0&\sigma_{\ln Q}^2
     \end{bmatrix}
-\end{equation}
+\end{align}
