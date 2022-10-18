@@ -156,17 +156,17 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \end{equation}
 
 \begin{equation}
-    p_i=\int\hat{J}_{0}x'^i\,\d V'
+    \hat{p}_i=\int\hat{J}_{0}x'^i\,\d V'
 \end{equation}
 \begin{equation}
-    q_{ij}=\int \hat{T}_{00}\,x'^ix'^j\,\d V'
+    \hat{q}_{ij}=\int \hat{T}_{00}\,x'^ix'^j\,\d V'
 \end{equation}
 
 \begin{equation}
-    \hat{A}_i=\frac{\mu_0}{4\pi}\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}(-i\omega p_i)
+    \hat{A}_i=\frac{\mu_0}{4\pi}\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}(-i\omega \hat{p}_i)
 \end{equation}
 \begin{equation}
-    \hat{\bar{h}}_{ij}=4G\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}(-\frac{\omega^2}{2}q_{ij})
+    \hat{\bar{h}}_{ij}=4G\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}(-\frac{\omega^2}{2}\hat{q}_{ij})
 \end{equation}
 
 \begin{equation}
@@ -208,11 +208,11 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \end{align}
 
 \begin{equation}
-    D_{ij}=\int \hat{J}_{0}'\,x'^ix'^j\,\d V'
+    \hat{D}_{ij}=\int \hat{J}_{0}'\,x'^ix'^j\,\d V'
 \end{equation}
 
 \begin{equation}
-    \hat{A}_i=\frac{\mu_0}{4\pi}\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}(-\frac{\omega^2}{2}n^jD_{ij}
+    \hat{A}_i=\frac{\mu_0}{4\pi}\frac{e^{i\omega\left\lvert\vec{r}\right\rvert}}{\left\lvert\vec{r}\right\rvert}(-\frac{\omega^2}{2}n^j\hat{D}_{ij}
     )
 \end{equation}
 
@@ -225,43 +225,49 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \subsection{analogy between EMW \&{} GW}
 
 \begin{equation}
-    \p^{\nu}\p_{\nu}A_{\mu}=-\mu J_{\mu},\quad\p^{\mu}A_{\mu}=0
+    \p^{\nu}\p_{\nu}A_{\mu}=-\mu J_{\mu},\quad\p^{\mu}A_{\mu}=0\label{EMW}
 \end{equation}
 \begin{equation}
-    \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}=-16\pi \frac{G}{c^4}T_{\mu \nu},\quad\p^{\nu}\bar{h}_{\mu\nu}=0
+    \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}=-16\pi \frac{G}{c^4}T_{\mu \nu},\quad\p^{\nu}\bar{h}_{\mu\nu}=0\label{GW}
+\end{equation}
+\begin{equation}
+    q_0(\p^\mu A_\nu-\p_\nu A^\mu)U^\nu=m_0U^\nu\p_\nu U^\mu
+\end{equation}
+\begin{equation}
+    0=U^\nu\nabla_\nu U^\mu=U^\nu\p_\nu U^\mu+U^\nu\Gamma^{\mu}_{\ph{\mu}\nu\lambda}U^\lambda
+\end{equation}
+\begin{equation}
+    -m_0\Gamma^{\mu}_{\ph{\mu}\nu\lambda}U^\nu U^\lambda=m_0U^\nu\p_\nu U^\mu
+\end{equation}
+\begin{equation}
+    \Gamma^{\mu}_{\ph{\mu}\nu\lambda}=\frac{1}{2}(\p_{\nu}\bar{h}_{\lambda}^{\ph{\lambda}\mu}+\p_{\lambda}\bar{h}_{\nu}^{\ph{\nu}\mu}-\p^{\mu}\bar{h}_{\nu\lambda})
+\end{equation}
+\begin{equation}
+    m_0\frac{1}{2}(\p^{\mu}\bar{h}_{\nu\lambda}-\p_{\nu}\bar{h}^{\mu}_{\ph{\mu}\lambda}-\p_{\lambda}\bar{h}^{\mu}_{\ph{\mu}\nu})U^\nu U^\lambda=m_0U^\nu\p_\nu U^\mu
 \end{equation}
 \begin{equation}
     A_{\mu}\leftrightarrow\bar{h}_{\mu\nu},\quad \mu \leftrightarrow16\pi\frac{G}{c^4},\quad J_{\mu}\leftrightarrow T_{\mu \nu}
 \end{equation}
+
+\subsection{wave emission}
+
 \begin{equation}
-    A_0:([E]/[Q])/([L]/[T]),\quad J_{0}:([L]/[T])([Q]/[L^3])
+    {{A}_i}_{\text{(E2)}}=\frac{\mu}{4\pi}\frac{1}{\left\lvert\vec{r}\right\rvert}\frac{\d}{\d t}p_i(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
 \end{equation}
 \begin{equation}
-    \bar{h}_{00}:1,\quad T_{00}:([E]/[L^3])
+    {{A}_i}_{\text{(E4)}}=\frac{\mu}{4\pi c}\frac{1}{\left\lvert\vec{r}\right\rvert}n^j\frac{1}{2}\frac{\d^2}{\d t^2}D_{ij}(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
 \end{equation}
 \begin{equation}
-    \p^{\nu}\p_{\nu}(cA_{\mu})=-c^2\mu \left(\frac{J_{\mu}}{c}\right),\quad\p^{\mu}(cA_{\mu})=0
+    {\bar{h}}_{ij}=\frac{4G}{c^4}\frac{1}{\left\lvert\vec{r}\right\rvert}\frac{1}{2}\frac{\d^2}{\d t^2}q_{ij}(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
 \end{equation}
 \begin{equation}
-    \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}=-16\pi \frac{G}{c^4}T_{\mu \nu},\quad\p^{\nu}\bar{h}_{\mu\nu}=0
+    p_i=\int\rho_\text{Q}x'^i\,\d V'
 \end{equation}
 \begin{equation}
-    cA_{\mu}\leftrightarrow \bar{h}_{\mu\nu},\quad c^2\mu\leftrightarrow16\pi\frac{G}{c^4},\quad\frac{J_{\mu}}{c}\leftrightarrow T_{\mu \nu}
+    D_{ij}=\int\rho_\text{Q}\,x'^ix'^j\,\d V'
 \end{equation}
 \begin{equation}
-    A_0:([M]/[Q])([L]/[T]),\quad J_{0}:([L]/[T])([Q]/[L^3])
-\end{equation}
-\begin{equation}
-    \bar{h}_{00}:1,\quad T_{00}:([M]/[L^3])([L]/[T])^2
-\end{equation}
-\begin{equation}
-    \p^{\nu}\p_{\nu}\left(\frac{A_{\mu}}{c}\right)=-\mu \left(\frac{J_{\mu}}{c}\right),\quad\p^{\mu}\left(\frac{A_{\mu}}{c}\right)=0
-\end{equation}
-\begin{equation}
-    \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}=-16\pi \frac{G}{c^2}\left(\frac{T_{\mu \nu}}{c^2}\right),\quad\p^{\nu}\bar{h}_{\mu\nu}=0
-\end{equation}
-\begin{equation}
-    \frac{A_{\mu}}{c}\leftrightarrow \bar{h}_{\mu\nu},\quad \mu\leftrightarrow16\pi\frac{G}{c^2},\quad\frac{J_{\mu}}{c}\leftrightarrow \frac{T_{\mu \nu}}{c^2}
+    q_{ij}=\int \rho_\text{M}\,x'^ix'^j\,\d V'
 \end{equation}
 
 \subsection{energy propagation}
