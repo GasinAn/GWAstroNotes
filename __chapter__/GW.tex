@@ -222,16 +222,11 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 
 \section{常数变易}
 
-\subsection{analogy between EMW \&{} GW}
-
 \begin{equation}
-    \p^{\nu}\p_{\nu}A_{\mu}=-\mu J_{\mu},\quad\p^{\mu}A_{\mu}=0\label{EMW}
+    \p^{\lambda}\p_{\lambda}h_{\mu\nu}=-\frac{16\pi G}{c^4}T_{\mu \nu},\quad\p^{\nu}h_{\mu\nu}=0
 \end{equation}
 \begin{equation}
-    \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}=-16\pi \frac{G}{c^4}T_{\mu \nu},\quad\p^{\nu}\bar{h}_{\mu\nu}=0\label{GW}
-\end{equation}
-\begin{equation}
-    (\p^\mu A_\nu-\p_\nu A^\mu)q_0U^\nu=m_0U^\nu\p_\nu U^\mu
+    T^{\mu\nu}={\rho_\text{M}}_0U^\mu U^\nu
 \end{equation}
 \begin{equation}
     0=U^\nu\nabla_\nu U^\mu=U^\nu\p_\nu U^\mu+U^\nu\Gamma^{\mu}_{\ph{\mu}\nu\lambda}U^\lambda
@@ -240,182 +235,27 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     -m_0\Gamma^{\mu}_{\ph{\mu}\nu\lambda}U^\nu U^\lambda=m_0U^\nu\p_\nu U^\mu
 \end{equation}
 \begin{equation}
-    \Gamma^{\mu}_{\ph{\mu}\nu\lambda}=\frac{1}{2}(\p_{\nu}\bar{h}_{\lambda}^{\ph{\lambda}\mu}+\p_{\lambda}\bar{h}_{\nu}^{\ph{\nu}\mu}-\p^{\mu}\bar{h}_{\nu\lambda})
+    \Gamma^{\mu}_{\ph{\mu}\nu\lambda}=\frac{1}{2}(\p_{\nu}h_{\lambda}^{\ph{\lambda}\mu}+\p_{\lambda}h_{\nu}^{\ph{\nu}\mu}-\p^{\mu}h_{\nu\lambda})
 \end{equation}
 \begin{equation}
-    (\p^{\mu}\bar{h}_{\nu\lambda}-\p_{\nu}\bar{h}^{\mu}_{\ph{\mu}\lambda}-\p_{\lambda}\bar{h}^{\mu}_{\ph{\mu}\nu})\frac{1}{2}m_0U^\nu U^\lambda=m_0U^\nu\p_\nu U^\mu
+    m_0(\frac{\p^{\mu}h_{\nu\lambda}}{2}-\p_{(\nu}^{\text{}}h^{\mu}_{\ph{\mu}\lambda)})U^\nu U^\lambda=m_0U^\nu\p_\nu U^\mu
 \end{equation}
 \begin{equation}
-    J^{\mu}={\rho_\text{Q}}_0U^\mu
+    h_{\mu\nu}(t,\vec{r})=\int\frac{4G}{c^4}\frac{T_{\mu\nu}(t-\frac{\left\lvert\vec{r}-\vec{r}'\right\rvert}{c},\vec{r}')}{\left\lvert\vec{r}-\vec{r}'\right\rvert}\,\d V'
 \end{equation}
 \begin{equation}
-    T^{\mu\nu}={\rho_\text{M}}_0U^\mu U^\nu
+    h_{\mu\nu}(t,\vec{r})=\frac{4G^*}{{c^*}^4}\!\int\frac{T_{\mu\nu}(t-\frac{\left\lvert\vec{r}-\vec{r}'\right\rvert}{c},\vec{r}')}{\left\lvert\vec{r}-\vec{r}'\right\rvert}\,\d V'
 \end{equation}
 \begin{equation}
-    A_{\mu}\leftrightarrow\bar{h}_{\mu\nu},\quad \mu \leftrightarrow16\pi\frac{G}{c^4},\quad J_{\mu}\leftrightarrow T_{\mu\nu}
-\end{equation}
-
-\subsection{wave emission}
-
-\begin{equation}
-    {{A}_i}_{\text{(E2)}}=\frac{\mu}{4\pi}\frac{1}{\left\lvert\vec{r}\right\rvert}\frac{\d}{\d t}p_i(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
+    h_{\mu\nu}(t,\vec{r})=\frac{4G^*}{{c^*}^4}\mathcal{F}\!\left[\int 
+    \frac{\hat{T}_{\mu\nu}(\omega,\vec{r}')}{\left\lvert\vec{r}-\vec{r}'\right\rvert}e^{i\omega\frac{\left\lvert\vec{r}-\vec{r}'\right\rvert}{c}}\,\d V'\right]
 \end{equation}
 \begin{equation}
-    {{A}_i}_{\text{(E4)}}=\frac{\mu}{4\pi c}\frac{1}{\left\lvert\vec{r}\right\rvert}n^j\frac{1}{2}\frac{\d^2}{\d t^2}D_{ij}(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
+    h_{\mu\nu}(t,\vec{r})=\frac{4G^*}{{c^*}^4}\mathcal{F}\!\left[\frac{e^{i\omega\frac{\left\lvert\vec{r}\right\rvert}{c}}}{\left\lvert\vec{r}\right\rvert}\int\hat{T}_{\mu\nu}(\omega,\vec{r}')\,\d V'\right]
 \end{equation}
 \begin{equation}
-    {\bar{h}}_{ij}=\frac{4G}{c^4}\frac{1}{\left\lvert\vec{r}\right\rvert}\frac{1}{2}\frac{\d^2}{\d t^2}q_{ij}(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
+    h_{ij}(t,\vec{r})=\frac{4G^*}{{c^*}^4}\mathcal{F}\!\left[\frac{e^{i\omega\frac{\left\lvert\vec{r}\right\rvert}{c}}}{\left\lvert\vec{r}\right\rvert}(-\frac{\omega^2}{2}\hat{q}_{ij})\right]
 \end{equation}
 \begin{equation}
-    p_i=\int\rho_\text{Q}x'^i\,\d V'
+    {h}_{ij}(t,\vec{r})=\frac{4G^*}{{c^*}^4}\frac{1}{\left\lvert\vec{r}\right\rvert}\frac{1}{2}\frac{\d^2}{\d t^2}q_{ij}(t-\frac{\left\lvert\vec{r}\right\rvert}{c})
 \end{equation}
-\begin{equation}
-    D_{ij}=\int\rho_\text{Q}\,x'^ix'^j\,\d V'
-\end{equation}
-\begin{equation}
-    q_{ij}=\int \rho_\text{M}\,x'^ix'^j\,\d V'
-\end{equation}
-
-\subsection{energy propagation}
-
-\begin{equation}
-    T_{\mu\nu}\propto F_{\mu\lambda}F_\nu^{\ph{\nu}\lambda}-\frac{1}{4}\eta_{\mu\nu}F_{\lambda\sigma}F^{\lambda\sigma}
-\end{equation}
-\begin{equation}
-    T_{0i}\propto F_{0\mu}F_i^{\ph{i}\mu}
-\end{equation}
-\begin{equation}
-    F_{\mu\nu}=\p_\mu A_\nu-\p_\nu A_\mu
-\end{equation}
-\begin{equation}
-    T_{0i}\propto (\p_0A_\mu-\p_\mu A_0)(\p_iA^\mu-\p^\mu A_i)
-\end{equation}
-\begin{equation}
-    A_0=0
-\end{equation}
-\begin{equation}
-    T_{0i}\propto \p_0A_j(\p_iA^j-\p^jA_i)
-\end{equation}
-\begin{equation}
-    A_i(t,\vec{r})=\Re[A_ie^{-i(\omega t-\vec{k}\cdot\vec{r})}]
-\end{equation}
-\begin{equation}
-    \bar{T}_{0i}\propto(-i\omega A_j)[ik_iA^j-ik^jA_i]
-    =\omega[\lvert \vec{A}\rvert ^2\vec{k}-(\vec{k}\cdot\vec{A})\vec{A}]
-\end{equation}
-\begin{equation}
-    \p^\mu A_\mu=0
-\end{equation}
-\begin{equation}
-    \p^iA_i=0
-\end{equation}
-\begin{equation}
-    k^iA_i=\vec{k}\cdot\vec{A}=0
-\end{equation}
-\begin{equation}
-    \bar{S}_\text{EM}\propto\left\lvert \bar{T}_{0i}\right\rvert \propto\omega k A^2=\omega^2 A^2
-\end{equation}
-\begin{equation}
-    S_\text{EM}\propto\frac{1}{c\mu}\omega^2 A^2
-\end{equation}
-\begin{equation}
-    S_\text{G}\propto\dot{h}^2\propto\omega^2 h^2
-\end{equation}
-\begin{equation}
-    S_\text{G}\propto\frac{c^3}{G}\omega^2h^2
-\end{equation}
-
-\subsection{experiment}
-
-双星系统引力辐射本为
-\begin{equation}
-    h=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{r}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F(t)\,\d t]
-\end{equation}
-设双星系统常量$c^*$, $G^*$, 一观者临近双星系统且与双星系统相对静止, 其与双星系统距离为$r$, 测得强度$h_r$, 频率$F_r$, 则\footnote{$\mathcal{M}$和$c^*$, $G^*$简并, 所以可以笼统地仍记作$\mathcal{M}$.}
-\begin{equation}
-    h_r=\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{r/c^*}Q(\theta,\phi,\psi,\iota)
-\end{equation}
-与双星系统距离为$r$的观者测得的引力辐射光度$L_r\propto4\pi r^2({c^*}^3/G^*)F_r^2 h_r^2$, 设地球观者与双星系统距离为$d$, 双星系统红移为$z$, 测得强度$h_d$, 频率$F_d$, 则地球观者测得的引力辐射光度正比于$L_d\propto4\pi d^2(c^3/G)F_d^2 h_d^2$, 且有$L_d=L_r/(1+z)^2$, 所以$r^2({c^*}^3/G^*)F_r^2 h_r^2/(1+z)^2=d^2(c^3/G)F_d^2 h_d^2$,又有$F_d=F_r/(1+z)$, 所以$r^2({c^*}^3/G^*)h_r^2=d^2(c^3/G)h_d^2$, 则
-\begin{align}
-    h_d&=\sqrt{\frac{{c^*}^3/G^*}{c^3/G}}\frac{r^2}{d^2}h_r\\
-    &=\sqrt{\frac{{c^*}^3/G^*}{c^3/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)
-\end{align}
-所以地球观者测得
-\begin{equation}
-    h=\sqrt{\frac{{c^*}^3/G^*}{c^3/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi \frac{F_r(t)}{1+z}\,\d t]
-\end{equation}
-记$F_\text{obs}(t)=F_r(t)/(1+z)$, $\mathcal{M}_\text{obs}=\mathcal{M}(1+z)$, 光度距离$d_\text{L}=d(1+z)$, 则
-\begin{align}
-    h&=\sqrt{\frac{{c^*}^3/G^*}{c^3/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d(1+z)/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
-    &=\sqrt{\frac{{c^*}^3/G^*}{c^3/G}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
-    &=\sqrt{\frac{{c^*}^5/G^*}{c^5/G}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]
-\end{align}
-用引力波测距测得$d_\text{L,G}$, 则
-\begin{equation}
-    d_\text{L,G}=d_\text{L}\sqrt{\frac{c^5/G}{{c^*}^5/G^*}}
-\end{equation}
-
-\subsection{fisher matrix}
-
-\cite{Poisson1995}
-\begin{equation}
-    h(t)=\frac{\mathcal{M}[\pi \mathcal{M}F(t)]^{2/3}}{\xi\,d_\text{L}}Q(\text{angles})\cos\Phi(t)
-\end{equation}
-\begin{equation}
-    \tilde{h}(f)=\frac{\sqrt{30}}{48\pi^{2/3}}\frac{\mathcal{M}^{5/6}Q}{\xi\,d_\text{L}}f^{-7/6}e^{i[2\pi ft(f)-\Phi(f)-\frac{\pi}{4}]}
-\end{equation}
-问题转化为估计$\xi$
-\begin{equation}
-    p(\mu)\propto p^{(0)}(\mu)\exp[
-        -\frac{1}{2}\Gamma_{ab}(\mu^a-\hat{\mu}^a)(\mu^b-\hat{\mu}^b)
-    ]
-\end{equation}
-\begin{equation}
-    p^{(0)}(\mu)\propto\exp[
-        -\frac{1}{2}\Gamma^{(0)}_{ab}(\mu^a-\bar{\mu}^a)(\mu^b-\bar{\mu}^b)
-    ]
-\end{equation}
-设待估参数为$\mu=(\ln\xi,\ln (d_\text{L}/{d_\text{L}}_0),\ln Q,\dots)$, $\dots$为其他参数(如$\mathcal{M}$), 则$\tilde{h}_{,\ln\xi}=\tilde{h}_{,\ln (d_\text{L}/{d_\text{L}}_0)}=-\tilde{h}_{,\ln Q}=-\tilde{h}$, $\tilde{h}$对其他参数求偏导皆为纯虚数, 则由$\Gamma_{ab}=\left\langle h_{,a}|h_{,b}\right\rangle $和$\text{SNR}:=\rho=\sqrt{\left\langle h|h\right\rangle}$得
-\begin{equation}
-    \Gamma_{ab}=\begin{bmatrix}
-        \rho^2&\rho^2&-\rho^2&0&\dots\\
-        \rho^2&\rho^2&-\rho^2&0&\dots\\
-        -\rho^2&-\rho^2&\rho^2&0&\dots\\
-        0&0&0&?&\ldots\\
-        \vdots&\vdots&\vdots&\vdots&\ddots 
-    \end{bmatrix}
-\end{equation}
-又设
-\begin{equation}
-    \Gamma^{(0)}_{ab}=\begin{bmatrix}
-        0&0&0&0&\dots\\
-        0&1/\sigma_{\ln d_\text{L}}^2&0&0&\dots\\
-        0&0&1/\sigma_{\ln Q}^2&0&\dots\\
-        0 &0&0&0&\ldots\\
-        \vdots&\vdots&\vdots&\vdots&\ddots 
-    \end{bmatrix}
-\end{equation}
-则由$\Sigma_{ab}=(\Gamma^{(0)}_{ab}+\Gamma_{ab})^{-1}$得
-\begin{equation}
-    \Sigma_{ab}=\begin{bmatrix}
-        \begin{bmatrix}
-            \rho^2&\rho^2&-\rho^2\\
-            \rho^2&\rho^2+1/\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&-\rho^2\\
-            -\rho^2&-\rho^2&\rho^2+1/\sigma_{\ln Q}^2
-        \end{bmatrix}^{-1}&0\\
-        0&[?]^{-1}
-    \end{bmatrix}
-\end{equation}
-而
-\begin{align}
-    &\begin{bmatrix}
-        \rho^2&\rho^2&-\rho^2\\
-        \rho^2&\rho^2+1/\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&-\rho^2\\
-        -\rho^2&-\rho^2&\rho^2+1/\sigma_{\ln Q}^2
-    \end{bmatrix}^{-1}\\
-    &=\begin{bmatrix}
-        1/\rho^2+\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2+\sigma_{\ln Q}^2&-\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&\sigma_{\ln Q}^2\\
-        -\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&\sigma_{\ln (d_\text{L}/{d_\text{L}}_0)}^2&0\\
-        \sigma_{\ln Q}^2&0&\sigma_{\ln Q}^2
-    \end{bmatrix}
-\end{align}
