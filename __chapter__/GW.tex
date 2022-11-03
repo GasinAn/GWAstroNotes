@@ -231,25 +231,29 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     \p^{\mu}A_{\mu}=0
 \end{equation}
 \begin{equation}
-    \p^{j}\p_{j}A_{i}-\p^{0}\p_{0}A_{i}=-\mu J_{i},\quad
-    \p^{j}\p_{j}A_{0}-\p^{0}\p_{0}A_{0}=-\mu J_{0},\quad
-    \p^{i}A_{i}+\p^{0}A_{0}=0
+    \vec{\nabla}^2\varphi-\frac{\p^2}{\p t^2}\varphi=-\mu\rho
 \end{equation}
 \begin{equation}
-    B_{i}=\varepsilon_{i}^{\ph{i}jk}\p_{j}A_{k},\quad
-    E_{i}=-(\p_{i}A_0+\p_0A_{i})
+    \vec{\nabla}^2\vec{A}-\frac{\p^2}{\p t^2}\vec{A}=-\mu\vec{j}
 \end{equation}
 \begin{equation}
-    \p^{j}\p_{j}A_{i}-\p^{0}\p_{0}A_{i}-\p_{i}(\p^{j}A_{j}+\p^{0}A_{0})=-\mu J_{i}
+    \frac{\p}{\p t}\varphi+\vec{\nabla}\cdot\vec{A}=0
 \end{equation}
 \begin{equation}
-    \p^{j}\p_{j}A_{0}-\p^{0}\p_{0}A_{0}+\p_{0}(\p^{j}A_{j}+\p^{0}A_{0})=-\mu J_{0}
+    \varphi_1=\varphi_2
 \end{equation}
 \begin{equation}
-    \p^{j}\p_{j}A_{i}-\p^{j}\p_{i}A_{j}=-\mu J_{i}+\p^{0}\p_{i}A_{0}+\p^{0}\p_{0}A_{i},\quad
-    \p^{j}\p_{j}A_{0}+\p^{j}\p_{0}A_{j}=-\mu J_{0}
+    \vec{A}_1=\vec{A}_2
 \end{equation}
 \begin{equation}
-    \varepsilon_{i}^{\ph{i}jk}\p_{j}B_{k}=\mu J_{i}+\p^{0}E_{i},\quad
-    \p^{i}E_{i}=\mu J_{0}
+    \frac{1}{\mu_1}\vec{n}\cdot(\vec{\nabla}\varphi_1+\frac{\p}{\p t}\vec{A}_1)=\frac{1}{\mu_2}\vec{n}\cdot(\vec{\nabla}\varphi_2+\frac{\p}{\p t}\vec{A}_2)
+\end{equation}
+\begin{equation}
+    \frac{1}{\mu_1}\vec{n}\times(\vec{\nabla}\times\vec{A}_1)=\frac{1}{\mu_2}\vec{n}\times(\vec{\nabla}\times\vec{A}_2)
+\end{equation}
+\begin{equation}
+    \frac{1}{\mu_1}[(\vec{n}\cdot\vec{\nabla})\varphi_1+\frac{\p}{\p t}(\vec{n}\cdot\vec{A}_1)]=\frac{1}{\mu_2}[(\vec{n}\cdot\vec{\nabla})\varphi_2+\frac{\p}{\p t}(\vec{n}\cdot\vec{A}_2)]
+\end{equation}
+\begin{equation}
+    \frac{1}{\mu_1}[(\vec{n}\cdot\vec{\nabla})\vec{A}_1-\vec{\nabla}(\vec{n}\cdot\vec{A}_1)]=\frac{1}{\mu_2}[(\vec{n}\cdot\vec{\nabla})\vec{A}_2-\vec{\nabla}(\vec{n}\cdot\vec{A}_2)]
 \end{equation}
