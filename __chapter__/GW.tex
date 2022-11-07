@@ -19,7 +19,7 @@ $\bar{h}_{\mu\nu}:=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}\eta^{\lambda\sigma}h_{\la
 
 \section{Radiation Gauge}
 
-\cite{Wald1984}. 存在$\{x^{\mu}\}$, 使得$h+\text{O}(s^2)=0$ (TT gauge \cite{Wang2020})且$h_{0\mu}+\text{O}(s^2)=0$. 
+\cite{Wald1984}. 存在$\{x^{\mu}\}$, 使得``无源处'' $h+\text{O}(s^2)=0$ (TT gauge \cite{Wang2020})且$h_{0\mu}+\text{O}(s^2)=0$. 
 
 \section{Quadrupole Approximation}
 
@@ -256,4 +256,103 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \end{equation}
 \begin{equation}
     \frac{1}{\mu_1}[(\vec{n}\cdot\vec{\nabla})\vec{A}_1-\vec{\nabla}(\vec{n}\cdot\vec{A}_1)]=\frac{1}{\mu_2}[(\vec{n}\cdot\vec{\nabla})\vec{A}_2-\vec{\nabla}(\vec{n}\cdot\vec{A}_2)]
+\end{equation}
+\begin{equation}
+    \varphi=\varphi_0e^{i(\omega t-\vec{k}\cdot\vec{r})}
+\end{equation}
+\begin{equation}
+    \vec{A}=\vec{A}_0e^{i(\omega t-\vec{k}\cdot\vec{r})}
+\end{equation}
+\begin{equation}
+    \varphi=\varphi e^{i(\omega t-\vec{k}\cdot\vec{r})}+\varphi' e^{i(\omega t+\vec{k}\cdot\vec{r})}
+\end{equation}
+\begin{equation}
+    \vec{A}=\vec{A} e^{i(\omega t-\vec{k}\cdot\vec{r})}+\vec{A}' e^{i(\omega t+\vec{k}\cdot\vec{r})}
+\end{equation}
+\begin{equation}
+    \varphi=\varphi''e^{i(\omega t-\vec{k}\cdot\vec{r})}
+\end{equation}
+\begin{equation}
+    \vec{A}=\vec{A}''e^{i(\omega t-\vec{k}\cdot\vec{r})}
+\end{equation}
+\begin{equation}
+    \omega(\varphi+\varphi')=\vec{k}\cdot(\vec{A}-\vec{A}')
+\end{equation}
+\begin{equation}
+    \omega\varphi''=\vec{k}\cdot\vec{A}''
+\end{equation}
+\begin{equation}
+    \varphi+\varphi'=\varphi''
+\end{equation}
+\begin{equation}
+    \vec{A}+\vec{A}'=\vec{A}''
+\end{equation}
+\begin{equation}
+    \frac{1}{\mu_1}[(\vec{n}\cdot\vec{k})(\varphi-\varphi')+\omega(\vec{n}\cdot(\vec{A}+\vec{A}'))]=\frac{1}{\mu_2}[(\vec{n}\cdot\vec{k})\varphi''+\omega(\vec{n}\cdot\vec{A}'')]
+\end{equation}
+\begin{equation}
+    \frac{1}{\mu_1}[(\vec{n}\cdot\vec{k})(\vec{A}-\vec{A}')-\vec{k}(\vec{n}\cdot(\vec{A}-\vec{A}'))]=\frac{1}{\mu_2}[(\vec{n}\cdot\vec{k})\vec{A}''-\vec{k}(\vec{n}\cdot\vec{A}'')]
+\end{equation}
+\begin{equation}
+    \omega(\varphi+\varphi')=\omega\vec{n}\cdot(\vec{A}-\vec{A}')
+\end{equation}
+\begin{equation}
+    \omega\varphi''=\omega\vec{n}\cdot\vec{A}''
+\end{equation}
+\begin{equation}
+    (\varphi+\varphi')=\varphi''
+\end{equation}
+\begin{equation}
+    (\vec{A}+\vec{A}')=\vec{A}''
+\end{equation}
+\begin{equation}
+    \frac{1}{\mu_1}[\omega(\varphi-\varphi')+\omega(\vec{n}\cdot(\vec{A}+\vec{A}'))]=\frac{1}{\mu_2}[\omega\varphi''+\omega(\vec{n}\cdot\vec{A}'')]
+\end{equation}
+\begin{equation}
+    \frac{1}{\mu_1}[\omega(\vec{A}-\vec{A}')-\omega\vec{n}(\vec{n}\cdot(\vec{A}-\vec{A}'))]=\frac{1}{\mu_2}[\omega\vec{A}''-\omega\vec{n}(\vec{n}\cdot\vec{A}'')]
+\end{equation}
+\begin{equation}
+    (\varphi+\varphi')=(\vec{A}_\text{n}-\vec{A}'_\text{n})
+\end{equation}
+\begin{equation}
+    \varphi''=\vec{A}''_\text{n}
+\end{equation}
+\begin{equation}
+    (\varphi+\varphi')=\varphi''
+\end{equation}
+\begin{equation}
+    (\vec{A}_\text{n}+\vec{A}'_\text{n})=\vec{A}''_\text{n}
+\end{equation}
+\begin{equation}
+    (\vec{A}_\text{t}+\vec{A}'_\text{t})=\vec{A}''_\text{t}
+\end{equation}
+\begin{equation}
+    \frac{1}{\mu_1}[(\varphi-\varphi')+(\vec{A}_\text{n}+\vec{A}'_\text{n})]=\frac{1}{\mu_2}[\varphi''+\vec{A}''_\text{n}]
+\end{equation}
+\begin{equation}
+    \frac{1}{\mu_1}[(\vec{A}_\text{t}-\vec{A}'_\text{t})]=\frac{1}{\mu_2}[\vec{A}''_\text{t}]
+\end{equation}
+\begin{equation}
+    \varphi'=\frac{\mu_2-\mu_1}{\mu_1}\varphi
+\end{equation}
+\begin{equation}
+    \varphi''=\frac{\mu_2}{\mu_1}\varphi
+\end{equation}
+\begin{equation}
+    \vec{A}'_\text{n}=0\vec{A}_\text{n}
+\end{equation}
+\begin{equation}
+    \vec{A}''_\text{n}=1\vec{A}_\text{n}
+\end{equation}
+\begin{equation}
+    -\varphi'+\vec{A}'_\text{n}=-\frac{\mu_2-\mu_1}{\mu_2+\mu_1}(\varphi+\vec{A}_\text{n})
+\end{equation}
+\begin{equation}
+    \varphi''+\vec{A}''_\text{n}=\frac{2\mu_2}{\mu_2+\mu_1}(\varphi+\vec{A}_\text{n})
+\end{equation}
+\begin{equation}
+    \vec{A}'_\text{t}=\frac{\mu_2-\mu_1}{\mu_2+\mu_1}\vec{A}_\text{t}
+\end{equation}
+\begin{equation}
+    \vec{A}''_\text{t}=\frac{2\mu_2}{\mu_2+\mu_1}\vec{A}_\text{t}
 \end{equation}
