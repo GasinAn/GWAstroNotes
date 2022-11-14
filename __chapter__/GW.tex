@@ -276,10 +276,10 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     \vec{A}=\vec{A}''e^{i(\omega t-\vec{k}\cdot\vec{r})}
 \end{equation}
 \begin{equation}
-    \omega(\varphi+\varphi')=\vec{k}\cdot(\vec{A}-\vec{A}')
+    \omega(\varphi+\varphi')=-\vec{k}\cdot(\vec{A}-\vec{A}')
 \end{equation}
 \begin{equation}
-    \omega\varphi''=\vec{k}\cdot\vec{A}''
+    \omega\varphi''=-\vec{k}\cdot\vec{A}''
 \end{equation}
 \begin{equation}
     \varphi+\varphi'=\varphi''
@@ -288,16 +288,16 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     \vec{A}+\vec{A}'=\vec{A}''
 \end{equation}
 \begin{equation}
-    \frac{1}{\mu_1}[(\vec{n}\cdot\vec{k})(\varphi-\varphi')+\omega(\vec{n}\cdot(\vec{A}+\vec{A}'))]=\frac{1}{\mu_2}[(\vec{n}\cdot\vec{k})\varphi''+\omega(\vec{n}\cdot\vec{A}'')]
+    \frac{1}{\mu_1}[-(\vec{n}\cdot\vec{k})(\varphi-\varphi')+\omega(\vec{n}\cdot(\vec{A}+\vec{A}'))]=\frac{1}{\mu_2}[-(\vec{n}\cdot\vec{k})\varphi''+\omega(\vec{n}\cdot\vec{A}'')]
 \end{equation}
 \begin{equation}
-    \frac{1}{\mu_1}[(\vec{n}\cdot\vec{k})(\vec{A}-\vec{A}')-\vec{k}(\vec{n}\cdot(\vec{A}-\vec{A}'))]=\frac{1}{\mu_2}[(\vec{n}\cdot\vec{k})\vec{A}''-\vec{k}(\vec{n}\cdot\vec{A}'')]
+    \frac{1}{\mu_1}[-(\vec{n}\cdot\vec{k})(\vec{A}-\vec{A}')+\vec{k}(\vec{n}\cdot(\vec{A}-\vec{A}'))]=\frac{1}{\mu_2}[-(\vec{n}\cdot\vec{k})\vec{A}''+\vec{k}(\vec{n}\cdot\vec{A}'')]
 \end{equation}
 \begin{equation}
-    \omega(\varphi+\varphi')=\omega\vec{n}\cdot(\vec{A}-\vec{A}')
+    \omega(\varphi+\varphi')=-\omega\vec{n}\cdot(\vec{A}-\vec{A}')
 \end{equation}
 \begin{equation}
-    \omega\varphi''=\omega\vec{n}\cdot\vec{A}''
+    \omega\varphi''=-\omega\vec{n}\cdot\vec{A}''
 \end{equation}
 \begin{equation}
     (\varphi+\varphi')=\varphi''
@@ -306,16 +306,16 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     (\vec{A}+\vec{A}')=\vec{A}''
 \end{equation}
 \begin{equation}
-    \frac{1}{\mu_1}[\omega(\varphi-\varphi')+\omega(\vec{n}\cdot(\vec{A}+\vec{A}'))]=\frac{1}{\mu_2}[\omega\varphi''+\omega(\vec{n}\cdot\vec{A}'')]
+    \frac{1}{\mu_1}[-\omega(\varphi-\varphi')+\omega(\vec{n}\cdot(\vec{A}+\vec{A}'))]=\frac{1}{\mu_2}[-\omega\varphi''+\omega(\vec{n}\cdot\vec{A}'')]
 \end{equation}
 \begin{equation}
-    \frac{1}{\mu_1}[\omega(\vec{A}-\vec{A}')-\omega\vec{n}(\vec{n}\cdot(\vec{A}-\vec{A}'))]=\frac{1}{\mu_2}[\omega\vec{A}''-\omega\vec{n}(\vec{n}\cdot\vec{A}'')]
+    \frac{1}{\mu_1}[-\omega(\vec{A}-\vec{A}')+\omega\vec{n}(\vec{n}\cdot(\vec{A}-\vec{A}'))]=\frac{1}{\mu_2}[-\omega\vec{A}''+\omega\vec{n}(\vec{n}\cdot\vec{A}'')]
 \end{equation}
 \begin{equation}
-    (\varphi+\varphi')=(\vec{A}_\text{n}-\vec{A}'_\text{n})
+    (\varphi+\varphi')=-(\vec{A}_\text{n}-\vec{A}'_\text{n})
 \end{equation}
 \begin{equation}
-    \varphi''=\vec{A}''_\text{n}
+    \varphi''=-\vec{A}''_\text{n}
 \end{equation}
 \begin{equation}
     (\varphi+\varphi')=\varphi''
@@ -327,32 +327,68 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     (\vec{A}_\text{t}+\vec{A}'_\text{t})=\vec{A}''_\text{t}
 \end{equation}
 \begin{equation}
-    \frac{1}{\mu_1}[(\varphi-\varphi')+(\vec{A}_\text{n}+\vec{A}'_\text{n})]=\frac{1}{\mu_2}[\varphi''+\vec{A}''_\text{n}]
+    \frac{1}{\mu_1}[-(\varphi-\varphi')+(\vec{A}_\text{n}+\vec{A}'_\text{n})]=\frac{1}{\mu_2}[-\varphi''+\vec{A}''_\text{n}]
 \end{equation}
 \begin{equation}
     \frac{1}{\mu_1}[(\vec{A}_\text{t}-\vec{A}'_\text{t})]=\frac{1}{\mu_2}[\vec{A}''_\text{t}]
 \end{equation}
 \begin{equation}
-    \varphi'=\frac{\mu_2-\mu_1}{\mu_1}\varphi
+    \varphi'=\frac{\mu_2-\mu_1}{\mu_1}\varphi,\quad\vec{A}'_\text{n}=0\vec{A}_\text{n}
 \end{equation}
 \begin{equation}
-    \varphi''=\frac{\mu_2}{\mu_1}\varphi
+    \varphi''=\frac{\mu_2}{\mu_1}\varphi,\quad\vec{A}''_\text{n}=1\vec{A}_\text{n}
 \end{equation}
 \begin{equation}
-    \vec{A}'_\text{n}=0\vec{A}_\text{n}
+    (\varphi'+\vec{A}'_\text{n})=-\frac{\mu_2-\mu_1}{\mu_2+\mu_1}(-\varphi+\vec{A}_\text{n})
 \end{equation}
 \begin{equation}
-    \vec{A}''_\text{n}=1\vec{A}_\text{n}
-\end{equation}
-\begin{equation}
-    -\varphi'+\vec{A}'_\text{n}=-\frac{\mu_2-\mu_1}{\mu_2+\mu_1}(\varphi+\vec{A}_\text{n})
-\end{equation}
-\begin{equation}
-    \varphi''+\vec{A}''_\text{n}=\frac{2\mu_2}{\mu_2+\mu_1}(\varphi+\vec{A}_\text{n})
+    (-\varphi''+\vec{A}''_\text{n})=\frac{2\mu_2}{\mu_2+\mu_1}(-\varphi+\vec{A}_\text{n})
 \end{equation}
 \begin{equation}
     \vec{A}'_\text{t}=\frac{\mu_2-\mu_1}{\mu_2+\mu_1}\vec{A}_\text{t}
 \end{equation}
 \begin{equation}
     \vec{A}''_\text{t}=\frac{2\mu_2}{\mu_2+\mu_1}\vec{A}_\text{t}
+\end{equation}
+\begin{equation}
+    \vec{S}'=-\frac{(\mu_1-\mu_2)^2}{(\mu_1+\mu_2)^2}\vec{S}
+\end{equation}
+\begin{equation}
+    \vec{S}''=\frac{4\mu_1\mu_2}{(\mu_1+\mu_2)^2}\vec{S}
+\end{equation}
+\begin{equation}
+    \Delta r
+\end{equation}
+\begin{equation}
+    \mu_1,\dots,\mu_n
+\end{equation}
+\begin{equation}
+    1+\frac{\mu_2-\mu_1}{\mu_2+\mu_1},\dots,1+\frac{\mu_n-\mu_{n-1}}{\mu_n+\mu_{n-1}}
+\end{equation}
+\begin{equation}
+    \frac{\mu_1}{\mu_2}(1+\frac{\mu_2-\mu_1}{\mu_2+\mu_1})^2,\dots,\frac{\mu_{n-1}}{\mu_n}(1+\frac{\mu_n-\mu_{n-1}}{\mu_n+\mu_{n-1}})^2
+\end{equation}
+\begin{equation}
+    \prod_{i=1}^{n-1}(1+\frac{\mu_{i+1}-\mu_i}{\mu_{i+1}+\mu_i})
+\end{equation}
+\begin{equation}
+    \sum_{i=1}^{n-1}\ln(1+\frac{\mu_{i+1}-\mu_i}{\mu_{i+1}+\mu_i})
+\end{equation}
+\begin{equation}
+    \sum_{i=1}^{n-1}((\frac{\mu_{i+1}-\mu_i}{\mu_{i+1}+\mu_i})-\frac{1}{2}(\frac{\mu_{i+1}-\mu_i}{\mu_{i+1}+\mu_i})^2+\frac{1}{3}(\frac{\mu_{i+1}-\mu_i}{\mu_{i+1}+\mu_i})^3-\dots)
+\end{equation}
+\begin{equation}
+    \sum_{i=1}^{n-1}(\frac{\mu_{i+1}-\mu_i}{\mu_{i+1}+\mu_i})
+\end{equation}
+\begin{equation}
+    \int\frac{1}{2\mu}\frac{\d u}{\d r}\d r
+\end{equation}
+\begin{equation}
+    \frac{1}{2}\Delta\ln\mu
+\end{equation}
+\begin{equation}
+    \sqrt{\frac{\mu_n}{\mu_1}}
+\end{equation}
+\begin{equation}
+    1
 \end{equation}
