@@ -1,0 +1,95 @@
+\documentclass[12pt]{ctexart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{marginnote}
+\usepackage{mathrsfs}
+\usepackage{syntonly}
+\usepackage{textcomp}
+\usepackage{ulem}
+\usepackage{verbatim}
+%\syntaxonly
+%\geometry{a5paper}
+\hyphenation{}
+\normalem
+\hypersetup{
+    colorlinks,
+    linkcolor=blue,
+    filecolor=pink,
+    urlcolor=cyan,
+    citecolor=red,
+}
+\def\b{\boldsymbol}
+\def\d{\mathrm{d}}
+\def\p{\partial}
+\def\ph{\phantom}
+\def\t{\tilde}
+\def\Ra{\Rightarrow}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\atanxy}{atan2}
+\theoremstyle{definition}
+\newtheorem{definition}{定义}
+\newtheorem{proposition}{命题}
+\title{}
+\author{}
+\begin{document}
+\begin{equation}
+    T_{ab}=2U_{(a}J_{b)}+U^cJ_cU_aU_b
+\end{equation}
+\begin{equation}
+    J_b=-U^aT_{ab}
+\end{equation}
+\begin{equation}
+    \p^a\bar{h}_{ab}=0
+\end{equation}
+\begin{equation}
+    \p^c\p_c\bar{h}_{ab}=-16\pi\frac{G_0}{c_0^3}T_{ab}
+\end{equation}
+\begin{equation}
+    \Gamma^c_{\ph{c}ab}=\frac{1}{2}\eta^{cd}(2\p_{(a}{h}_{b)d}-\p_d{h}_{ab})
+\end{equation}
+\begin{equation}
+    U^a\p_aU^c+\Gamma^c_{\ph{c}ab}U^aU^b=0
+\end{equation}
+\begin{equation}
+    U^a\p_aU^c=-\frac{1}{2}\eta^{cd}(2\p_{(a}{h}_{b)d}-\p_d{h}_{ab})U^aU^b
+\end{equation}
+
+\begin{equation}
+    A_b
+    =-\frac{1}{4}U^a\bar{h}_{ab}
+\end{equation}
+\begin{equation}
+    A_0
+    =-\frac{1}{4}c_0\bar{h}_{00}
+    =-\frac{1}{2}c_0(\bar{h}_{00}-\frac{1}{2}\eta_{00}\eta^{00}\bar{h}_{00})=-\frac{1}{2}c_0h_{00}
+\end{equation}
+\begin{equation}
+    A_i=-\frac{1}{4}c_0\bar{h}_{0i}=-\frac{1}{4}c_0{h}_{0i}
+\end{equation}
+
+\begin{equation}
+    U^\mu\p_\mu U^i=-\frac{1}{2}\eta^{i\sigma}(\p_\mu{h}_{\nu\sigma}+\p_\nu{h}_{\mu\sigma}-\p_\sigma{h}_{\mu\nu})U^\mu U^\nu
+\end{equation}
+\begin{align}
+    -\frac{1}{2}\eta^{i\sigma}(\p_0{h}_{0\sigma}+\p_0{h}_{0\sigma}-\p_\sigma{h}_{00})U^0 U^0
+    &=\frac{1}{2}c_0^2\eta^{i\sigma}\p_\sigma{h}_{00}\\
+    &=\frac{1}{2}c_0^2\p^i{h}_{00}\\
+    &=c_0\p^iA_0
+\end{align}
+\begin{align}
+    -\frac{1}{2}\eta^{i\sigma}(\p_0{h}_{j\sigma}+\p_j{h}_{0\sigma}-\p_\sigma{h}_{0j})U^0 U^j
+    &=-\frac{1}{2}c_0\eta^{i\sigma}(\p_j{h}_{0\sigma}-\p_\sigma{h}_{0j})v^j\\
+    &=-\frac{1}{2}c_0\eta^{ik}(\p_j{h}_{0k}-\p_k{h}_{0j})v^j\\
+    &=2\eta^{ik}(\p_jA_k-\p_kA_j)v^j\\
+    &=-2(\p^iA_j-\p_jA^i)v^j
+\end{align}
+\begin{align}
+    -\frac{1}{2}\eta^{i\sigma}(\p_j{h}_{k\sigma}+\p_k{h}_{j\sigma}-\p_\sigma{h}_{jk})U^j U^k=0
+\end{align}
+\end{document}
