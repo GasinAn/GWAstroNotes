@@ -311,6 +311,13 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \end{equation}
 
 \begin{equation}
+    \varepsilon_{\text{G}}=\frac{c}{16\pi G},\quad
+    \mu_{\text{G}}=\frac{16\pi G}{c^3}
+\end{equation}
+\begin{equation}
+    x^\mu=(ct,x,y,z)
+\end{equation}
+\begin{equation}
     \begin{cases}
         \vec{\nabla}\cdot(\varepsilon_{\text{G}}\vec{E})=\rho\\
         \vec{\nabla}\cdot\vec{B}=0\\
@@ -322,10 +329,29 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     \vec{a}=-\vec{E}-4\vec{v}\times\vec{B}
 \end{equation}
 \begin{equation}
-    U^\mu\p_\mu U^i=-\frac{1}{2}\eta^{i\sigma}(\p_\mu{h}_{\nu\sigma}+\p_\nu{h}_{\mu\sigma}-\p_\sigma{h}_{\mu\nu})U^\mu U^\nu
+    A_\mu=-\frac{1}{4}c_{}\bar{h}_{0\mu}
+\end{equation}
+
+\begin{equation}
+    \begin{cases}
+        \vec{\nabla}\cdot\vec{E}=\varepsilon_{\text{G}}^{-1}\rho\\
+        \vec{\nabla}\times\vec{B}=\mu_{\text{G}}\vec{j}+\varepsilon_{\text{G}}\mu_{\text{G}}\frac{\p}{\p t}\vec{E}
+    \end{cases}
 \end{equation}
 \begin{equation}
-    A_\mu=-\frac{1}{4}c_0\bar{h}_{0\mu}
+    \frac{1}{c^2}\frac{\p}{\p t}\varphi+\vec{\nabla}\cdot\vec{A}=0
+\end{equation}
+\begin{equation}
+    \begin{cases}
+        -\frac{1}{c^2}\frac{\p^2}{\p t^2}\varphi+\vec{\nabla}^2\varphi=\varepsilon_{\text{G}}^{-1}\rho\\
+        -\frac{1}{c^2}\frac{\p^2}{\p t^2}\vec{A}+\vec{\nabla}^2\vec{A}=\mu_{\text{G}}\vec{j}
+    \end{cases}
+\end{equation}
+\begin{equation}
+    \begin{cases}
+        -\frac{1}{c^2}\frac{\p^2}{\p t^2}c^{-1}\varphi+\vec{\nabla}^2c^{-1}\varphi=\mu_{\text{G}}c\rho\\
+        -\frac{1}{c^2}\frac{\p^2}{\p t^2}\vec{A}+\vec{\nabla}^2\vec{A}=\mu_{\text{G}}\vec{j}
+    \end{cases}
 \end{equation}
 
 \begin{equation}
@@ -372,30 +398,33 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \end{equation}
 \begin{equation}
     \begin{cases}
-        \mu_{\text{G}}\frac{\p}{\p r}\mu_{\text{G}}^{-1}\frac{\p}{\p r}(r{E}_\theta)-\frac{\p}{\p(v_\text{p}t)}\frac{\p}{\p(v_\text{p}t)}(r{E}_\theta)=0\\
-        \varepsilon_{\text{G}}\frac{\p}{\p r}\varepsilon_{\text{G}}^{-1}\frac{\p}{\p r}(r{H}_\phi)-\frac{\p}{\p(v_\text{p}t)}\frac{\p}{\p(v_\text{p}t)}(r{H}_\phi)=0\\
+        \mu_{\text{G}}\frac{\p}{\p r}\mu_{\text{G}}^{-1}\frac{\p}{\p r}(r{E}_\theta)-\frac{\p}{\p(ct)}\frac{\p}{\p(ct)}(r{E}_\theta)=0\\
+        \varepsilon_{\text{G}}\frac{\p}{\p r}\varepsilon_{\text{G}}^{-1}\frac{\p}{\p r}(r{H}_\phi)-\frac{\p}{\p(ct)}\frac{\p}{\p(ct)}(r{H}_\phi)=0\\
     \end{cases}
 \end{equation}
 \begin{equation}
     \begin{cases}
-        \frac{\p}{\p r}\frac{\p}{\p r}(r{E}_\theta)-\frac{\p}{\p r}(\ln\mu_{\text{G}})\frac{\p}{\p r}(r{E}_\theta)-\frac{\p}{\p(v_\text{p}t)}\frac{\p}{\p(v_\text{p}t)}(r{E}_\theta)=0\\
-        \frac{\p}{\p r}\frac{\p}{\p r}(r{H}_\phi)-\frac{\p}{\p r}(\ln\varepsilon_{\text{G}})\frac{\p}{\p r}(r{H}_\phi)-\frac{\p}{\p(v_\text{p}t)}\frac{\p}{\p(v_\text{p}t)}(r{H}_\phi)=0\\
+        \frac{\p}{\p r}\frac{\p}{\p r}(r{E}_\theta)-\frac{\p}{\p r}(\ln\mu_{\text{G}})\frac{\p}{\p r}(r{E}_\theta)-\frac{\p}{\p(ct)}\frac{\p}{\p(ct)}(r{E}_\theta)=0\\
+        \frac{\p}{\p r}\frac{\p}{\p r}(r{H}_\phi)-\frac{\p}{\p r}(\ln\varepsilon_{\text{G}})\frac{\p}{\p r}(r{H}_\phi)-\frac{\p}{\p(ct)}\frac{\p}{\p(ct)}(r{H}_\phi)=0\\
     \end{cases}
 \end{equation}
 \begin{equation}
     \frac{\p^2}{\p r^2}f(r,t)-p(r)\frac{\p}{\p r}f(r,t)-\frac{\p^2}{\p t^2}f(r,t)=0
 \end{equation}
 \begin{equation}
-    \frac{\d^2}{\d r^2}f(r)-p(r)\frac{\d}{\d r}f(r)+f(r)=0
+    f(r,t)=f(r)e^{-ikt}
 \end{equation}
 \begin{equation}
-    \frac{\d^2}{\d r^2}f(r)-p\frac{\d}{\d r}f(r)+f(r)=0
+    \frac{\d^2}{\d r^2}f(r)-p(r)\frac{\d}{\d r}f(r)+k^2f(r)=0
 \end{equation}
 \begin{equation}
-    f(r)=e^{(p/2)r}[C_+e^{i\sqrt{1-(p/2)^2}r}+C_-e^{-i\sqrt{1-(p/2)^2}r}]
+    \frac{\d^2}{\d r^2}f(r)-p\frac{\d}{\d r}f(r)+k^2f(r)=0
 \end{equation}
 \begin{equation}
-    f(r)=e^{\int(p/2)\,\d r}[C_+e^{i\int\sqrt{1-(p/2)^2}\,\d r}+C_-e^{-i\int\sqrt{1-(p/2)^2}\,\d r}]
+    f(r)=e^{(p/2)r}[C_+e^{i\sqrt{k-(p/2)^2}r}+C_-e^{-i\sqrt{k-(p/2)^2}r}]
+\end{equation}
+\begin{equation}
+    f(r)=e^{\int(p/2)\,\d r}[C_+e^{i\int\sqrt{k-(p/2)^2}\,\d r}+C_-e^{-i\int\sqrt{k-(p/2)^2}\,\d r}]
 \end{equation}
 \begin{equation}
     \begin{cases}
@@ -405,30 +434,24 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \end{equation}
 \begin{equation}
     \begin{cases}
-        r_2\left\lvert {E}_\theta\right\rvert_{r=r_2}=r_1\left\lvert {E}_\theta\right\rvert_{r=r_1}\sqrt{\frac{\left\lvert \mu_{\text{G}}\right\rvert_{r=r_2}}{\left\lvert \mu_{\text{G}}\right\rvert_{r=r_1}}}\\
-        r_2\left\lvert {H}_\phi\right\rvert_{r=r_2}=r_1\left\lvert {H}_\phi\right\rvert_{r=r_1}\sqrt{\frac{\left\lvert \varepsilon_{\text{G}}\right\rvert_{r=r_2}}{\left\lvert \varepsilon_{\text{G}}\right\rvert_{r=r_1}}}
+        {E}_2=\sqrt{\frac{{\mu_{\text{G}}}_2}{{\mu_{\text{G}}}_1}}\frac{r_1}{r_2}{E}_1\\
+        {H}_2=\sqrt{\frac{{\varepsilon_{\text{G}}}_2}{{\varepsilon_{\text{G}}}_1}}\frac{r_1}{r_2}{H}_1
     \end{cases}
-\end{equation}
-\begin{equation}
-    \vec{a}\cdot\vec{v}=-\vec{j}\cdot\vec{E}
-\end{equation}
-\begin{equation}
-    \vec{S}=-\vec{E}\times\vec{H}=(\vec{\nabla}\varphi)\times(\frac{1}{\mu}\vec{\nabla}\times\vec{A})=\frac{c^3}{16\pi G}(\vec{\nabla}\varphi)\times(\vec{\nabla}\times\vec{A})
-\end{equation}
-\begin{equation}
-    S^{i}=\frac{c^3}{16\pi G}\varepsilon^{i}_{\ph{i}jk}(-\p_jA_0)(\varepsilon_{klm}\p^lA^m)=\frac{c^3}{16\pi G}\varepsilon^{i}_{\ph{i}jk}(\frac{1}{4}\p_i\bar{h}_{00})(-\frac{1}{4}\varepsilon_{klm}\p^l\bar{h}_{0}^{\ph{0}m})
-\end{equation}
-\begin{equation}
-    S^{i}=-\frac{c^3}{256\pi G}\varepsilon^{i}_{\ph{i}jk}(\p_i\bar{h}_{00})(\varepsilon_{klm}\p^l\bar{h}_{0}^{\ph{0}m})
-\end{equation}
-\begin{equation}
-    L|_{r=r_2}=L|_{r=r_1}\frac{c|_{r=r_1}}{c|_{r=r_2}}
 \end{equation}
 \begin{equation}
     \begin{cases}
-        \Delta t_{{E}_\theta}|_{r=r_1}^{r=r_2}=\int_{r_1}^{r_2}\frac{\sqrt{1-[\frac{1}{2}\frac{\p}{\p r}(\ln\mu_{\text{G}})]^2}}{v_\text{p}}\d r\\
-        \Delta t_{{H}_\phi}|_{r=r_1}^{r=r_2}=\int_{r_1}^{r_2}\frac{\sqrt{1-[\frac{1}{2}\frac{\p}{\p r}(\ln\varepsilon_{\text{G}})]^2}}{v_\text{p}}\d r\\
+        {E}_2/c_2=\sqrt{\frac{{\mu_{\text{G}}}_2}{{\mu_{\text{G}}}_1}}\frac{c_1}{c_2}\frac{r_1}{r_2}{E}_1/c_1\\
+        {B}_2=\sqrt{\frac{{\mu_{\text{G}}}_2}{{\mu_{\text{G}}}_1}}\frac{c_1}{c_2}\frac{r_1}{r_2}{B}_1
     \end{cases}
+\end{equation}
+\begin{equation}
+    \begin{cases}
+        (\bar{h}_{00})_2=\sqrt{\frac{{\mu_{\text{G}}}_2}{{\mu_{\text{G}}}_1}}\frac{c_1^2}{c_2^2}\frac{r_1}{r_2}(\bar{h}_{00})_1\\
+        (\bar{h}_{0i})_2=\sqrt{\frac{{\mu_{\text{G}}}_2}{{\mu_{\text{G}}}_1}}\frac{c_1^2}{c_2^2}\frac{r_1}{r_2}(\bar{h}_{0i})_1
+    \end{cases}
+\end{equation}
+\begin{equation}
+    h_2=\sqrt{\frac{c_1^7/G_1}{c_2^7/G_2}}\frac{r_1}{r_2}h_1
 \end{equation}
 
 双星系统引力辐射本为
@@ -439,24 +462,25 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \begin{equation}
     h_r=\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{r/c^*}Q(\theta,\phi,\psi,\iota)
 \end{equation}
-与双星系统距离为$r$的观者测得的引力辐射光度$L_r\propto4\pi r^2({c^*}^3/G^*)F_r^2 h_r^2$, 设地球观者与双星系统距离为$d$, 双星系统红移为$z$, 测得强度$h_d$, 频率$F_d$, 则地球观者测得的引力辐射光度正比于$L_d\propto4\pi d^2(c^3/G)F_d^2 h_d^2$, 且有$L_d=(c^*/c)L_r/(1+z)^2$, 所以$r^2({c^*}^3/G^*)F_r^2 h_r^2/(1+z)^2=(c^*/c)d^2(c^3/G)F_d^2 h_d^2$,又有$F_d=F_r/(1+z)$, 所以$r^2({c^*}^3/G^*)h_r^2=(c^*/c)d^2(c^3/G)h_d^2$, 则
+
+设地球观者与双星系统距离为$d$, 双星系统红移为$z$, 测得强度$h_d$, 频率$F_d=F_r/(1+z)$, 则
 \begin{align}
-    h_d&=\sqrt{\frac{{c^*}^2/G^*}{c^2/G}}\frac{r^2}{d^2}h_r\\
-    &=\sqrt{\frac{{c^*}^2/G^*}{c^2/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)
+    h_d&=\sqrt{\frac{{c^*}^7/G^*}{c^7/G}}\frac{r}{d}h_r\\
+    &=\sqrt{\frac{{c^*}^7/G^*}{c^7/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)
 \end{align}
 所以地球观者测得
 \begin{equation}
-    h=\sqrt{\frac{{c^*}^2/G^*}{c^2/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi \frac{F_r(t)}{1+z}\,\d t]
+    h=\sqrt{\frac{{c^*}^7/G^*}{c^7/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi \frac{F_r(t)}{1+z}\,\d t]
 \end{equation}
 记$F_\text{obs}(t)=F_r(t)/(1+z)$, $\mathcal{M}_\text{obs}=\mathcal{M}(1+z)$, 光度距离$d_\text{L}=d(1+z)$, 则
 \begin{align}
-    h&=\sqrt{\frac{{c^*}^2/G^*}{c^2/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d(1+z)/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
-    &=\sqrt{\frac{{c^*}^2/G^*}{c^2/G}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
-    &=\sqrt{\frac{{c^*}^4/G^*}{c^4/G}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]
+    h&=\sqrt{\frac{{c^*}^7/G^*}{c^7/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d(1+z)/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
+    &=\sqrt{\frac{{c^*}^7/G^*}{c^7/G}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
+    &=\sqrt{\frac{{c^*}^9/G^*}{c^9/G}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]
 \end{align}
 用引力波测距测得$d_\text{L,G}$, 则
 \begin{equation}
-    d_\text{L,G}=d_\text{L}\sqrt{\frac{c^4/G}{{c^*}^4/G^*}}
+    d_\text{L,G}=d_\text{L}\sqrt{\frac{c^9/G}{{c^*}^9/G^*}}
 \end{equation}
 
 \cite{Poisson1995}
