@@ -223,16 +223,7 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \section{Varying $G$}
 
 \begin{equation}
-    T_{ab}=2U_{(a}J_{b)}+U^cJ_cU_aU_b
-\end{equation}
-\begin{equation}
-    J_b=-U^aT_{ab}
-\end{equation}
-\begin{equation}
-    \p^a\bar{h}_{ab}=0
-\end{equation}
-\begin{equation}
-    \p^c\p_c\bar{h}_{ab}=-16\pi\frac{G_0}{c_0^3}T_{ab}
+    \p^c\p_c\bar{h}_{ab}=-16\pi\frac{G_0}{c_0^3}T_{ab},\quad\p^a\bar{h}_{ab}=0
 \end{equation}
 \begin{equation}
     \Gamma^c_{\ph{c}ab}=\frac{1}{2}\eta^{cd}(2\p_{(a}{h}_{b)d}-\p_d{h}_{ab})
@@ -242,6 +233,13 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \end{equation}
 \begin{equation}
     U^a\p_aU^c=-\frac{1}{2}\eta^{cd}(2\p_{(a}{h}_{b)d}-\p_d{h}_{ab})U^aU^b
+\end{equation}
+
+\begin{equation}
+    T_{ab}=2U_{(a}J_{b)}+U^cJ_cU_aU_b
+\end{equation}
+\begin{equation}
+    J_b=-U^aT_{ab}
 \end{equation}
 
 \begin{equation}
@@ -264,7 +262,7 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     -\frac{1}{2}\eta^{i\sigma}(\p_0{h}_{0\sigma}+\p_0{h}_{0\sigma}-\p_\sigma{h}_{00})U^0 U^0
     &=\frac{1}{2}c_0^2\eta^{i\sigma}\p_\sigma{h}_{00}\\
     &=\frac{1}{2}c_0^2\p^i{h}_{00}\\
-    &=c_0\p^iA_0\\
+    &=-c_0\p^iA_0\\
     &=-E^i
 \end{align}
 \begin{align}
@@ -272,7 +270,8 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     &=-\frac{1}{2}c_0\eta^{i\sigma}(\p_j{h}_{0\sigma}-\p_\sigma{h}_{0j})v^j\\
     &=-\frac{1}{2}c_0\eta^{ik}(\p_j{h}_{0k}-\p_k{h}_{0j})v^j\\
     &=2\eta^{ik}(\p_jA_k-\p_kA_j)v^j\\
-    &=2(\p_jA^i-\p^iA_j)v^j\\
+    &=-2\eta^{ik}(\p_kA_j-\p_jA_k)v^j\\
+    &=-2(\p^iA_j-\p_jA^i)v^j\\
     &=-2\varepsilon^{i}_{\ph{i}jk}v^jB^k
 \end{align}
 \begin{align}
@@ -312,15 +311,21 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \end{equation}
 
 \begin{equation}
-    \vec{a}=-\vec{E}-4\vec{v}\times\vec{B}
-\end{equation}
-\begin{equation}
     \begin{cases}
         \vec{\nabla}\cdot(\varepsilon_{\text{G}}\vec{E})=\rho\\
         \vec{\nabla}\cdot\vec{B}=0\\
         \vec{\nabla}\times\vec{E}=-\frac{\p}{\p t}\vec{B}\\
         \vec{\nabla}\times(\mu_{\text{G}}^{-1}\vec{B})=\vec{j}+\frac{\p}{\p t}(\varepsilon_{\text{G}}\vec{E})
     \end{cases}
+\end{equation}
+\begin{equation}
+    \vec{a}=-\vec{E}-4\vec{v}\times\vec{B}
+\end{equation}
+\begin{equation}
+    U^\mu\p_\mu U^i=-\frac{1}{2}\eta^{i\sigma}(\p_\mu{h}_{\nu\sigma}+\p_\nu{h}_{\mu\sigma}-\p_\sigma{h}_{\mu\nu})U^\mu U^\nu
+\end{equation}
+\begin{equation}
+    A_\mu=-\frac{1}{4}c_0\bar{h}_{0\mu}
 \end{equation}
 
 \begin{equation}
@@ -405,20 +410,25 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     \end{cases}
 \end{equation}
 \begin{equation}
-    L|_{r=r_2}=L|_{r=r_1}\frac{v_\text{p}|_{r=r_1}}{v_\text{p}|_{r=r_2}}
+    \vec{a}\cdot\vec{v}=-\vec{j}\cdot\vec{E}
+\end{equation}
+\begin{equation}
+    \vec{S}=-\vec{E}\times\vec{H}=(\vec{\nabla}\varphi)\times(\frac{1}{\mu}\vec{\nabla}\times\vec{A})=\frac{c^3}{16\pi G}(\vec{\nabla}\varphi)\times(\vec{\nabla}\times\vec{A})
+\end{equation}
+\begin{equation}
+    S^{i}=\frac{c^3}{16\pi G}\varepsilon^{i}_{\ph{i}jk}(-\p_jA_0)(\varepsilon_{klm}\p^lA^m)=\frac{c^3}{16\pi G}\varepsilon^{i}_{\ph{i}jk}(\frac{1}{4}\p_i\bar{h}_{00})(-\frac{1}{4}\varepsilon_{klm}\p^l\bar{h}_{0}^{\ph{0}m})
+\end{equation}
+\begin{equation}
+    S^{i}=-\frac{c^3}{256\pi G}\varepsilon^{i}_{\ph{i}jk}(\p_i\bar{h}_{00})(\varepsilon_{klm}\p^l\bar{h}_{0}^{\ph{0}m})
+\end{equation}
+\begin{equation}
+    L|_{r=r_2}=L|_{r=r_1}\frac{c|_{r=r_1}}{c|_{r=r_2}}
 \end{equation}
 \begin{equation}
     \begin{cases}
         \Delta t_{{E}_\theta}|_{r=r_1}^{r=r_2}=\int_{r_1}^{r_2}\frac{\sqrt{1-[\frac{1}{2}\frac{\p}{\p r}(\ln\mu_{\text{G}})]^2}}{v_\text{p}}\d r\\
         \Delta t_{{H}_\phi}|_{r=r_1}^{r=r_2}=\int_{r_1}^{r_2}\frac{\sqrt{1-[\frac{1}{2}\frac{\p}{\p r}(\ln\varepsilon_{\text{G}})]^2}}{v_\text{p}}\d r\\
     \end{cases}
-\end{equation}
-
-\begin{equation}
-    S_\text{G}\propto\dot{h}^2\propto\omega^2 h^2
-\end{equation}
-\begin{equation}
-    S_\text{G}\propto\frac{c^3}{G}\omega^2h^2
 \end{equation}
 
 双星系统引力辐射本为
