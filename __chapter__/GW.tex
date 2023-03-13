@@ -2,7 +2,7 @@
 
 \section{Linearized Gravity}
 
-\cite{Wald1984}. 流形$\mathbb{R}^{4}$. 任意坐标系$\{x^{\mu}\}$, $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\gamma_{\mu\nu}s+\text{O}(s^2)$, 得
+\cite{Wald1984}. 流形$\mathbb{R}^{4}$. 任意坐标系$\{x^{\mu}\}$, $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\gamma_{\mu\nu}s+\text{O}(s^2)$, $g^{\mu\nu}={?}^{\mu\nu}+{??}^{\mu\nu}s+\text{O}(s^2)$, 则$\delta^{\mu}_{\ph{\mu}\lambda}={?}^{\mu\nu}\eta_{\nu\lambda}+{?}^{\mu\nu}\gamma_{\nu\lambda}s+{??}^{\mu\nu}\eta_{\nu\lambda}s+\text{O}(s^2)$, 所以${?}^{\mu\nu}=\eta^{\mu\nu}$, ${??}^{\mu\nu}={??}^{\mu\sigma}\delta_{\sigma}^{\ph{\sigma}\nu}={??}^{\mu\sigma}\eta_{\sigma\lambda}\eta^{\lambda\nu}=-{?}^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\eta^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\gamma^{\mu\nu}$, 所以$g^{\mu\nu}=\eta^{\mu\nu}-\gamma^{\mu\nu}s+\text{O}(s^2)=\eta^{\mu\nu}-h^{\mu\nu}+\text{O}(s^2)$.
 \begin{equation}
     R_{\mu\nu\lambda\sigma}=\p_\sigma\p_{[\mu}h_{\lambda]\nu}-\p_\nu\p_{[\mu}h_{\lambda]\sigma}+\text{O}(s^2).
 \end{equation}
@@ -10,7 +10,7 @@ $\bar{h}_{\mu\nu}:=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}\eta^{\lambda\sigma}h_{\la
 \begin{equation}
     -\frac{1}{2} \partial^{\lambda} \partial_{\lambda} \bar{h}_{\mu \nu}+\partial^{\lambda} \partial_{(\mu} \bar{h}_{\nu) \lambda}-\frac{1}{2} \eta_{\mu \nu} \partial^{\lambda} \partial^{\sigma} \bar{h}_{\lambda \sigma}+\text{O}(s^2)=8 \pi T_{\mu \nu}.
 \end{equation}
-存在$\{x^{\mu}\}$, 使得$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$ (Lorentz gauge). 
+存在$\{x^{\mu}\}$, 使得$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$ (Lorentz gauge). 设$x'^\mu=x^\mu-\xi^\mu=x^\mu-\zeta^\mu s-\text{O}(s^2)$, 则$\frac{\p ?}{\p x'^\mu}=\frac{\p ?}{\p x^\lambda}\frac{\p x^\lambda}{\p x'^\mu}=\frac{\p ?}{\p x^\lambda}(\delta^{\lambda}_{\ph{\lambda}\mu}+\frac{\p \xi^\lambda}{\p x'^\mu})=\frac{\p ?}{\p x^\nu}+\text{O}(s^2)$, $g'_{\mu\nu}=g_{\lambda\sigma}\frac{\p x^\lambda}{\p x'^\mu}\frac{\p x^\sigma}{\p x'^\nu}=g_{\lambda\sigma}(\delta^{\lambda}_{\ph{\lambda}\mu}+\frac{\p \xi^\lambda}{\p x'^\mu})(\delta^{\sigma}_{\ph{\sigma}\nu}+\frac{\p \xi^\sigma}{\p x'^\nu})=g_{\mu\nu}+g_{\mu\sigma}\frac{\p \xi^\sigma}{\p x'^\nu}+g_{\lambda\nu}\frac{\p \xi^\lambda}{\p x'^\mu}=g_{\mu\nu}+(\eta_{\mu\sigma}+\text{O}(s))(\frac{\p \xi^\sigma}{\p x^\nu}+\text{O}(s^2))+(\eta_{\lambda\nu}+\text{O}(s))(\frac{\p \xi^\lambda}{\p x^\mu}+\text{O}(s^2))=g_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\text{O}(s^2)$, 所以$h'_{\mu\nu}=g'_{\mu\nu}-\eta_{\mu\nu}=g_{\mu\nu}-\eta_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\text{O}(s^2)=h_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\text{O}(s^2)$, 因此存在$\xi^\mu$, 使得$\p'^{\nu}\bar{h}'_{\mu\nu}+\text{O}(s^2)=0$ \cite{Wald1984}.
 令$\{x^{\mu}\}$满足$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$, 则
 \begin{equation}
     \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}+\text{O}(s^2)=-16\pi T_{\mu \nu}.\label{lin_gravity}
@@ -19,7 +19,7 @@ $\bar{h}_{\mu\nu}:=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}\eta^{\lambda\sigma}h_{\la
 
 \section{Radiation Gauge}
 
-\cite{Wald1984}. 存在$\{x^{\mu}\}$, 使得``无源处'' $h+\text{O}(s^2)=0$ (TT gauge \cite{Wang2020})且$h_{0\mu}+\text{O}(s^2)=0$. 
+\cite{Wald1984}. 存在$\{x^{\mu}\}$, 使得``无源处'' $h+\text{O}(s^2)=0$ (TT gauge \cite{Wang2020})且$h_{0\mu}+\text{O}(s^2)=0$.
 
 \section{Quadrupole Approximation}
 
@@ -56,7 +56,7 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     &= -i\omega\int \hat{T}_{0j}x'^i\,\d V'\\
     &= \int \hat{T}_{(ij)}\,\d V'\\
     &= -i\omega\int \hat{T}_{0(j}x'^{i)}\,\d V'\\
-    &= -\frac{i\omega}{2}\int (\hat{T}_{0j}x'^{i}+\hat{T}_{0i}x'^{j})\,\d V',\\
+    &= -\frac{i\omega}{2}\int (\hat{T}_{0j}x'^{i}+\hat{T}_{0i}x'^{j})\,\d V',
 \end{align}
 \begin{align}
     -\frac{i\omega}{2}\int (\hat{T}_{0j}x'^{i}+\hat{T}_{0i}x'^{j})\,\d V'
@@ -82,7 +82,7 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 
 \section{$+$ Mode and $\times$ Mode}
 
-寻新标架$(e'^1)_a=(e^+)_a$, $(e'^2)_a=(e^\times)_a$, $(e'^3)_a=(e^r)_a$, ${\bar{h}}_{ij}(e^i)_a(e^j)_b={\bar{h}}'_{ij}(e'^i)_a(e'^j)_b$, 取$x$, $y$分量后去迹, $h_+=\frac{1}{2}({\bar{h}}'_{11}-{\bar{h}}'_{22})$, $h_\times={\bar{h}}'_{12}={\bar{h}}'_{21}$? \cite{Sathyaprakash2009}
+寻新标架$(e'^1)_a=(e^+)_a$, $(e'^2)_a=(e^\times)_a$, $(e'^3)_a=(e^r)_a$, ${\bar{h}}_{ij}(e^i)_a(e^j)_b={\bar{h}}'_{ij}(e'^i)_a(e'^j)_b$, 取$x$, $y$分量后去迹, $h_+=\frac{1}{2}({\bar{h}}'_{11}-{\bar{h}}'_{22})$, $h_\times={\bar{h}}'_{12}={\bar{h}}'_{21}$. (?) \cite{Sathyaprakash2009}
 
 \cite{Blanchet1997}, $\vec{n}:=\frac{\vec{r}}{\left\lvert\vec{r}\right\rvert}$,
 \begin{equation}
@@ -421,19 +421,16 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     \frac{\d^2}{\d r^2}f(r)-p\frac{\d}{\d r}f(r)+k^2f(r)=0
 \end{equation}
 \begin{equation}
-    f(r)=e^{(p/2)r}[C_+e^{i\sqrt{k-(p/2)^2}r}+C_-e^{-i\sqrt{k-(p/2)^2}r}]
+    f(r)=e^{(p/2)r}[C_+e^{i\sqrt{k^2-(p/2)^2}r}+C_-e^{-i\sqrt{k^2-(p/2)^2}r}]
 \end{equation}
 \begin{equation}
-    f(r,t)=e^{(p/2)r}[C_+e^{i(+\sqrt{k-(p/2)^2}r-kct)}+C_-e^{i(-\sqrt{k-(p/2)^2}r-kct)}]
+    f(r,t)=e^{(p/2)r}[C_+e^{i(+\sqrt{k^2-(p/2)^2}r-kct)}+C_-e^{i(-\sqrt{k^2-(p/2)^2}r-kct)}]
 \end{equation}
 \begin{equation}
-    f(r,t)=e^{(p/2)r}[C_+e^{i(+\sqrt{k-(p/2)^2}r-kct)}+C_-e^{i(-\sqrt{k-(p/2)^2}r-kct)}]
+    f(r,t)=e^{(p/2)r}[C_+e^{i(+\sqrt{(\omega/c)^2-(p/2)^2}r-\omega t)}+C_-e^{i(-\sqrt{(\omega/c)^2-(p/2)^2}r-\omega t)}]
 \end{equation}
 \begin{equation}
-    f(r,t)=e^{(p/2)r}[C_+e^{i(+\sqrt{(\omega/c)-(p/2)^2}r-\omega t)}+C_-e^{i(-\sqrt{(\omega/c)-(p/2)^2}r-\omega t)}]
-\end{equation}
-\begin{equation}
-    f(r,t)=e^{\int(p/2)\d r}[C_+e^{i(+\int\sqrt{(\omega/c)-(p/2)^2}\d r-\omega t)}+C_-e^{i(-\int\sqrt{(\omega/c)-(p/2)^2}\d r-\omega t)}]
+    f(r,t)=e^{\int(p/2)\d r}[C_+e^{i(+\int\sqrt{(\omega/c)^2-(p/2)^2}\d r-\omega t)}+C_-e^{i(-\int\sqrt{(\omega/c)^2-(p/2)^2}\d r-\omega t)}]
 \end{equation}
 \begin{equation}
     \begin{cases}
@@ -460,7 +457,7 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
     \end{cases}
 \end{equation}
 \begin{equation}
-    h_2=\sqrt{\frac{c_1^5/G_1}{c_2^5/G_2}}\frac{r_1}{r_2}h_1
+    h_2=\sqrt{\frac{c_1^4/G_1}{c_2^4/G_2}}\frac{r_1}{r_2}h_1
 \end{equation}
 
 双星系统引力辐射本为
@@ -474,22 +471,22 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 
 设地球观者与双星系统距离为$d$, 双星系统红移为$z$, 测得强度$h_d$, 频率$F_d=F_r/(1+z)$, 则
 \begin{align}
-    h_d&=\sqrt{\frac{{c^*}^5/G^*}{c^5/G}}\frac{r}{d}h_r\\
-    &=\sqrt{\frac{{c^*}^5/G^*}{c^5/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)
+    h_d&=\sqrt{\frac{{c^*}^4/G^*}{c^4/G}}\frac{r}{d}h_r\\
+    &=\sqrt{\frac{{c^*}^4/G^*}{c^4/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)
 \end{align}
 所以地球观者测得
 \begin{equation}
-    h=\sqrt{\frac{{c^*}^5/G^*}{c^5/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi \frac{F_r(t)}{1+z}\,\d t]
+    h=\sqrt{\frac{{c^*}^4/G^*}{c^4/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi \frac{F_r(t)}{1+z}\,\d t]
 \end{equation}
 记$F_\text{obs}(t)=F_r(t)/(1+z)$, $\mathcal{M}_\text{obs}=\mathcal{M}(1+z)$, 光度距离$d_\text{L}=d(1+z)$, 则
 \begin{align}
-    h&=\sqrt{\frac{{c^*}^5/G^*}{c^5/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d(1+z)/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
-    &=\sqrt{\frac{{c^*}^5/G^*}{c^5/G}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
-    &=\sqrt{\frac{{c^*}^7/G^*}{c^7/G}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]
+    h&=\sqrt{\frac{{c^*}^4/G^*}{c^4/G}}\frac{\mathcal{M}[\pi \mathcal{M}F_r(t)]^{2/3}}{d(1+z)/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
+    &=\sqrt{\frac{{c^*}^4/G^*}{c^4/G}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c^*}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]\\
+    &=\sqrt{\frac{{c^*}^6/G^*}{c^6/G}}\frac{\mathcal{M}_\text{obs}[\pi \mathcal{M}_\text{obs}F_\text{obs}(t)]^{2/3}}{d_\text{L}/c}Q(\theta,\phi,\psi,\iota)\cos[\int 2\pi F_\text{obs}(t)\,\d t]
 \end{align}
 用引力波测距测得$d_\text{L,G}$, 则
 \begin{equation}
-    d_\text{L,G}=d_\text{L}\sqrt{\frac{c^7/G}{{c^*}^7/G^*}}
+    d_\text{L,G}=d_\text{L}\sqrt{\frac{c^6/G}{{c^*}^6/G^*}}
 \end{equation}
 
 \cite{Poisson1995}
