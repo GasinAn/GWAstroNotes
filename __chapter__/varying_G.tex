@@ -744,4 +744,40 @@
     \begin{equation}
         \frac{p}{2}[\frac{p}{2}+(-1/2)k^{-3/2}]+[\frac{p'}{2}+(-1/2)(-3/2)k^{-5/2}]-k^{-1/2}k^2-p[\frac{p}{2}+(-1/2)k^{-3/2}]+\omega_0^2k^{-1/2}=0
     \end{equation}
+    \begin{verbatim}
+import numpy as np
+from scipy.integrate import solve_ivp
+import matplotlib.pyplot as plt
+
+def q(z, alpha):
+    exp = np.exp(-z)
+    return (
+        (alpha*(alpha*(z**2+2)*exp-2*(z-1))*exp)
+       /(4*(alpha*(z+1)*exp+1)**2)
+    )
+
+def solute(alpha, omega):
+    K0_0, K1_0 = 1, 0
+    K_0 = np.array([K0_0, K1_0])
+    def equ(z, K, alpha, omega):
+        return np.array([K[1], q(z, alpha)*K[0]-omega**2*K[0]*(1-K[0]**(-4))])
+    z_span = np.array([0, 10*(np.pi/omega)])
+    sol = solve_ivp(equ, z_span, K_0, args=(alpha, omega))
+    return sol.t, sol.y[0]-1
+
+def solute_approx(alpha, omega):
+    K0_0, K1_0 = 0, 0
+    K_0 = np.array([K0_0, K1_0])
+    def equ(z, K, alpha, omega):
+        return np.array([K[1], q(z, alpha)-(2*omega)**2*K[0]])
+    z_span = np.array([0, 10*(np.pi/omega)])
+    sol = solve_ivp(equ, z_span, K_0, args=(alpha, omega))
+    return sol.t, sol.y[0]
+
+alpha, omega = 0.1, 1e+6
+z = np.linspace(0, 10, 10001)
+plt.plot(z, q(z, alpha)/(2*omega)**2)
+
+plt.show()
+    \end{verbatim}
 \end{comment}
