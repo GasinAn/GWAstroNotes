@@ -16,7 +16,8 @@
 *.ist
 *.fls
 *.log
+*.synctex.gz
 
 *.bak
-*.sav.tmp
 *.sav
+*.tmp

@@ -335,449 +335,53 @@
 \section{Modification of Phase}
 
 \begin{equation}
-    p=\frac{\d\ln G}{\d z}
+    \frac{d^2}{d z^2}H(z)+2p(z)\frac{d}{d z}H(z)+\left[\omega^2+q(z)\right]H(z)=0.\label{dessoleq}
+\end{equation}
+\begin{equation}\label{HAphi}
+    H=Ae^{i\Phi}.
+\end{equation}
+$k=\frac{d \Phi}{d z}$,
+\begin{equation}\label{rpart}
+    \frac{d^2 A}{d z^2}+2p\frac{d A}{d z}+\left[\omega^2\left(1-\frac{k^2}{\omega^2}\right)+q\right]A=0,
+\end{equation}
+\begin{equation}\label{ipart}
+    2\frac{d A}{d z}k+A\frac{d k}{d z}+2pAk=0,
 \end{equation}
 \begin{equation}
-    \frac{\d^2}{\d z^2}h-p\frac{\d}{\d z}h+\omega_0^2h=0
+    2\frac{1}{A}\frac{d A}{d z}+\frac{1}{k}\frac{d k}{d z}+2p=0,
+\end{equation}
+\begin{equation}\label{Apk}
+    A\propto e^{-\int p\,dz}k^{-1/2}.
+\end{equation}
+$\Gamma=e^{\int p \,dz}$ and $K=(k/\omega)^{-1/2}$,
+\begin{equation}\label{equK0}
+    \frac{d^2 K}{d z^2}-\left(\frac{1}{\Gamma}\frac{d^2\Gamma}{d z^2}-q\right)K+\omega^2K(1-K^{-4})=0,
+\end{equation}
+$\Xi=\frac{1}{\Gamma}\frac{d^2\Gamma}{d z^2}-q$ and make $\omega=1$,
+\begin{equation}\label{equK}
+    \frac{d^2 K}{d z^2}+K[(1-\Xi)-K^{-4}]=0.
+\end{equation}
+$\Xi=\text{const}$,
+\begin{equation}\label{K0}
+    K=(1-\Xi)^{-1/4}=1+\frac{1}{4}\Xi+\frac{5}{32}\Xi^2+O(\Xi^3),
 \end{equation}
 \begin{equation}
-    G=G_\infty[1+\alpha(1+z)e^{-z}]
+    k=(1-\Xi)^{1/2}=1-\frac{1}{2}\Xi-\frac{1}{8}\Xi^2+O(\Xi^3),
 \end{equation}
-\begin{equation}
-    h=Ae^{i\phi}
+$\Xi\neq\text{const}$, $\Xi(z)=\kappa^2\tilde{\Xi}(\tilde{z})$, where $\tilde{z}=\kappa z$.
+\begin{equation}\label{equKs}
+    K^3\frac{d^2 K}{d \tilde{z}^2}\kappa^2-K^4\tilde{\Xi}(\tilde{z})\kappa^2+K^4-1=0.
 \end{equation}
-\begin{equation}
-    \frac{\d}{\d z}h=\frac{\d A}{\d z}e^{i\phi}+Ai\frac{\d \phi}{\d z}e^{i\phi}
+\begin{equation}\label{K}
+    K=\sum_{n=0}^\infty K_n(\tilde{z})\kappa^{2n},
 \end{equation}
-\begin{equation}
-    \frac{\d^2}{\d z^2}h=\frac{\d^2 A}{\d z^2}e^{i\phi}+2\frac{\d A}{\d z}i\frac{\d \phi}{\d z}e^{i\phi}+A[i\frac{\d^2 \phi}{\d z^2}e^{i\phi}-(\frac{\d \phi}{\d z})^2e^{i\phi}]
-\end{equation}
-\begin{equation}
-    \frac{\d^2 A}{\d z^2}-A(\frac{\d \phi}{\d z})^2-p\frac{\d A}{\d z}+\omega_0^2A=0
-\end{equation}
-\begin{equation}
-    2\frac{\d A}{\d z}\frac{\d \phi}{\d z}+A\frac{\d^2 \phi}{\d z^2}-pA\frac{\d \phi}{\d z}=0
-\end{equation}
-\begin{equation}
-    \frac{\d^2 A}{\d z^2}-p\frac{\d A}{\d z}+\omega_0^2[1-(\frac{k}{\omega_0})^2]A=0
-\end{equation}
-\begin{equation}
-    2k\frac{\d A}{\d z}+(\frac{\d k}{\d z}-pk)A=0
-\end{equation}
-\begin{equation}
-    2\frac{1}{A}\frac{\d A}{\d z}+\frac{1}{k}\frac{\d k}{\d z}-p=0
-\end{equation}
-\begin{equation}
-    2\frac{\d\ln A}{\d z}+\frac{\d\ln k}{\d z}-\frac{\d\ln G}{\d z}=0
-\end{equation}
-\begin{equation}
-    A\propto G^{1/2}k^{-1/2}
-\end{equation}
-\begin{equation}
-    A=A_0(\frac{G}{G_\text{s}})^{1/2}(\frac{k}{\omega_0})^{-1/2}
-\end{equation}
-\begin{equation}
-    A=(\frac{G}{G_\text{s}})^{1/2}(\frac{k}{\omega_0})^{-1/2}
-\end{equation}
-\begin{equation}
-    G=\frac{1+\alpha(1+z)e^{-z}}{1+\alpha}
-\end{equation}
-\begin{equation}
-    A=G^{1/2}k^{-1/2}
-\end{equation}
-\begin{equation}
-    A=\Gamma^{-1}K
-\end{equation}
-\begin{equation}
-    \frac{\d A}{\d z}=-\Gamma^{-2}\frac{\d \Gamma}{\d z}K+\Gamma^{-1}\frac{\d K}{\d z}
-\end{equation}
-\begin{equation}
-    \frac{\d^2 A}{\d z^2}=2\Gamma^{-3}(\frac{\d \Gamma}{\d z})^2K-\Gamma^{-2}\frac{\d^2\Gamma}{\d z^2}K-2\Gamma^{-2}\frac{\d \Gamma}{\d z}\frac{\d K}{\d z}+\Gamma^{-1}\frac{\d^2 K}{\d z^2}
-\end{equation}
-\begin{equation}
-    \frac{\d \ln G}{\d z}=\frac{\d \ln \Gamma^{-2}}{\d z}=-2\Gamma^{-1}\frac{\d \Gamma}{\d z}
-\end{equation}
-\begin{equation}
-    \frac{\d^2 A}{\d z^2}-\frac{\d \ln G}{\d z}\frac{\d A}{\d z}+\omega_0^2(1-k^2)A=0
-\end{equation}
-\begin{equation}
-    2\Gamma^{-3}(\frac{\d \Gamma}{\d z})^2K-\Gamma^{-2}\frac{\d^2\Gamma}{\d z^2}K-2\Gamma^{-2}\frac{\d \Gamma}{\d z}\frac{\d K}{\d z}+\Gamma^{-1}\frac{\d^2 K}{\d z^2}-(-2\Gamma^{-1}\frac{\d \Gamma}{\d z})(-\Gamma^{-2}\frac{\d \Gamma}{\d z}K+\Gamma^{-1}\frac{\d K}{\d z})+\omega_0^2(1-K^{-4})\Gamma^{-1}K=0
-\end{equation}
-\begin{equation}
-    \frac{\d^2 K}{\d z^2}-\Gamma^{-1}\frac{\d^2\Gamma}{\d z^2}K+\omega_0^2K(1-K^{-4})=0
-\end{equation}
-\begin{equation}
-    \Gamma^{-1}\frac{\d^2\Gamma}{\d z^2}=G^{1/2}\frac{\d^2 G^{-1/2}}{\d z^2}=G^{1/2}[\frac{3}{4}G^{-5/2}(\frac{\d G}{\d z})^2-\frac{1}{2}G^{-3/2}\frac{\d^2 G}{\d z^2}]=\frac{3}{4}G^{-2}(\frac{\d G}{\d z})^2-\frac{1}{2}G^{-1}\frac{\d^2 G}{\d z^2}
-\end{equation}
-\begin{equation}
-    G=\alpha(z+1)e^{-z}+1
-\end{equation}
-\begin{equation}
-    \frac{\d G}{\d z}=-\alpha ze^{-z}
-\end{equation}
-\begin{equation}
-    \frac{\d^2 G}{\d z^2}=\alpha(z-1)e^{-z}
-\end{equation}
-\begin{equation}
-    \Gamma^{-1}\frac{\d^2\Gamma}{\d z^2}=\frac{\alpha[\alpha(z^2+2)e^{-z}-2(z-1)]e^{-z}}{4[\alpha(z+1)e^{-z}+1]^2}
-\end{equation}
-\begin{equation}
-    K=k^{-1/2}=(1+\Delta k)^{-1/2}\approx1+(-\frac{1}{2})\Delta k
-\end{equation}
-\begin{equation}
-    -\frac{1}{2}q=\Gamma^{-1}\frac{\d^2\Gamma}{\d z^2}
-\end{equation}
-\begin{equation}
-    \frac{\d^2 (1+\Delta k)^{-1/2}}{\d z^2}-(-\frac{1}{2}q)(1+\Delta k)^{-1/2}+\omega_0^2(1+\Delta k)^{-1/2}[1-{(1+\Delta k)^{-1/2}}^{-4}]=0
-\end{equation}
-\begin{equation}
-    \frac{\d^2 \Delta k}{\d z^2}+(2\omega_0)^2\Delta k\approx q
-\end{equation}
-\begin{equation}
-    W=\begin{vmatrix}+\cos(2\omega_0z)&+\sin(2\omega_0z)\\-2\omega_0\sin(2\omega_0z)&+2\omega_0\cos(2\omega_0z)\end{vmatrix}=2\omega_0
-\end{equation}
-\begin{equation}
-    \Delta k\approx[C_\text{c}-\int\frac{q(z)\sin(2\omega_0z)}{2\omega_0}\,\d z]\cos(2\omega_0z)+[C_\text{s}+\int\frac{q(z)\cos(2\omega_0z)}{2\omega_0}\,\d z]\sin(2\omega_0z)
-\end{equation}
-\begin{equation}
-    \Delta k\approx[C_\text{c}\cos(2\omega_0z)+C_\text{s}\sin(2\omega_0z)]+\sum_{n=0}^{\infty}(-1)^{n}\frac{1}{(2\omega_0)^{2n}}\frac{\d^{2n}}{\d z^{2n}}\frac{q(z)}{(2\omega_0)^2}
-\end{equation}
-\begin{equation}
-    \Delta k\approx[-\int_0^z\frac{q(z)\sin(2\omega_0z)}{2\omega_0}\,\d z]\cos(2\omega_0z)+[+\int_0^z\frac{q(z)\cos(2\omega_0z)}{2\omega_0}\,\d z]\sin(2\omega_0z)
-\end{equation}
-\begin{equation}
-    \Delta k\approx\frac{q(z)}{(2\omega_0)^2}[1-\cos(2\omega_0z)]+[\int_0^z\frac{\frac{\d}{\d z}q(z)\cos(2\omega_0z)}{(2\omega_0)^2}\,\d z]\cos(2\omega_0z)+[\int_0^z\frac{\frac{\d}{\d z}q(z)\sin(2\omega_0z)}{(2\omega_0)^2}\,\d z]\sin(2\omega_0z)
-\end{equation}
-\begin{equation}
-    \left\lvert [\int_0^z\frac{\frac{\d}{\d z}q(z)\cos(2\omega_0z)}{(2\omega_0)^2}\,\d z]\cos(2\omega_0z)+[\int_0^z\frac{\frac{\d}{\d z}q(z)\sin(2\omega_0z)}{(2\omega_0)^2}\,\d z]\sin(2\omega_0z)\right\rvert \le2\int_0^z\frac{\left\lvert\frac{\d}{\d z}q(z)\right\rvert}{(2\omega_0)^2}\,\d z
-\end{equation}
-\begin{comment}
-    \begin{equation}
-        K=1+\Delta K
-    \end{equation}
-    \begin{equation}
-        q=\Gamma^{-1}\frac{\d^2\Gamma}{\d z^2}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 \Delta K}{\d z^2}-q(1+\Delta K)+\omega_0^2(1+\Delta K)[1-(1+\Delta K)^{-4}]=0
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 \Delta K}{\d z^2}+(2\omega_0)^2\Delta K\approx q
-    \end{equation}
-    \begin{equation}
-        W=\begin{vmatrix}+\cos(2\omega_0z)&+\sin(2\omega_0z)\\-2\omega_0\sin(2\omega_0z)&+2\omega_0\cos(2\omega_0z)\end{vmatrix}=2\omega_0
-    \end{equation}
-    \begin{equation}
-        \Delta K\approx[C_\text{c}-\int\frac{q(z)\sin(2\omega_0z)}{2\omega_0}\,\d z]\cos(2\omega_0z)+[C_\text{s}+\int\frac{q(z)\cos(2\omega_0z)}{2\omega_0}\,\d z]\sin(2\omega_0z)
-    \end{equation}
-    \begin{equation}
-        \Delta K\approx[C_\text{c}\cos(2\omega_0z)+C_\text{s}\sin(2\omega_0z)]+\sum_{n=0}^{\infty}(-1)^{n}\frac{1}{(2\omega_0)^{2n}}\frac{\d^{2n}}{\d z^{2n}}\frac{q(z)}{(2\omega_0)^2}
-    \end{equation}
-    \begin{equation}
-        \Delta K\approx[-\int_0^z\frac{q(z)\sin(2\omega_0z)}{2\omega_0}\,\d z]\cos(2\omega_0z)+[+\int_0^z\frac{q(z)\cos(2\omega_0z)}{2\omega_0}\,\d z]\sin(2\omega_0z)
-    \end{equation}
-    \begin{equation}
-        \Delta K\approx\frac{q(z)}{(2\omega_0)^2}[1-\cos(2\omega_0z)]+[\int_0^z\frac{\frac{\d}{\d z}q(z)\cos(2\omega_0z)}{(2\omega_0)^2}\,\d z]\cos(2\omega_0z)+[\int_0^z\frac{\frac{\d}{\d z}q(z)\sin(2\omega_0z)}{(2\omega_0)^2}\,\d z]\sin(2\omega_0z)
-    \end{equation}
-    \begin{equation}
-        \left\lvert [\int_0^z\frac{\frac{\d}{\d z}q(z)\cos(2\omega_0z)}{(2\omega_0)^2}\,\d z]\cos(2\omega_0z)+[\int_0^z\frac{\frac{\d}{\d z}q(z)\sin(2\omega_0z)}{(2\omega_0)^2}\,\d z]\sin(2\omega_0z)\right\rvert \le2\int_0^z\frac{\left\lvert\frac{\d}{\d z}q(z)\right\rvert}{(2\omega_0)^2}\,\d z
-    \end{equation}
-
-    \begin{equation}
-        \Delta K\approx\frac{q(z)}{(2\omega_0)^2}[1-\cos(2\omega_0z)]
-    \end{equation}
-    \begin{equation}
-        \sum_{n=0}^{\infty}(-1)^{n}\frac{1}{(2\omega_0)^{2n}}\frac{\d^{2n}}{\d z^{2n}}\frac{q(z)}{(2\omega_0)^2}
-    \end{equation}
-    \begin{equation}
-        \sum_{n=0}^{\infty}(-1)^{n}\frac{1}{(2\omega_0)^{2n}}(i\zeta)^{2n}\frac{\tilde{q}(\zeta)}{(2\omega_0)^2}
-    \end{equation}
-    \begin{equation}
-        \sum_{n=0}^{\infty}\frac{1}{(2\omega_0)^{2n}}\zeta^{2n}\frac{\tilde{q}(\zeta)}{(2\omega_0)^2}
-    \end{equation}
-    \begin{equation}
-        \frac{\tilde{q}(\zeta)}{(2\omega_0)^2}\frac{1}{1-(\zeta/2\omega_0)^{2}}
-    \end{equation}
-
-    \begin{equation}
-        q=q_0
-    \end{equation}
-    \begin{equation}
-        \Delta K\approx \frac{q_0}{(2\omega_0)^2}[1-\cos(2\omega_0z)]
-    \end{equation}
-    \begin{equation}
-        q=q_1z
-    \end{equation}
-    \begin{equation}
-        \Delta K\approx \frac{q_1}{(2\omega_0)^3}[2\omega_0z-\sin(2\omega_0z)]
-    \end{equation}
-    \begin{equation}
-        q=q_2z^2
-    \end{equation}
-    \begin{equation}
-        \Delta K\approx \frac{q_2}{(2\omega_0)^3}[(2\omega_0z)^2-2+2\cos(2\omega_0z)]
-    \end{equation}
-
-    \begin{equation}
-        \Delta K\approx-\cos(2\omega_0z)\int\frac{q(z)\sin(2\omega_0z)}{2\omega_0}\,\d z+\sin(2\omega_0z)\int\frac{q(z)\cos(2\omega_0z)}{2\omega_0}\,\d z
-    \end{equation}
-    \begin{equation}
-        \frac{\d \Delta K}{\d z}\approx+2\omega_0\sin(2\omega_0z)\int\frac{q(z)\sin(2\omega_0z)}{2\omega_0}\,\d z+2\omega_0\cos(2\omega_0z)\int\frac{q(z)\cos(2\omega_0z)}{2\omega_0}\,\d z
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 \Delta K}{\d z^2}\approx+(2\omega_0)^2\cos(2\omega_0z)\int\frac{q(z)\sin(2\omega_0z)}{2\omega_0}\,\d z-(2\omega_0)^2\sin(2\omega_0z)\int\frac{q(z)\cos(2\omega_0z)}{2\omega_0}\,\d z+q(z)
-    \end{equation}
-
-    \begin{equation}
-        \frac{\d A}{\d z}=\frac{1}{2}\frac{\d G}{\d z}G^{-1/2}k^{-1/2}-\frac{1}{2}G^{1/2}\frac{\d k}{\d z}k^{-3/2}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}=-\frac{1}{4}(\frac{\d G}{\d z})^2G^{-3/2}k^{-1/2}-\frac{1}{2}\frac{\d G}{\d z}\frac{\d k}{\d z}G^{-1/2}k^{-3/2}+\frac{1}{2}\frac{\d^2 G}{\d z^2}G^{-1/2}k^{-1/2}+\frac{3}{4}G^{1/2}(\frac{\d k}{\d z})^2k^{-5/2}-\frac{1}{2}G^{1/2}\frac{\d^2 k}{\d z^2}k^{-3/2}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}-\frac{1}{G}\frac{\d G}{\d z}\frac{\d A}{\d z}+\omega_0^2(1-k^2)A=0
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}-\frac{1}{G}\frac{\d G}{\d z}\frac{\d A}{\d z}=
-        - \frac{0.75 \left(\frac{d}{d z} G{\left(z \right)}\right)^{2}}{G^{1.5}{\left(z \right)} k^{0.5}{\left(z \right)}} + \frac{0.5 \frac{d^{2}}{d z^{2}} G{\left(z \right)}}{G^{0.5}{\left(z \right)} k^{0.5}{\left(z \right)}} + \frac{0.75 G^{0.5}{\left(z \right)} \left(\frac{d}{d z} k{\left(z \right)}\right)^{2}}{k^{2.5}{\left(z \right)}} - \frac{0.5 G^{0.5}{\left(z \right)} \frac{d^{2}}{d z^{2}} k{\left(z \right)}}{k^{1.5}{\left(z \right)}}
-    \end{equation}
-    \begin{equation}
-        [\frac{1}{2}G^{-1/2}\frac{\d^2 G}{\d z^2}-\frac{3}{4}G^{-3/2}(\frac{\d G}{\d z})^2]k^{-1/2}-[\frac{1}{2}G^{1/2}]k^{-3/2}\frac{\d^2 k}{\d z^2}+[\frac{3}{4}G^{1/2}]k^{-5/2}(\frac{\d k}{\d z})^2+\omega_0^2(1-k^2)G^{1/2}k^{-1/2}=0
-    \end{equation}
-    \begin{equation}
-        -\frac{1}{2}k\frac{\d^2 k}{\d z^2}+\frac{3}{4}(\frac{\d k}{\d z})^2+[\frac{1}{2}\frac{1}{G}\frac{\d^2 G}{\d z^2}-\frac{3}{4}\frac{1}{G^2}(\frac{\d G}{\d z})^2]k^2+\omega_0^2k^2(1-k^2)=0
-    \end{equation}
-    \begin{equation}
-        k|_{z=0}=1, \frac{\d k}{\d z}|_{z=0}=0
-    \end{equation}
-    \begin{equation}
-        K=k^n
-    \end{equation}
-    \begin{equation}
-        \frac{\d K}{\d z}=nk^{n-1}\frac{\d k}{\d z}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 K}{\d z^2}=n(n-1)k^{n-2}(\frac{\d k}{\d z})^2+nk^{n-1}\frac{\d^2 k}{\d z^2}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 k^{-1/2}}{\d z^2}-\frac{1}{G^{-1/2}}\frac{\d^2 G^{-1/2}}{\d z^2}k^{-1/2}+\omega_0^2k^{-1/2}(1-k^2)=0
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 K}{\d z^2}-qK+\omega_0^2K(1-K^{-4})=0
-    \end{equation}
-
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}-\frac{1}{G}\frac{\d G}{\d z}\frac{\d A}{\d z}+\omega_0^2(1-G^2A^{-4})A=0
-    \end{equation}
-    \begin{equation}
-        A^3\frac{\d^2 A}{\d z^2}-\frac{1}{G}\frac{\d G}{\d z}A^3\frac{\d A}{\d z}+\omega_0^2(A^4-G^2)=0
-    \end{equation}
-
-    \begin{equation}
-        k\propto GA^{-2}
-    \end{equation}
-    \begin{equation}
-        G=\frac{1+\alpha(1+z)e^{-z}}{1+\alpha}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}-\frac{1}{G}\frac{\d G}{\d z}\frac{\d A}{\d z}+\omega_0^2(1-GA^{-2})A=0
-    \end{equation}
-
-    \begin{equation}
-        \frac{\d A}{\d z}\propto \frac{1}{2}G^{-1/2}\frac{\d G}{\d z}k^{-1/2}-\frac{1}{2}G^{1/2}k^{-3/2}\frac{\d k}{\d z}
-    \end{equation}
-    \begin{equation}
-        \frac{\d A}{\d z}\propto \frac{1}{2}A\frac{\d \ln (G/k)}{\d z}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}\propto \frac{1}{2}(\frac{1}{2}G^{-1/2}\frac{\d G}{\d z}k^{-1/2}-\frac{1}{2}G^{1/2}k^{-3/2}\frac{\d k}{\d z})(p-\frac{\d \ln k}{\d z})+\frac{1}{2}G^{1/2}k^{-1/2}(\frac{\d p}{\d z}-\frac{\d^2 \ln k}{\d z^2})
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}\propto \frac{1}{4}A(\frac{\d \ln (G/k)}{\d z})^2+\frac{1}{2}A\frac{\d^2 \ln (G/k)}{\d z^2}
-    \end{equation}
-    \begin{equation}
-        \frac{1}{4}(\frac{\d \ln (G/k)}{\d z})^2+\frac{1}{2}\frac{\d^2 \ln (G/k)}{\d z^2}-\frac{\d\ln G}{\d z}\frac{1}{2}\frac{\d \ln (G/k)}{\d z}+(\omega_0^2-k^2)=0
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 \ln \sqrt{G/k}}{\d z^2}+(\frac{\d \ln \sqrt{G/k}}{\d z})^2-\frac{\d\ln G}{\d z}\frac{\d \ln \sqrt{G/k}}{\d z}+(\omega_0^2-k^2)=0
-    \end{equation}
-
-    \def\M{\mathcal{M}}
-    \begin{equation}
-        \M:=\mu^{3/5}M^{2/5}
-    \end{equation}
-    \begin{equation}
-        h_+=\frac{4\M}{d_\text{L}}[\pi \M F_0]^{2/3}\frac{1+\cos^2\iota}{2}\cos(2\pi F_0t)
-    \end{equation}
-    \begin{equation}
-        h_\times=\frac{4\M}{d_\text{L}}[\pi \M F_0]^{2/3}\cos\iota\sin(2\pi F_0t)
-    \end{equation}
-    \begin{equation}
-        \p^\lambda\p_\lambda h_{\mu\nu}- (\p^\lambda\ln G)\,\p_\lambda h_{\mu\nu}=0
-    \end{equation}
-    \begin{equation}
-        G = G_\infty [1 + \alpha(1 + r/\lambda)e^{-r/\lambda}]
-    \end{equation}
-    \begin{equation}
-        h=\sin(2\pi F_0t)=\sin(\omega_0t)
-    \end{equation}
-    \begin{equation}
-        G = G_\infty [1 + \alpha(1 + z/\lambda)e^{-z/\lambda}]
-    \end{equation}
-    \begin{equation}
-        \frac{\d \ln G}{\d z}=-\frac{1}{\lambda}\frac{\alpha(z/\lambda)e^{-z/\lambda}}{1 + \alpha(1 + z/\lambda)e^{-z/\lambda}}
-    \end{equation}
-    \begin{equation}
-        \frac{\d \ln G}{\d z}=-\frac{\alpha z e^{-z}}{1 + \alpha(1 + z)e^{-z}}
-    \end{equation}
-    \begin{equation}
-        \frac{\p^2}{\p z^2}h - \frac{\d \ln G}{\d z}\frac{\p}{\p z}h-\frac{\p^2}{\p t^2} h=0
-    \end{equation}
-    \begin{equation}
-        h=h(z)e^{-i\omega_0t}=A(z)e^{i[k(z)z-\omega_0t]}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2}{\d z^2}h - \frac{\d \ln G}{\d z}\frac{\d}{\d z}h+\omega_0^2 h=0
-    \end{equation}
-    \begin{equation}
-        h=Ae^{ikz}
-    \end{equation}
-    \begin{equation}
-        \frac{\d}{\d z}h=\frac{\d A}{\d z}e^{ikz}+Ai(\frac{\d k}{\d z}z+k)e^{ikz}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2}{\d z^2}h=\frac{\d^2 A}{\d z^2}e^{ikz}+2\frac{\d A}{\d z}i(\frac{\d k}{\d z}z+k)e^{ikz}+A[i(\frac{\d^2 k}{\d z^2}z+2\frac{\d k}{\d z}+k)e^{ikz}-(\frac{\d k}{\d z}z+k)^2e^{ikz}]
-    \end{equation}
-    \begin{equation}
-        \frac{\d \ln G}{\d z}=-\frac{\alpha z e^{-z}}{1 + \alpha(1 + z)e^{-z}}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2}{\d z^2}h - \frac{\d \ln G}{\d z}\frac{\d}{\d z}h+\omega_0^2 h=0
-    \end{equation}
-    \begin{equation}
-        h|_{z=0}=1, \frac{\d h}{\d z}|_{z=0}=\omega_0i
-    \end{equation}
-    \begin{equation}
-        h|_{z=0}=0, \frac{\d h}{\d z}|_{z=0}=\omega_0
-    \end{equation}
-    \begin{equation}
-        h|_{z=0}=1, \frac{\d h}{\d z}|_{z=0}=0
-    \end{equation}
-    \begin{equation}
-        \frac{\d \ln G}{\d z}=-\frac{\alpha z e^{-z}}{1 + \alpha(1 + z)e^{-z}}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2}{\d z^2}h - \frac{\d \ln G}{\d z}\frac{\d}{\d z}h+\omega_0^2 h=0
-    \end{equation}
-    \begin{equation}
-        h|_{z=0}=1, \frac{\d h}{\d z}|_{z=0}=0
-    \end{equation}
-    \begin{equation}
-        \sqrt{\frac{G}{G|_{z=0}}}=\sqrt{\frac{1 + \alpha(1 + z)e^{-z}}{1 + \alpha}}
-    \end{equation}
-    \begin{equation}
-        h=Ae^{i\phi}
-    \end{equation}
-    \begin{equation}
-        \frac{\d}{\d z}h=\frac{\d A}{\d z}e^{i\phi}+Ai\frac{\d \phi}{\d z}e^{i\phi}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2}{\d z^2}h=\frac{\d^2 A}{\d z^2}e^{i\phi}+2\frac{\d A}{\d z}i\frac{\d \phi}{\d z}e^{i\phi}+A[i\frac{\d^2 \phi}{\d z^2}e^{i\phi}-(\frac{\d \phi}{\d z})^2e^{i\phi}]
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}-A(\frac{\d \phi}{\d z})^2-p\frac{\d A}{\d z}+\omega_0^2A=0
-    \end{equation}
-    \begin{equation}
-        2\frac{\d A}{\d z}\frac{\d \phi}{\d z}+A\frac{\d^2 \phi}{\d z^2}-pA\frac{\d \phi}{\d z}=0
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}-Ak^2-p\frac{\d A}{\d z}+\omega_0^2A=0
-    \end{equation}
-    \begin{equation}
-        2\frac{\d A}{\d z}k+A\frac{\d k}{\d z}-pAk=0
-    \end{equation}
-    \begin{equation}
-        \frac{\d A}{\d z}=\frac{1}{2}pA
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}=\frac{1}{2}\frac{\d p}{\d z}A+\frac{1}{2}p\frac{\d A}{\d z}
-    \end{equation}
-    \begin{equation}
-        \frac{1}{2}\frac{\d p}{\d z}A-\frac{1}{2}p\frac{\d A}{\d z}+\omega_0^2A-k^2A=0
-    \end{equation}
-    \begin{equation}
-        (\frac{1}{2}\frac{\d p}{\d z}+\omega_0^2-k^2)A=\frac{1}{2}p\frac{\d A}{\d z}
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}-Ak^2-p\frac{\d A}{\d z}+\omega_0^2A=0
-    \end{equation}
-    \begin{equation}
-        2\frac{\d A}{\d z}k+A\frac{\d k}{\d z}-pAk=0
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}-p\frac{\d A}{\d z}=0
-    \end{equation}
-    \begin{equation}
-        2\frac{\d A}{\d z}-pA=0
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}-Ak^2-p\frac{\d A}{\d z}+\omega_0^2A=0
-    \end{equation}
-    \begin{equation}
-        2\frac{\d A}{\d z}k+A\frac{\d k}{\d z}-pAk=0
-    \end{equation}
-    \begin{equation}
-        A=e^{\int\frac{pk-\frac{\d k}{\d z}}{2k}\,\d z}
-        =e^{\int\frac{p}{2}\,\d z}/e^{\int\frac{1}{2k}\,\d k}
-        =e^{\int\frac{1}{2}\,\d \ln G}/e^{\int\frac{1}{2}\,\d \ln k}
-        =G^{1/2}k^{-1/2}
-    \end{equation}
-    \begin{equation}
-        A=e^{\int\frac{p}{2}\,\d z}k^{-1/2}
-    \end{equation}
-    \begin{equation}
-        \frac{\d A}{\d z}=e^{\int\frac{p}{2}\,\d z}[\frac{p}{2}+(-1/2)k^{-3/2}]
-    \end{equation}
-    \begin{equation}
-        \frac{\d^2 A}{\d z^2}=e^{\int\frac{p}{2}\,\d z}\frac{p}{2}[\frac{p}{2}+(-1/2)k^{-3/2}]+e^{\int\frac{p}{2}\,\d z}[\frac{p'}{2}+(-1/2)(-3/2)k^{-5/2}]
-    \end{equation}
-    \begin{equation}
-        \frac{p}{2}[\frac{p}{2}+(-1/2)k^{-3/2}]+[\frac{p'}{2}+(-1/2)(-3/2)k^{-5/2}]-k^{-1/2}k^2-p[\frac{p}{2}+(-1/2)k^{-3/2}]+\omega_0^2k^{-1/2}=0
-    \end{equation}
-    \begin{verbatim}
-import numpy as np
-from scipy.integrate import solve_ivp
-import matplotlib.pyplot as plt
-
-def q(z, alpha):
-    exp = np.exp(-z)
-    return (
-        (alpha*(alpha*(z**2+2)*exp-2*(z-1))*exp)
-       /(4*(alpha*(z+1)*exp+1)**2)
-    )
-
-def solute(alpha, omega):
-    K0_0, K1_0 = 1, 0
-    K_0 = np.array([K0_0, K1_0])
-    def equ(z, K, alpha, omega):
-        return np.array([K[1], q(z, alpha)*K[0]-omega**2*K[0]*(1-K[0]**(-4))])
-    z_span = np.array([0, 10*(np.pi/omega)])
-    sol = solve_ivp(equ, z_span, K_0, args=(alpha, omega))
-    return sol.t, sol.y[0]-1
-
-def solute_approx(alpha, omega):
-    K0_0, K1_0 = 0, 0
-    K_0 = np.array([K0_0, K1_0])
-    def equ(z, K, alpha, omega):
-        return np.array([K[1], q(z, alpha)-(2*omega)**2*K[0]])
-    z_span = np.array([0, 10*(np.pi/omega)])
-    sol = solve_ivp(equ, z_span, K_0, args=(alpha, omega))
-    return sol.t, sol.y[0]
-
-alpha, omega = 0.1, 1e+6
-z = np.linspace(0, 10, 10001)
-plt.plot(z, q(z, alpha)/(2*omega)**2)
-
-plt.show()
-    \end{verbatim}
-\end{comment}
+\begin{gather}
+    K_0^4-1=0,\\
+    K_0^3K_0''-K_0^4\tilde{\Xi}+4K_0^3K_1=0,\\
+    (K_0^3K_1''+3K_0^2K_1K_0'')-4K_0^3K_1\tilde{\Xi}+(4K_0^3K_2+6K_0^2K_1^2)=0.
+\end{gather}
+\begin{gather}
+    K_0=1,\\
+    K_1=\frac{1}{4}\tilde{\Xi},\\
+    K_2=\frac{5}{32}\tilde{\Xi}^2-\frac{1}{16}\frac{d^2\tilde{\Xi}}{d\tilde{z}^2},
+\end{gather}
