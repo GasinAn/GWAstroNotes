@@ -468,26 +468,27 @@ $\Xi\neq\text{const}$, $\Xi(z)=\kappa^2\tilde{\Xi}(\tilde{z})$, where $\tilde{z}
 \begin{equation}
     \frac{1}{16}\frac{5}{3}(\frac{743}{336}+\frac{11}{4}\eta)\mathcal{M}^{-5/3}M^{2/3}-\Omega
 \end{equation}
-\begin{comment}
-\begin{equation}
-    \tilde{h}(f)=\mathcal{A} f^{-7/6}e^{i[2\pi ft_\text{c}-\phi_\text{c}-\frac{\pi}{4}+\frac{3}{128}(\pi\mathcal{M}f)^{-5/3}-\Omega(2\pi f)^{-1}]}
-\end{equation}
-\begin{equation}
-    \vec{\theta}=(\ln\mathcal{A},f_0t_\text{c},\phi_\text{c},\ln\mathcal{M},\Omega/f_0)
-\end{equation}
-\begin{equation}
-    \tilde{h}_{,1}=\tilde{h}
-\end{equation}
-\begin{equation}
-    \tilde{h}_{,2}=(2\pi f/f_0)i\tilde{h}
-\end{equation}
-\begin{equation}
-    \tilde{h}_{,3}=-i\tilde{h}
-\end{equation}
-\begin{equation}
-    \tilde{h}_{,4}=-\frac{5i}{128}(\pi\mathcal{M}f)^{-5/3}\tilde{h}
-\end{equation}
-\begin{equation}
-    \tilde{h}_{,5}=-(2\pi f/f_0)^{-1}i\tilde{h}
-\end{equation}
-\end{comment}
+\begin{eqnarray}
+    h_0(t)=\sum_k[C_+(k)e^{+ik\int\,dt}+C_-(k)e^{-ik\int\,dt}]e^{ikd_L}\\
+    h(t)=\sum_k\Gamma^{-1}K[C_+(k)e^{+ik\int K^{-2}\,dt}+C_-(k)e^{-ik\int K^{-2}\,dt}]e^{ikd_L}
+\end{eqnarray}
+\begin{eqnarray}
+    h_0(t)=\int[C_+(k)e^{+ik\int\,dt}+C_-(k)e^{-ik\int\,dt}]e^{ikd_L}dk\\
+    h(t)=\int\Gamma^{-1}K[C_+(k)e^{+ik\int K^{-2}\,dt}+C_-(k)e^{-ik\int K^{-2}\,dt}]e^{ikd_L}dk
+\end{eqnarray}
+\begin{eqnarray}
+    h_0(t)
+    =\int[C_+(-\omega)e^{-i\omega d_L}+C_-(+\omega)e^{+i\omega d_L}]e^{-i\omega t}d\omega\\
+    =\int\tilde{h}_0(\omega)e^{-i\omega t}d\omega
+\end{eqnarray}
+\begin{eqnarray}
+    h(t)
+    =\int[C_+(-\omega)e^{-i\omega d_L}+C_-(+\omega)e^{+i\omega d_L}]e^{-i\omega \int K^{-2}\,dt}d\omega\\
+    =\int\tilde{h}_0(\omega)e^{-i\omega t}e^{+i\omega \int\frac{\Xi(t)}{2\omega^2}}d\omega
+\end{eqnarray}
+如果直接认为${\dot{G}}/{G}$是常数, 那$\int{\Xi(t)}/{2\omega^2}=\eta({\dot{G}}/{G})^2t/{2\omega^2}$, 这里暂用$\sum_\omega$表示积分.
+\begin{eqnarray}
+    h(t)
+    =\sum_\omega\tilde{h}_0(\omega)e^{-i\omega t}e^{+i\omega \eta({\dot{G}}/{G})^2t/{2\omega^2}}\\
+    =\sum_\omega\tilde{h}_0(\omega)e^{-i\omega(1-\eta({\dot{G}}/{G})^2/{2\omega^2}) t}
+\end{eqnarray}
