@@ -2,28 +2,62 @@
 
 \section{Linearized Gravity}
 
-\cite{Wald1984}. 流形$\mathbb{R}^{4}$. 任意坐标系$\{x^{\mu}\}$, $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\gamma_{\mu\nu}s+\text{O}(s^2)$, $g^{\mu\nu}={?}^{\mu\nu}+{??}^{\mu\nu}s+\text{O}(s^2)$, 则$\delta^{\mu}_{\ph{\mu}\lambda}={?}^{\mu\nu}\eta_{\nu\lambda}+{?}^{\mu\nu}\gamma_{\nu\lambda}s+{??}^{\mu\nu}\eta_{\nu\lambda}s+\text{O}(s^2)$, 所以${?}^{\mu\nu}=\eta^{\mu\nu}$, ${??}^{\mu\nu}={??}^{\mu\sigma}\delta_{\sigma}^{\ph{\sigma}\nu}={??}^{\mu\sigma}\eta_{\sigma\lambda}\eta^{\lambda\nu}=-{?}^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\eta^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\gamma^{\mu\nu}$, 所以$g^{\mu\nu}=\eta^{\mu\nu}-\gamma^{\mu\nu}s+\text{O}(s^2)=\eta^{\mu\nu}-h^{\mu\nu}+\text{O}(s^2)$.
+\cite{Wald1984}. 流形$\mathbb{R}^{4}$. 任意坐标系$\{x^{\mu}\}$, $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\gamma_{\mu\nu}s+\text{O}(s^2)$. 设$g^{\mu\nu}={?}^{\mu\nu}+{??}^{\mu\nu}s+\text{O}(s^2)$, 则$\delta^{\mu}_{\ph{\mu}\lambda}={?}^{\mu\nu}\eta_{\nu\lambda}+{?}^{\mu\nu}\gamma_{\nu\lambda}s+{??}^{\mu\nu}\eta_{\nu\lambda}s+\text{O}(s^2)$, 所以${?}^{\mu\nu}=\eta^{\mu\nu}$, ${??}^{\mu\nu}={??}^{\mu\sigma}\delta_{\sigma}^{\ph{\sigma}\nu}={??}^{\mu\sigma}\eta_{\sigma\lambda}\eta^{\lambda\nu}=-{?}^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\eta^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\gamma^{\mu\nu}$, 所以$g^{\mu\nu}=\eta^{\mu\nu}-\gamma^{\mu\nu}s+\text{O}(s^2)=\eta^{\mu\nu}-h^{\mu\nu}+\text{O}(s^2)$.
 \begin{equation}
     R_{\mu\nu\lambda\sigma}=\p_\sigma\p_{[\mu}h_{\lambda]\nu}-\p_\nu\p_{[\mu}h_{\lambda]\sigma}+\text{O}(s^2).
 \end{equation}
+
 $\bar{h}_{\mu\nu}:=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}\eta^{\lambda\sigma}h_{\lambda\sigma}=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}h$.
 \begin{equation}
     -\frac{1}{2} \partial^{\lambda} \partial_{\lambda} \bar{h}_{\mu \nu}+\partial^{\lambda} \partial_{(\mu} \bar{h}_{\nu) \lambda}-\frac{1}{2} \eta_{\mu \nu} \partial^{\lambda} \partial^{\sigma} \bar{h}_{\lambda \sigma}+\text{O}(s^2)=8 \pi T_{\mu \nu}.
 \end{equation}
-存在$\{x^{\mu}\}$, 使得$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$ (Lorentz gauge). 设$x'^\mu=x^\mu-\xi^\mu=x^\mu-\zeta^\mu s-\text{O}(s^2)$, 则$\frac{\p ?}{\p x'^\mu}=\frac{\p ?}{\p x^\lambda}\frac{\p x^\lambda}{\p x'^\mu}=\frac{\p ?}{\p x^\lambda}(\delta^{\lambda}_{\ph{\lambda}\mu}+\frac{\p \xi^\lambda}{\p x'^\mu})=\frac{\p ?}{\p x^\nu}+\text{O}(s^2)$, $g'_{\mu\nu}=g_{\lambda\sigma}\frac{\p x^\lambda}{\p x'^\mu}\frac{\p x^\sigma}{\p x'^\nu}=g_{\lambda\sigma}(\delta^{\lambda}_{\ph{\lambda}\mu}+\frac{\p \xi^\lambda}{\p x'^\mu})(\delta^{\sigma}_{\ph{\sigma}\nu}+\frac{\p \xi^\sigma}{\p x'^\nu})=g_{\mu\nu}+g_{\mu\sigma}\frac{\p \xi^\sigma}{\p x'^\nu}+g_{\lambda\nu}\frac{\p \xi^\lambda}{\p x'^\mu}=g_{\mu\nu}+(\eta_{\mu\sigma}+\text{O}(s))(\frac{\p \xi^\sigma}{\p x^\nu}+\text{O}(s^2))+(\eta_{\lambda\nu}+\text{O}(s))(\frac{\p \xi^\lambda}{\p x^\mu}+\text{O}(s^2))=g_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\text{O}(s^2)$, 所以$h'_{\mu\nu}=g'_{\mu\nu}-\eta_{\mu\nu}=g_{\mu\nu}-\eta_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\text{O}(s^2)=h_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\text{O}(s^2)$, 因此存在$\xi^\mu$, 使得$\p'^{\nu}\bar{h}'_{\mu\nu}+\text{O}(s^2)=0$ \cite{Wald1984}.
-令$\{x^{\mu}\}$满足$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$, 则
+存在$\{x^{\mu}\}$, 使得$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$ (Lorentz gauge). [证: 设$x'^\mu=x^\mu-\xi^\mu=x^\mu-\zeta^\mu s-\text{O}(s^2)$, 则$\frac{\p ?}{\p x'^\mu}=\frac{\p ?}{\p x^\lambda}\frac{\p x^\lambda}{\p x'^\mu}=\frac{\p ?}{\p x^\lambda}(\delta^{\lambda}_{\ph{\lambda}\mu}+\frac{\p \xi^\lambda}{\p x'^\mu})=\frac{\p ?}{\p x^\nu}+\text{O}(s^2)$, $g'_{\mu\nu}=g_{\lambda\sigma}\frac{\p x^\lambda}{\p x'^\mu}\frac{\p x^\sigma}{\p x'^\nu}=g_{\lambda\sigma}(\delta^{\lambda}_{\ph{\lambda}\mu}+\frac{\p \xi^\lambda}{\p x'^\mu})(\delta^{\sigma}_{\ph{\sigma}\nu}+\frac{\p \xi^\sigma}{\p x'^\nu})=g_{\mu\nu}+g_{\mu\sigma}\frac{\p \xi^\sigma}{\p x'^\nu}+g_{\lambda\nu}\frac{\p \xi^\lambda}{\p x'^\mu}=g_{\mu\nu}+(\eta_{\mu\sigma}+\text{O}(s))(\frac{\p \xi^\sigma}{\p x^\nu}+\text{O}(s^2))+(\eta_{\lambda\nu}+\text{O}(s))(\frac{\p \xi^\lambda}{\p x^\mu}+\text{O}(s^2))=g_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\text{O}(s^2)$, 所以$h'_{\mu\nu}=g'_{\mu\nu}-\eta_{\mu\nu}=g_{\mu\nu}-\eta_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\text{O}(s^2)=h_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\text{O}(s^2)$, 因此存在$\xi^\mu$, 使得$\p'^{\nu}\bar{h}'_{\mu\nu}+\text{O}(s^2)=0$.] 令$\{x^{\mu}\}$满足$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$, 则
 \begin{equation}
     \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}+\text{O}(s^2)=-16\pi T_{\mu \nu}.\label{lin_gravity}
 \end{equation}
-略去$\text{O}(s^2)$条件: $h_{\mu\nu}$, $\p_\lambda h_{\mu\nu}$\dots{}小.
+略去$\text{O}(s^2)$条件: $h_{\mu\nu}$, $\p_\lambda h_{\mu\nu}$\dots{}小. 下略$\text{O}(s^2)$. 
 
 \section{Radiation Gauge}
 
-\cite{Wald1984}. 存在$\{x^{\mu}\}$, 使得``无源处'' $h+\text{O}(s^2)=0$ (TT gauge \cite{Wang2020})且$h_{0\mu}+\text{O}(s^2)=0$.
+\cite{Wald1984}. 存在$\{x^{\mu}\}$, 使得``无源处'' $h+\text{O}(s^2)=0$ (TT gauge \cite{Wang2020})且$h_{0\mu}+\text{O}(s^2)=0$. \cite{Maggiore2014}, 解$\p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}=0$得$h_{ij}=A_{ij}(\vec{k})e^{ik^\mu x_\mu}$ ($A_{ij}$称为polarization tensor). $h_{(ij)}=0$, $h=0$, $\p^{j}h_{ij}=0$ $\D$ $A_{(ij)}=0$, $A=0$, $k^{j}A_{ij}=0$. 令$\vec{e}_z\parallel\vec{k}$,
+\begin{equation}
+    h_{xy}=\begin{bmatrix}
+        +h_+&h_\times\\
+        h_\times&-h_+
+    \end{bmatrix}e^{i\omega(t-z)}.
+\end{equation}
+
+\cite{Maggiore2014}. Lorentz gauge $\to$ radiation gauge, $P_{ij}:=\delta_{ij}-n_in_j$, $\Lambda_{ijkl}=P_{ik}P_{jl}-\frac{1}{2}P_{ij}P_{kl}$, $h_{ij}^\text{r}=\Lambda_{ijkl}h_{kl}^\text{L}$. \cite{Sathyaprakash2009}. Step 1: 坐标系空间旋转, 使$\vec{e}_z\parallel\vec{n}$. Step 2: 取$x$, $y$分量$h_{xy}$. Step 3: 去迹. [$h_+=\frac{1}{2}(h_{xx}-h_{yy})$, $h_\times=h_{xy}=h_{yx}$.]
+
+\section{Fourier Transformation}
+
+\def\A{\mathcal{A}}
+\cite{Maggiore2014}. 
+\begin{equation}
+    h_{ij}=\frac{1}{(2\pi)^3}\int\d^3\vec{k}\left[\A_{ij}(\vec{k})e^{+ik_\mu x^\mu}+\A_{ij}^*(\vec{k})e^{-ik_\mu x^\mu}\right]
+\end{equation}
+$\d^2\vec{n}:=\sin\theta\d\theta\d\phi$,
+\begin{align}
+    h_{ij}&=\int_0^\infty\d f\, f^2\int\d^2\vec{n}\left[\A_{ij}(f,\vec{n})e^{-2\pi i f(t-\vec{n}\cdot\vec{x})}+\text{c.c.}\right]\\
+    &=\int_0^\infty\d f\left[e^{-2\pi i ft}f^2\int\d^2\vec{n}\,\A_{ij}(f,\vec{n})e^{+2\pi i f\vec{n}\cdot\vec{x}}+\text{c.c.}\right]\\
+    &:=\int_0^\infty\d f\left[\tilde{h}_{ij}(f,\vec{x})e^{-2\pi i ft}+\tilde{h}_{ij}^*(f,\vec{x})e^{+2\pi i ft}\right]\\
+    &:=\int\d f\,\tilde{h}_{ij}(f,\vec{x})e^{-2\pi i ft}.
+\end{align}
+When we observe on Earth a GW emitted by a single astrophysical source, and the linear dimensions of the detector are much smaller than wavelength of the GW, choosing the origin of the coordinate system centered on the detector, $\tilde{h}_{ij}(f,\vec{x})\approx\tilde{h}_{ij}(f):=\tilde{h}_{ij}(f,\vec{x}=\vec{0})$,
+\begin{align}
+    h_{ij}&=\int\d f\,\tilde{h}_{ij}(f)e^{-2\pi i ft}.
+\end{align}
+The dependence on $\vec{x}$ must be kept in some cases (see \cite{Maggiore2014}).
+
+\section{TT frame}
+
+TT gauge $\D$ TT frame. free test body $x^\mu(\tau)$, $\frac{\d x^i}{\d t}|_{\tau=0}=0$ $\D$ $\frac{\d x^0}{\d \tau}\equiv1$ and $\frac{\d x^i}{\d \tau}\equiv0$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Quadrupole Approximation}
 
-\cite{Wald1984}. 下略$\text{O}(s^2)$. 由\eqref{lin_gravity}得
+\cite{Wald1984}. 由\eqref{lin_gravity}得
 \begin{equation}
     \bar{h}_{\mu\nu}(t,\vec{r}) = 4\int 
     \frac{T_{\mu\nu}(t-\left\lvert\vec{r}-\vec{r}'\right\rvert,\vec{r}')}{\left\lvert\vec{r}-\vec{r}'\right\rvert}\,\d V'.
@@ -78,26 +112,6 @@ $\left\lvert \vec{r}\right\rvert \gg \left\lvert \vec{r}'\right\rvert$且$\omega
 \begin{equation}
     {\bar{h}}_{ij}(t,\vec{r}) = \frac{2}{\left\lvert\vec{r}\right\rvert}
     \frac{\d^2}{\d t^2}{q}_{ij}(t-\left\lvert\vec{r}\right\rvert).\label{qf}
-\end{equation}
-
-\section{$+$ Mode and $\times$ Mode}
-
-Lorentz gauge $\to$ radiation gauge. 寻新标架$(e'^1)_a=(e^+)_a$, $(e'^2)_a=(e^\times)_a$, $(e'^3)_a=(e^r)_a$, ${\bar{h}}_{ij}(e^i)_a(e^j)_b={\bar{h}}'_{ij}(e'^i)_a(e'^j)_b$, 取$x$, $y$分量后去迹, $h_+=\frac{1}{2}({\bar{h}}'_{11}-{\bar{h}}'_{22})$, $h_\times={\bar{h}}'_{12}={\bar{h}}'_{21}$. (?) \cite{Sathyaprakash2009}, \cite{Maggiore2014}
-
-\cite{Blanchet1996}, $\vec{n}:=\frac{\vec{r}}{\left\lvert\vec{r}\right\rvert}$,
-\begin{equation}
-    h_{ij}^{\text{TT}}=\frac{2}{\left\lvert\vec{r}\right\rvert}\mathcal{P}_{ijkm}\frac{\d^2}{\d t^2}{Q}^{km}(t-\left\lvert\vec{r}\right\rvert), \label{TT}
-\end{equation}
-\begin{equation}
-    \mathcal{P}_{ijkm}:=
-    \left(\delta_{ik} -\vec{n}_i\vec{n}_k\right)
-    \left(\delta_{jm} -\vec{n}_j\vec{n}_m\right)
-    -\frac{1}{2}
-    \left(\delta_{ij} -\vec{n}_i\vec{n}_j\right)
-    \left(\delta_{km} -\vec{n}_k\vec{n}_m\right),
-\end{equation}
-\begin{equation}
-    Q^{km}(t):=\int{T}_{00}\,\left(x'^kx'^m-\frac{1}{3}\delta^{km}\sum_nx'^nx'^n\right)\,\d V'
 \end{equation}
 
 \section{电磁---引力对比}
