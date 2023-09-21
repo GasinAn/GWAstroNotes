@@ -1,0 +1,30 @@
+\chapter{数据分析}
+
+\cite{Finn1992}, \cite{Maggiore2014}.
+
+\def\la{\langle}
+\def\ra{\rangle}
+\begin{equation}
+    R(\tau):=\text{E}(N_tN_{t+\tau}),
+\end{equation}
+\begin{equation}
+    \frac{1}{2}S_{N}(f):=\tilde{R}(f):=\int R(\tau)e^{i2\pi f\tau}\,\d\tau.
+\end{equation}
+\begin{equation}
+    \la p|q \ra:=4\text{Re}\int_0^\infty\frac{\tilde{p}^*(f)\tilde{q}(f)}{S_{N}(f)}\,\d f.
+\end{equation}
+
+\section{parameter estimation}
+
+\begin{equation}
+    p(\mu|d)\propto p(\mu)\exp\left[-\frac{1}{2}\sum_{m,n}C_{mn}^{-1}(d_m-h_m)(d_n-h_n)\right],
+\end{equation}
+\begin{equation}
+    p(\mu|d)\propto p(\mu)\exp\left[-\frac{1}{2}\la d-h|d-h \ra\right].
+\end{equation}
+
+\section{sensitivity}
+
+\begin{equation}
+    \Gamma_{mn}=\text{E}(\la d-h|\p_m h\ra\la d-h|\p_n h \ra)=\la \p_m h|\p_n h \ra.
+\end{equation}
