@@ -468,27 +468,48 @@ $\Xi\neq\text{const}$, $\Xi(z)=\kappa^2\tilde{\Xi}(\tilde{z})$, where $\tilde{z}
 \begin{equation}
     \frac{1}{16}\frac{5}{3}(\frac{743}{336}+\frac{11}{4}\eta)\mathcal{M}^{-5/3}M^{2/3}-\Omega
 \end{equation}
-\begin{eqnarray}
-    h_0(t)=\sum_k[C_+(k)e^{+ik\int\,dt}+C_-(k)e^{-ik\int\,dt}]e^{ikd_L}\\
-    h(t)=\sum_k\Gamma^{-1}K[C_+(k)e^{+ik\int K^{-2}\,dt}+C_-(k)e^{-ik\int K^{-2}\,dt}]e^{ikd_L}
-\end{eqnarray}
-\begin{eqnarray}
-    h_0(t)=\int[C_+(k)e^{+ik\int\,dt}+C_-(k)e^{-ik\int\,dt}]e^{ikd_L}dk\\
-    h(t)=\int\Gamma^{-1}K[C_+(k)e^{+ik\int K^{-2}\,dt}+C_-(k)e^{-ik\int K^{-2}\,dt}]e^{ikd_L}dk
-\end{eqnarray}
-\begin{eqnarray}
-    h_0(t)
-    =\int[C_+(-\omega)e^{-i\omega d_L}+C_-(+\omega)e^{+i\omega d_L}]e^{-i\omega t}d\omega\\
-    =\int\tilde{h}_0(\omega)e^{-i\omega t}d\omega
-\end{eqnarray}
-\begin{eqnarray}
-    h(t)
-    =\int[C_+(-\omega)e^{-i\omega d_L}+C_-(+\omega)e^{+i\omega d_L}]e^{-i\omega \int K^{-2}\,dt}d\omega\\
-    =\int\tilde{h}_0(\omega)e^{-i\omega t}e^{+i\omega \int\frac{\Xi(t)}{2\omega^2}}d\omega
-\end{eqnarray}
-如果直接认为${\dot{G}}/{G}$是常数, 那$\int{\Xi(t)}/{2\omega^2}=\eta({\dot{G}}/{G})^2t/{2\omega^2}$, 这里暂用$\sum_\omega$表示积分.
-\begin{eqnarray}
-    h(t)
-    =\sum_\omega\tilde{h}_0(\omega)e^{-i\omega t}e^{+i\omega \eta({\dot{G}}/{G})^2t/{2\omega^2}}\\
-    =\sum_\omega\tilde{h}_0(\omega)e^{-i\omega(1-\eta({\dot{G}}/{G})^2/{2\omega^2}) t}
-\end{eqnarray}
+\begin{equation}
+    h(z,t)=h(z)e^{-i\omega t}
+\end{equation}
+\begin{equation}
+    h(z)=\Gamma^{-1}(z)K(z)(C_+e^{+i\omega\int K^{-2}(z)\,\d z}+C_-e^{-i\omega\int K^{-2}(z)\,\d z})
+\end{equation}
+\begin{equation}
+    h(z,t)=\int_{-\infty}^{+\infty}\tilde{h}(z;f)e^{-i2\pi f t}\,\d f
+\end{equation}
+\begin{equation}
+    \tilde{h}(z;f)=\Gamma^{-1}(z)K(z;f)[C_+(f)e^{+i2\pi f\int K^{-2}(z;f)\,\d z}+C_-(f)e^{-i2\pi f\int K^{-2}(z;f)\,\d z}]
+\end{equation}
+\begin{equation}
+    \tilde{h}_0(z;f)=\Gamma^{-1}(0)K(0;f)[C_+(f)e^{+i2\pi f\int\,\d z}+C_-(f)e^{-i2\pi f\int\,\d z}]
+\end{equation}
+\begin{equation}
+    \tilde{h}(z;f)=\frac{\Gamma^{-1}(z)K(z;f)}{\Gamma^{-1}(0)K(0;f)}[C_+(f)e^{+i2\pi f\int K^{-2}(z)\,\d z}+C_-(f)e^{-i2\pi f\int K^{-2}(z)\,\d z}]
+\end{equation}
+\begin{equation}
+    \tilde{h}_0(z;f)=[C_+(f)e^{+i2\pi f\int\,\d z}+C_-(f)e^{-i2\pi f\int\,\d z}]
+\end{equation}
+\begin{equation}
+    K(z)=1+\frac{1}{4\omega^2}\Xi(z)
+\end{equation}
+\begin{equation}
+    \tilde{h}(z;f)=\frac{\Gamma^{-1}(z)}{\Gamma^{-1}(0)}[1+\frac{\Xi(z)-\Xi(0)}{4}(2\pi f)^{-2}][C_+(f)e^{+i2\pi fz}e^{-i2\pi f\int\frac{\Xi(z)}{2}(2\pi f)^{-2}\,\d z}+C_-(f)e^{-i2\pi fz}e^{+i2\pi f\int\frac{\Xi(z)}{2}(2\pi f)^{-2}\,\d z}]
+\end{equation}
+\begin{equation}
+    \tilde{h}(z;f)=\gamma(z)[1+\xi(z)(2\pi f)^{-2}][C_+(f)e^{+i2\pi fz}e^{+i\Omega(z)(2\pi f)^{-1}}+C_-(f)e^{-i2\pi fz}e^{-i\Omega(z)(2\pi f)^{-1}}]
+\end{equation}
+\begin{equation}
+    \tilde{h}_0(z;f)=[C_+(f)e^{+i2\pi fz}+C_-(f)e^{-i2\pi fz}]
+\end{equation}
+\begin{equation}
+    \tilde{h}_0(z;f)=C_+(f)e^{+i2\pi fz}+C_-(f)e^{-i2\pi fz}
+\end{equation}
+\begin{equation}
+    \p_z\tilde{h}_0(z;f)=C_+(f)(i2\pi f)e^{+i2\pi fz}-C_-(f)(i2\pi f)e^{-i2\pi fz}
+\end{equation}
+\begin{equation}
+    C_+(f)e^{+i2\pi fz}=\frac{1}{2}[\tilde{h}_0(z;f)+\p_z\tilde{h}_0(z;f)(i2\pi f)^{-1}]
+\end{equation}
+\begin{equation}
+    C_-(f)e^{-i2\pi fz}=\frac{1}{2}[\tilde{h}_0(z;f)-\p_z\tilde{h}_0(z;f)(i2\pi f)^{-1}]
+\end{equation}
