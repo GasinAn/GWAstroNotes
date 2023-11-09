@@ -15,7 +15,9 @@ $\bar{h}_{\mu\nu}:=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}\eta^{\lambda\sigma}h_{\la
 \begin{equation}
     \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}+\text{O}(s^2)=-16\pi T_{\mu \nu}.\label{lin_gravity}
 \end{equation}
-略去$\text{O}(s^2)$条件: $h_{\mu\nu}$, $\p_\lambda h_{\mu\nu}$\dots{}小. 下略$\text{O}(s^2)$. 
+略去$\text{O}(s^2)$条件: $h_{\mu\nu}$, $\p_\lambda h_{\mu\nu}$\dots{}小. 下略$\text{O}(s^2)$.
+
+Lorentz gauge等价于协和坐标条件.
 
 \section{Radiation Gauge}
 
@@ -52,3 +54,5 @@ The dependence on $\vec{x}$ must be kept in some cases (see \cite{Maggiore2014})
 \section{TT frame}
 
 TT gauge $\D$ TT frame. free test body $x^\mu(\tau)$, $\frac{\d x^i}{\d t}|_{\tau=0}=0$ $\D$ $\frac{\d x^0}{\d \tau}\equiv1$ and $\frac{\d x^i}{\d \tau}\equiv0$.
+
+设一测试体在$(0,0,0)$, 另一测试体在$(\Delta x^1,\Delta x^2,\Delta x^3)$, 定义$\Delta x^2=\delta_{ij}\Delta x^i\Delta x^j$, 则$\Delta s^2=g_{ij}\Delta x^i\Delta x^j=\Delta x^2(1+h_{ij}\frac{\Delta x^i}{\Delta x}\frac{\Delta x^j}{\Delta x})$, $\Delta s\approx\Delta x(1+\frac{1}{2}h_{ij}\frac{\Delta x^i}{\Delta x}\frac{\Delta x^j}{\Delta x})$, $\Delta \ddot{s}\approx\frac{1}{2}\ddot{h}_{ij}\frac{\Delta x^i}{\Delta x}\frac{\Delta x^j}{\Delta x}\Delta x$. 定义$n^i=\frac{\Delta x^i}{\Delta x}$, 则$\Delta \ddot{s}\approx n^i(\frac{1}{2}\ddot{h}_{ij}\Delta x^j)$. 定义$\Delta s^i=\Delta s\,n^i$, 则$\Delta s=\Delta s\,n^in_i=\Delta s^in_i=n^i\Delta s_i$, 则$\Delta s_i\approx \frac{1}{2}\ddot{h}_{ij}\Delta x^j\approx\frac{1}{2}\ddot{h}_{ij}\Delta s^j$.
