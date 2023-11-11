@@ -2,7 +2,17 @@
 
 \cite{Maggiore2014}. 设入射电场$\vec{E}_\text{in}=\vec{E}_0e^{-i\omega_\text{L}t+i\vec{k}_\text{L}\cdot\vec{x}}$. 设splitter在$\vec{x}=0$处, 则$\vec{E}_\text{in}=\vec{E}_0e^{-i\omega_\text{L}t}$. $\vec{E}_\text{out}=\vec{E}_\text{form x}+\vec{E}_\text{form y}$, $t$时的$\vec{E}_\text{form x}$在$t-\frac{2L_x}{c}$时入splitter, $t$时的$\vec{E}_\text{form y}$在$t-\frac{2L_y}{c}$时入splitter, 考虑反相, $\vec{E}_\text{form x}=-\frac{1}{2}\vec{E}_0e^{-i\omega_\text{L}t+2ik_\text{L}L_x}$, $\vec{E}_\text{form y}=+\frac{1}{2}\vec{E}_0e^{-i\omega_\text{L}t+2ik_\text{L}L_y}$, $\vec{E}_\text{out}=\vec{E}_0\sin(\phi_0)e^{-i\omega_\text{L}(t-\frac{2L}{c})-i\frac{\pi}{2}}$, where $\phi_0=k_\text{L}(L_y-L_x)$ and $L=(L_x+L_y)/2$.
 
-用TT frame计算. 设splitter在$(0,0)$, reflector x在$(L_x,0)$, reflector y在$(0,L_y)$, 显然无GW时如上.
+\section{简单解释}
+
+$h:=h_0\sin(\omega_\text{gw} t)$. splitter在$(0,0)$, reflector x在$(L(1+h),0)$, reflector y在$(0,L(1-h))$. 设photon $t=t_0$到splitter, $t=t_1$到x reflector, $t=t_2$到splitter, $c(t_1-t_0)=L(1 \pm h(t_1))$, $c(t_2-t_1)=L(1 \pm h(t_1))$.
+
+解: $t_0=t_1-(L/c)(1 \pm h(t_1))$, $t_2=t_1+(L/c)(1 \pm h(t_1))$, $\omega_\text{gw} (t_2-(L/c))=(\omega_\text{gw} t_1) \pm \omega_\text{gw} (L/c) h_0 \sin(\omega_\text{gw} t_1)$, $\omega_\text{gw} t_1 \approx \omega_\text{gw} (t_2-(L/c)) \mp \omega_\text{gw} (L/c) h_0 \sin(\omega_\text{gw} (t_2-(L/c)))$, $t_1=t_2-(L/c)(1 \pm h(t_2-(L/c)))$, $h(t_1) \approx h(t_2-(L/c))$, $t_0=t_2-2(L/c)(1 \pm h(t_2-(L/c)))$.
+
+$E_\text{in}(t):=e^{-i\omega_\text{L} t}$, $E_\text{out}(t_2)=E_\text{in}(t_0)$, $E_\text{out}(t)=e^{-i\omega_\text{L} (t-2(L/c)(1 \pm h(t-(L/c))))}$.
+
+\section{TT frame解释}
+
+设splitter在$(0,0)$, reflector x在$(L_x,0)$, reflector y在$(0,L_y)$, 显然无GW时如上.
 
 设GW只有$+$mode且方向为$z_+$, $h_+=h_0\cos[\omega_\text{gw}(t-z/c)]$, 
 \begin{equation}
