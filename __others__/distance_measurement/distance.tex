@@ -1,0 +1,73 @@
+\def\documentclassname{ctexart}
+\documentclass[a4paper,12pt]{\documentclassname}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{marginnote}
+\usepackage{mathrsfs}
+\usepackage{syntonly}
+\usepackage{textcomp}
+\usepackage{ulem}
+\usepackage{verbatim}
+\usepackage{xcolor}
+%\syntaxonly
+%\geometry{a5paper}
+\pagestyle{empty}
+\hyphenation{}
+\normalem
+\hypersetup{
+    colorlinks,
+    linkcolor=blue,
+    filecolor=pink,
+    urlcolor=cyan,
+    citecolor=red,
+}
+\lstset{
+    language=[18]Fortran,
+    basicstyle=\ttfamily,
+    keywordstyle=\bfseries\color{green},
+    identifierstyle=\color{blue},
+    stringstyle=\color{black},
+    commentstyle=\itshape\color{cyan},
+    showspaces=false,
+    showstringspaces=false,
+}
+\def\b{\boldsymbol}
+\def\d{\mathrm{d}}
+\def\p{\partial}
+\def\ph{\phantom}
+\def\t{\text}
+\def\ti{\tilde}
+\def\v{\vec}
+\def\La{\Leftarrow}
+\def\Ra{\Rightarrow}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\atanxy}{atan2}
+\DeclareMathOperator{\Arg}{Arg}
+\theoremstyle{definition}
+\ifthenelse{\equal{\documentclassname}{article}}{
+    \newtheorem{definition}{Definition}
+    \newtheorem{theorem}{Theorem}
+}{}
+\ifthenelse{\equal{\documentclassname}{ctexart}}{
+    \newtheorem{definition}{定义}
+    \newtheorem{theorem}{定理}
+}{}
+\title{}
+\author{}
+\date{}
+\begin{document}
+    \section{光度距离}
+    设发射时刻为$t_1$, 接收时刻为$t_2$, 则光度距离$L_\text{l}=(L/4\pi l)^{1/2}=(\frac{\d E_1}{\d t_1}/4\pi (\frac{\d E_2}{\d t_2}/4\pi D^2))^{1/2}=D((\d E_1/\d E_2)(\d t_2/\d t_1))^{1/2}=D((\hbar\omega_1/\hbar\omega_2)(\omega_1/\omega_2))^{1/2}=D(\omega_1/\omega_2)=D(\lambda_2/\lambda_1)=D(1+z)$.
+    \section{角直径距离}
+    设发射时刻为$t_1$, 接收时刻为$t_2$, source坐标为$(-x,0,0)$, source边缘坐标为$(-x,\pm\Delta y,0)$, detector坐标为$(0,0,0)$, 则source边缘辐射的世界线空间投影满足$\d x: \d y=x: \pm\Delta y$, 测得角直径$\theta=2\Delta y/x$, 固有线直径为$\Delta=2\Delta y$, 角直径距离$D_\text{a}=\Delta/\theta=x$, 物理距离$D=(a(t_2)/a(t_1))x=(1+z)x$, $D_\text{a}=D/(1+z)$.
+    \section{自行距离}
+    设发射时刻为$t_1$, 接收时刻为$t_2$, 则自行距离$D_\text{p}=v/\mu=((v\d t_1)/(\mu\d t_2))(\d t_2/\d t_1)=(\Delta/\theta)(\d t_2/\d t_1)=D_\text{a}(\d t_2/\d t_1)=D_\text{a}(\omega_1/\omega_2)=D_\text{a}(\lambda_2/\lambda_1)=D_\text{a}(1+z)=D$.
+\end{document}
