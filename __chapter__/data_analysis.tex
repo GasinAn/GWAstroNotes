@@ -14,6 +14,22 @@
     \la p|q \ra:=4\text{Re}\int_0^\infty\frac{\tilde{p}^*(f)\tilde{q}(f)}{S_{N}(f)}\,\d f.
 \end{equation}
 
+\section{matched filtering}
+
+\begin{equation}
+    \hat{\mathcal{S}}:=\int S_tK(t)\,\d t
+\end{equation}
+\begin{align}
+    \frac{\mathcal{S}}{\mathcal{N}}&:=\frac{\text{E}(\int (h(t)+N_t)K(t)\,\d t)}{\sqrt{\text{D}(\int N_tK(t)\,\d t)}}\\
+    &=\frac{\int h(t)K(t)\,\d t}{\sqrt{\int \text{E}(N_{t_1}N_{t_2})K(t_1)K(t_2)\,\d t_1\d t_2}}\\
+    &=\frac{\int h(t)K(t)\,\d t}{\sqrt{\int R(t_2-t_1)K(t_1)K(t_2)\,\d t_1\d t_2}}\\
+    &=\frac{\int \t{h}(f)\t{K}^*(f)\,\d f}{\sqrt{\int\frac{1}{2}S_{N}(f)\t{K}(f)\t{K}^*(f)\,\d f}}\\
+    &=\frac{\la \frac{1}{2}S_{N}\t{K}|h \ra}{\la \frac{1}{2}S_{N}\t{K}|\frac{1}{2}S_{N}\t{K} \ra^{1/2}}
+\end{align}
+\begin{equation}
+    \max{(\frac{\mathcal{S}}{\mathcal{N}})}=\la h|h \ra^{1/2}
+\end{equation}
+
 \section{parameter estimation}
 
 \begin{equation}
