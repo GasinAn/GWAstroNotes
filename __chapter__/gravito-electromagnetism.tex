@@ -148,86 +148,85 @@
     (\text{curl}\,B)_{ab}+\dots=\kappa\frac{1}{2}(\rho+p)\sigma_{ab}+\text{D}_t E_{\langle ab\rangle}+\dots.
 \end{equation}
 
-%\section{近似}
+\begin{comment}
+\section{近似}
 
-%\begin{equation}
-%    A^a=Z^b\nabla_bZ^a.
-%\end{equation}
-%\begin{equation}
-%    \Theta=\nabla_aZ^a
-%\end{equation}
-%\begin{equation}
-%    \sigma_{ab}=h_{(a}^ch_{b)}^d\nabla_dZ_c-\frac{1}{3}h_{ab}\nabla_eZ^e.
-%\end{equation}
-%\begin{equation}
-%    \omega_{ab}=h_{[a}^ch_{b]}^d\nabla_dZ_c
-%\end{equation}
+\begin{equation}
+    A^a=Z^b\nabla_bZ^a.
+\end{equation}
+\begin{equation}
+    \Theta=\nabla_aZ^a
+\end{equation}
+\begin{equation}
+    \sigma_{ab}=h_{(a}^ch_{b)}^d\nabla_dZ_c-\frac{1}{3}h_{ab}\nabla_eZ^e.
+\end{equation}
+\begin{equation}
+    \omega_{ab}=h_{[a}^ch_{b]}^d\nabla_dZ_c
+\end{equation}
+\begin{equation}
+    (\text{div}\,E)=\mu\rho.
+\end{equation}
+\begin{equation}
+    (\text{div}\,B)=0.
+\end{equation}
+\begin{equation}
+    (\text{curl}\,E)_a=-\text{D}_t B_{\langle a\rangle}.
+\end{equation}
+\begin{equation}
+    (\text{curl}\,B)_a=\mu j_a+\text{D}_t E_{\langle a\rangle}.
+\end{equation}
+\begin{equation}
+    (\text{div}\,E)_a=\kappa\frac{1}{3}{}^3\nabla_a\rho.
+\end{equation}
+\begin{equation}
+    (\text{div}\,B)_a=\kappa(\rho+p)\omega_a.
+\end{equation}
+\begin{equation}
+    (\text{curl}\,E)_{ab}=-\text{D}_t B_{\langle ab\rangle}.
+\end{equation}
+\begin{equation}
+    (\text{curl}\,B)_{ab}=\kappa\frac{1}{2}(\rho+p)\sigma_{ab}+\text{D}_t E_%\langle ab\rangle}.
+\end{equation}
+\begin{equation}
+    \vec{\nabla}\cdot\vec{E}=\mu_0\rho.
+\end{equation}
+\begin{equation}
+    \vec{\nabla}\cdot\vec{B}=0.
+\end{equation}
+\begin{equation}
+    \vec{\nabla}\times\vec{E}=-\frac{\p}{\p t}\vec{B}.
+\end{equation}
+\begin{equation}
+    \vec{\nabla}\times\vec{B}=\mu_0 \vec{j}+\frac{\p}{\p t}\vec{E}.
+\end{equation}
 
-%\begin{equation}
-%    (\text{div}\,E)=\mu\rho.
-%\end{equation}
-%\begin{equation}
-%    (\text{div}\,B)=0.
-%\end{equation}
-%\begin{equation}
-%    (\text{curl}\,E)_a=-\text{D}_t B_{\langle a\rangle}.
-%\end{equation}
-%\begin{equation}
-%    (\text{curl}\,B)_a=\mu j_a+\text{D}_t E_{\langle a\rangle}.
-%\end{equation}
+\begin{equation}
+    \rho_\text{p}=-\vec{\nabla}\cdot\vec{P}.
+\end{equation}
+\begin{equation}
+    \vec{D}=\frac{1}{\mu_0}\vec{E}+\vec{P}=\epsilon\vec{E}.
+\end{equation}
 
-%\begin{equation}
-%    (\text{div}\,E)_a=\kappa\frac{1}{3}{}^3\nabla_a\rho.
-%\end{equation}
-%\begin{equation}
-%    (\text{div}\,B)_a=\kappa(\rho+p)\omega_a.
-%\end{equation}
-%\begin{equation}
-%    (\text{curl}\,E)_{ab}=-\text{D}_t B_{\langle ab\rangle}.
-%\end{equation}
-%\begin{equation}
-%    (\text{curl}\,B)_{ab}=\kappa\frac{1}{2}(\rho+p)\sigma_{ab}+\text{D}_t E_%{\langle ab\rangle}.
-%\end{equation}
+\begin{equation}
+    \vec{j}_\text{m}=\vec{\nabla}\times\vec{M}.
+\end{equation}
+\begin{equation}
+    \vec{j}_\text{p}=\frac{\p}{\p t}\vec{P}
+\end{equation}
+\begin{equation}
+    \vec{H}=\frac{1}{\mu_0}\vec{B}-\vec{M}=\frac{1}{\mu}\vec{B}
+\end{equation}
 
-%\begin{equation}
-%    \vec{\nabla}\cdot\vec{E}=\mu_0\rho.
-%\end{equation}
-%\begin{equation}
-%    \vec{\nabla}\cdot\vec{B}=0.
-%\end{equation}
-%\begin{equation}
-%    \vec{\nabla}\times\vec{E}=-\frac{\p}{\p t}\vec{B}.
-%\end{equation}
-%\begin{equation}
-%    \vec{\nabla}\times\vec{B}=\mu_0 \vec{j}+\frac{\p}{\p t}\vec{E}.
-%\end{equation}
-%
-%\begin{equation}
-%    \rho_\text{p}=-\vec{\nabla}\cdot\vec{P}.
-%\end{equation}
-%\begin{equation}
-%    \vec{D}=\frac{1}{\mu_0}\vec{E}+\vec{P}=\epsilon\vec{E}.
-%\end{equation}
-%
-%\begin{equation}
-%    \vec{j}_\text{m}=\vec{\nabla}\times\vec{M}.
-%\end{equation}
-%\begin{equation}
-%    \vec{j}_\text{p}=\frac{\p}{\p t}\vec{P}
-%\end{equation}
-%\begin{equation}
-%    \vec{H}=\frac{1}{\mu_0}\vec{B}-\vec{M}=\frac{1}{\mu}\vec{B}
-%\end{equation}
-%
-%\begin{equation}
-%    \vec{\nabla}\cdot\vec{D}=\rho_f.
-%\end{equation}
-%\begin{equation}
-%    \vec{\nabla}\cdot\vec{B}=0.
-%\end{equation}
-%\begin{equation}
-%    \vec{\nabla}\times\vec{E}=-\frac{\p}{\p t}\vec{B}.
-%\end{equation}
-%\begin{equation}
-%    \vec{\nabla}\times\vec{H}=\vec{j}_\text{f}+\frac{\p}{\p t}\vec{D}.
-%\end{equation}
+\begin{equation}
+    \vec{\nabla}\cdot\vec{D}=\rho_f.
+\end{equation}
+\begin{equation}
+    \vec{\nabla}\cdot\vec{B}=0.
+\end{equation}
+\begin{equation}
+    \vec{\nabla}\times\vec{E}=-\frac{\p}{\p t}\vec{B}.
+\end{equation}
+\begin{equation}
+    \vec{\nabla}\times\vec{H}=\vec{j}_\text{f}+\frac{\p}{\p t}\vec{D}.
+\end{equation}
+\end{comment}
