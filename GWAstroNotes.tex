@@ -8,13 +8,6 @@
 \usepackage{verbatim}
 %\syntaxonly
 \pagestyle{plain}
-\makeatletter
-\newcommand{\starttoc}{
-    \chapter*{\contentsname}
-    \@starttoc{toc}
-}
-\makeatother
-%\renewcommand{\tableofcontents}{\twocolumn\starttoc\onecolumn}
 \hypersetup{
     colorlinks,
     linkcolor=blue,
@@ -42,15 +35,15 @@
     \maketitle
     \include{copyright}
     \tableofcontents
-    \include{__chapter__/GW}
-    \include{__chapter__/energy}
-    \include{__chapter__/multipole}
-    \include{__chapter__/binary}
-    \include{__chapter__/cosmology}
-    \include{__chapter__/interferometer}
-    \include{__chapter__/data_analysis}
-    \include{__chapter__/gravito-electromagnetism}
-    \include{__chapter__/varying_G}
+    \include{chapter/GW}
+    \include{chapter/energy}
+    \include{chapter/multipole}
+    \include{chapter/binary}
+    \include{chapter/cosmology}
+    \include{chapter/interferometer}
+    \include{chapter/data_analysis}
+    \include{chapter/gravito-electromagnetism}
+    \include{chapter/varying_G}
     \bibliographystyle{abbrv}
     \bibliography{GWAstro}
 \end{document}
