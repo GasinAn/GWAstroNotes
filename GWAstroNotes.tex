@@ -32,9 +32,11 @@
 \title{引力波天文学笔记}
 \author{GasinAn}
 \begin{document}
+    \frontmatter
     \maketitle
     \include{copyright}
     \tableofcontents
+    \mainmatter
     \include{chapter/GW}
     \include{chapter/energy}
     \include{chapter/multipole}
@@ -44,6 +46,9 @@
     \include{chapter/data_analysis}
     \include{chapter/gravito-electromagnetism}
     \include{chapter/varying_G}
+    \appendix
+    \backmatter
+    \addcontentsline{toc}{chapter}{\bibname}
     \bibliographystyle{abbrv}
     \bibliography{GWAstro}
 \end{document}
