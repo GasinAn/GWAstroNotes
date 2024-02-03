@@ -466,10 +466,10 @@ $\Xi\neq\text{const}$, $\Xi(z)=\kappa^2\tilde{\Xi}(\tilde{z})$, where $\tilde{z}
 
 \section{Hierarchical combination}
 
-\cite{Abbott2021}, For a given beyond-GR parameter $x$, this distribution $p(x|d)$ is the expectation for $x$ after marginalizing over the hyperparameters $\mu$ and $\sigma$,
+\cite{Abbott2021,Thrane2019}, For a given beyond-GR parameter $x$, this distribution $p(x|d)$ is the expectation for $x$ after marginalizing over the hyperparameters $\mu$ and $\sigma$,
 \begin{equation}
     p(x|d)=\int p(x|\mu,\sigma)p(\mu,\sigma|d)\,\d\mu\d\sigma,
 \end{equation}
 where $d$ represents the data for \emph{all} detected events, and $p(x|\mu,\sigma)\sim\mathcal{N}(\mu,\sigma)$ by construction.
 
-$p(\mu,\sigma|d)$算法见 \verb|hc.py|.
+$p(\mu,\sigma|d)$算法见 \verb|hp.py|.
