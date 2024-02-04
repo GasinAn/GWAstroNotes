@@ -32,4 +32,5 @@ result = bilby.run_sampler(
     label=label,
     verbose=True,
     clean=True,
+    plot=True,
 )
