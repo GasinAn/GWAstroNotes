@@ -1,10 +1,10 @@
 \chapter{引力波}\label{GW}
 
-\section{Linearized Gravity}
+\section{Linearized Gravity}\label{Linearized_Gravity}
 
 \cite{Wald1984}. 流形$\mathbb{R}^{4}$. 任意坐标系$\{x^{\mu}\}$, $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\gamma_{\mu\nu}s+\text{O}(s^2)$. 设$g^{\mu\nu}={?}^{\mu\nu}+{??}^{\mu\nu}s+\text{O}(s^2)$, 则$\delta^{\mu}_{\ph{\mu}\lambda}={?}^{\mu\nu}\eta_{\nu\lambda}+{?}^{\mu\nu}\gamma_{\nu\lambda}s+{??}^{\mu\nu}\eta_{\nu\lambda}s+\text{O}(s^2)$, 所以${?}^{\mu\nu}=\eta^{\mu\nu}$, ${??}^{\mu\nu}={??}^{\mu\sigma}\delta_{\sigma}^{\ph{\sigma}\nu}={??}^{\mu\sigma}\eta_{\sigma\lambda}\eta^{\lambda\nu}=-{?}^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\eta^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\gamma^{\mu\nu}$, 所以$g^{\mu\nu}=\eta^{\mu\nu}-\gamma^{\mu\nu}s+\text{O}(s^2)=\eta^{\mu\nu}-h^{\mu\nu}+\text{O}(s^2)$.
 \begin{equation}
-    R_{\mu\nu\lambda\sigma}=\p_\sigma\p_{[\mu}h_{\lambda]\nu}-\p_\nu\p_{[\mu}h_{\lambda]\sigma}+\text{O}(s^2).
+    R_{\mu\lambda\nu\sigma}=\p_\sigma\p_{[\mu}h_{\lambda]\nu}-\p_\nu\p_{[\mu}h_{\lambda]\sigma}+\text{O}(s^2).
 \end{equation}
 
 $\bar{h}_{\mu\nu}:=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}\eta^{\lambda\sigma}h_{\lambda\sigma}=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}h$.
@@ -21,19 +21,33 @@ Lorentz gauge等价于协和坐标条件.
 
 \section{Radiation Gauge}
 
-\cite{Wald1984}. 存在$\{x^{\mu}\}$, 使得``无源处'' $h+\text{O}(s^2)=0$ (TT gauge \cite{Wang2020})且$h_{0\mu}+\text{O}(s^2)=0$. \cite{Maggiore2014}, 解$\p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}=0$得$h_{ij}=A_{ij}(\vec{k})e^{ik^\mu x_\mu}$ ($A_{ij}$称为polarization tensor). $h_{(ij)}=0$, $h=0$, $\p^{j}h_{ij}=0$ $\Ra$ $A_{(ij)}=0$, $A=0$, $k^{j}A_{ij}=0$. 令$\vec{e}_z\parallel\vec{k}$,
+\cite{Wald1984}. 存在$\{x^{\mu}\}$, 使得``无源处'' $h=0\Ra\bar{h}_{\mu\nu}=h_{\mu\nu}$ (TT gauge \cite{王运永2020})且$h_{0\mu}=0$. \cite{Maggiore2014}, 解$\p^{\lambda}\p_{\lambda}\bar{h}_{ij}=0$得$h_{ij}=A_{ij}(\vec{k})e^{ik^\mu x_\mu}$ ($A_{ij}$称为polarization tensor). $h_{(ij)}=0$, $h=0$, $\p^{j}h_{ij}=0$ $\Ra$ $A_{(ij)}=0$, $A=0$, $k^{j}A_{ij}=0$. 令$\vec{e}_z\parallel\vec{k}$,
 \begin{equation}
     h_{xy}=\begin{bmatrix}
         +h_+&h_\times\\
         h_\times&-h_+
-    \end{bmatrix}e^{i\omega(t-z)}.
+    \end{bmatrix}e^{i\omega(t-z)}.\label{h_xy}
 \end{equation}
 
 \cite{Maggiore2014}. Lorentz gauge $\to$ radiation gauge, $P_{ij}:=\delta_{ij}-n_in_j$, $\Lambda_{ijkl}=P_{ik}P_{jl}-\frac{1}{2}P_{ij}P_{kl}$, $h_{ij}^\text{r}=\Lambda_{ijkl}h_{kl}^\text{L}=\Lambda_{ijkl}\bar{h}_{kl}^\text{L}$. \cite{Sathyaprakash2009}. Step 1: 坐标系空间旋转, 使$\vec{e}_z\parallel\vec{n}$. Step 2: 取$x$, $y$分量$h_{xy}$. Step 3: 去迹. [$h_+=\frac{1}{2}(h_{xx}-h_{yy})$, $h_\times=h_{xy}=h_{yx}$.]
 
+$x'^\mu=x^\mu-\xi^\mu$, $h'_{\mu\nu}=h_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu$, $h_{\mu\nu}=h'_{\mu\nu}-\p'_\mu\xi_\nu-\p'_\nu\xi_\mu$.
+
+辩曰: 令
+\begin{equation}
+    \xi=\frac{1}{2}\begin{bmatrix}
+        +h_+&h_\times\\
+        h_\times&-h_+
+   \end{bmatrix}\begin{bmatrix}
+    x\\y
+    \end{bmatrix}e^{i\omega(t-z)},
+\end{equation}
+则式\eqref{h_xy}中$h_{xy}$为$0$, 岂非无波欤? 对曰: 诚如是, 然$h_{01}$, $h_{02}$, $h_{31}$, $h_{32}$非为$0$, 故不可谓无波也.
+
+另可考\cite{Jaranowski2009}.
+
 \section{Fourier Transformation}
 
-\def\A{\mathcal{A}}
 \cite{Maggiore2014}. 
 \begin{equation}
     h_{ij}=\frac{1}{(2\pi)^3}\int\d^3\vec{k}\left[\A_{ij}(\vec{k})e^{+ik_\mu x^\mu}+\A_{ij}^*(\vec{k})e^{-ik_\mu x^\mu}\right]
@@ -53,63 +67,18 @@ The dependence on $\vec{x}$ must be kept in some cases (see \cite{Maggiore2014})
 
 \section{TT frame}
 
-TT gauge $\Ra$ TT frame. free test body $x^\mu(\tau)$, $\frac{\d x^i}{\d t}|_{\tau=0}=0$ $\Ra$ $\frac{\d x^0}{\d \tau}\equiv1$ and $\frac{\d x^i}{\d \tau}\equiv0$.
+TT gauge $\Ra$ TT frame. \cite{Maggiore2014}, free test body $x^\mu(\tau)$, $\frac{\d x^i}{\d \tau}|_{\tau=0}=0$ $\Ra$ $\frac{\d x^i}{\d \tau}\equiv0$ and $\frac{\d x^0}{\d \tau}\equiv1$. $\frac{\d x^i}{\d t}|_{t=0}=0$可得相似结论.
 
-设一测试体在$(0,0,0)$, 另一测试体在$(\Delta x^1,\Delta x^2,\Delta x^3)$, 定义$\Delta x^2=\delta_{ij}\Delta x^i\Delta x^j$, 则$\Delta s^2=g_{ij}\Delta x^i\Delta x^j=\Delta x^2(1+h_{ij}\frac{\Delta x^i}{\Delta x}\frac{\Delta x^j}{\Delta x})$, $\Delta s\approx\Delta x(1+\frac{1}{2}h_{ij}\frac{\Delta x^i}{\Delta x}\frac{\Delta x^j}{\Delta x})$, $\Delta \ddot{s}\approx\frac{1}{2}\ddot{h}_{ij}\frac{\Delta x^i}{\Delta x}\frac{\Delta x^j}{\Delta x}\Delta x$. 定义$n^i=\frac{\Delta x^i}{\Delta x}$, 则$\Delta \ddot{s}\approx n^i(\frac{1}{2}\ddot{h}_{ij}\Delta x^j)$. 定义$\Delta s^i=\Delta s\,n^i$, 则$\Delta s=\Delta s\,n^in_i=\Delta s^in_i=n^i\Delta s_i$, 则$\Delta s_i\approx \frac{1}{2}\ddot{h}_{ij}\Delta x^j\approx\frac{1}{2}\ddot{h}_{ij}\Delta s^j$.
+设一测试体在$(0,0,0)$, 另一测试体在$(\Delta x^1,\Delta x^2,\Delta x^3)$, 定义$(\Delta x)^2=\delta_{ij}\Delta x^i\Delta x^j$, 则$(\Delta s)^2=g_{ij}\Delta x^i\Delta x^j=(\Delta x)^2(1+h_{ij}\frac{\Delta x^i}{\Delta x}\frac{\Delta x^j}{\Delta x})$, $\Delta s\approx\Delta x(1+\frac{1}{2}h_{ij}\frac{\Delta x^i}{\Delta x}\frac{\Delta x^j}{\Delta x})$, $\Delta \ddot{s}\approx\frac{1}{2}\ddot{h}_{ij}\frac{\Delta x^i}{\Delta x}\frac{\Delta x^j}{\Delta x}\Delta x$. 定义$n^i=\frac{\Delta x^i}{\Delta x}$, 则$\Delta \ddot{s}\approx n^i(\frac{1}{2}\ddot{h}_{ij}\Delta x^j)$. 定义$\Delta s^i=\Delta s\,n^i$, 则$\Delta s=\Delta s\,n^in_i=\Delta s^in_i=n^i\Delta s_i$, 则$\Delta s_i\approx \frac{1}{2}\ddot{h}_{ij}\Delta x^j\approx\frac{1}{2}\ddot{h}_{ij}\Delta s^j$.
 
 \section{Proper detector frame}
 
+设一基准测试体, 取其固有坐标系, 另一测试体世界线$x^{i}(t)$. \cite{Jaranowski2009}, Let us now imagine that for times $t \le 0$ there were no waves ($h^\text{TT}_{ij} = 0$) in the vicinity of the two observers and that the observers were at rest with respect to each other before the wave has come, so $x^i(t) = x^i_0 = \text{const.}$, $\d x^i/\d t = 0$, for $t \le 0$. At $t = 0$ some wave arrives. Then according to geodesic deviation equation,
 \begin{equation}
-    g_{\mu\nu}\approx (g_{\mu\nu})_{x=0}+(\p_ig_{\mu\nu})_{x=0}\Delta x^i+\frac{1}{2}(\p_i\p_jg_{\mu\nu})_{x=0}\Delta x^i\Delta x^j
+    \frac{\d^2x^i}{\d t^2}=\frac{1}{2}\frac{\p^2h^\text{TT}_{ij}}{\p t^2}x^j_0,
 \end{equation}
 \begin{equation}
-    (g_{\mu\nu})_{x=0}=\eta_{{\mu\nu}}
+    x^i=(\delta_{ij}+\frac{1}{2}h^\text{TT}_{ij})x^j_0.
 \end{equation}
-\begin{equation}
-    (\Gamma^{\sigma}_{\ph{\sigma}\mu\nu})_{x=0}=\frac{1}{2}\eta^{{\sigma\rho}}(\p_\mu g_{\nu\rho}+\p_\nu g_{\mu\rho}-\p_\rho g_{\mu\nu})_{x=0}=0
-\end{equation}
-\begin{equation}
-    (\p_\mu g_{\nu0}+\p_\nu g_{\mu0}-\p_0 g_{\mu\nu})_{x=0}=0
-\end{equation}
-\begin{equation}
-    (\p_\mu g_{\nu i}+\p_\nu g_{\mu i}-\p_i g_{\mu\nu})_{x=0}=0
-\end{equation}
-\begin{equation}
-    (\p_\mu g_{\nu\rho}+\p_\nu g_{\mu\rho}-\p_\rho g_{\mu\nu})_{x=0}=0
-\end{equation}
-\begin{equation}
-    t_{abc}+t_{bca}-t_{cab}=0
-\end{equation}
-\begin{equation}
-    t_{cab}+t_{abc}-t_{bca}=0
-\end{equation}
-\begin{equation}
-    t_{abc}=0
-\end{equation}
-\begin{equation}
-    (R_{\mu\nu\sigma}^{\ph{\mu\nu\sigma}\rho})_{x=0}=(\p_\nu\Gamma^{\rho}_{\ph{\rho}\mu\sigma}-\p_\mu\Gamma^{\rho}_{\ph{\rho}\nu\sigma})_{x=0}
-\end{equation}
-\begin{equation}
-    (\p_\mu\Gamma^{\rho}_{\ph{\rho}\nu\sigma})_{x=0}=\frac{1}{2}[\p_\mu g^{{\rho\lambda}}(\p_\nu g_{\sigma\lambda}+\p_\sigma g_{\nu\lambda}-\p_\lambda g_{\nu\sigma})+g^{{\rho\lambda}}\p_\mu(\p_\nu g_{\sigma\lambda}+\p_\sigma g_{\nu\lambda}-\p_\lambda g_{\nu\sigma})]_{x=0}
-\end{equation}
-\begin{equation}
-    (\p_\mu\Gamma^{\rho}_{\ph{\rho}\nu\sigma})_{x=0}=\frac{1}{2}[\eta^{{\rho\lambda}}\p_\mu(\p_\nu g_{\sigma\lambda}+\p_\sigma g_{\nu\lambda}-\p_\lambda g_{\nu\sigma})]_{x=0}
-\end{equation}
-\begin{equation}
-    (\p_\mu\Gamma_{\rho\nu\sigma})_{x=0}=\frac{1}{2}[\p_\mu(\p_\nu g_{\sigma\rho}+\p_\sigma g_{\nu\rho}-\p_\rho g_{\nu\sigma})]_{x=0}
-\end{equation}
-\begin{equation}
-    (R_{\mu\nu\sigma\rho})_{x=0}=-\frac{1}{2}[(\p_\mu\p_\sigma g_{\nu\rho}-\p_\mu\p_\rho g_{\nu\sigma})-(\p_\nu\p_\sigma g_{\mu\rho}-\p_\nu\p_\rho g_{\mu\sigma})]_{x=0}
-\end{equation}
-\begin{comment}
-\begin{equation}
-    Q_{abcd}=+t_{acbd}-t_{adbc}-t_{bcad}+t_{bdac}
-\end{equation}
-\begin{equation}
-    Q_{bcad}=+t_{bacd}-t_{bdca}-t_{cabd}+t_{cdba}
-\end{equation}
-\begin{equation}
-    Q_{cabd}=+t_{cbad}-t_{cdab}-t_{abcd}+t_{adcb}
-\end{equation}
-\end{comment}
-\cite{Ni1978}
+
+考虑对观测器材有影响的其他效应, 见\cite{Maggiore2014}, \cite{Ni1978}.
