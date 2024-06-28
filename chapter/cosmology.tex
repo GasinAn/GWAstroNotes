@@ -1,20 +1,32 @@
 \chapter{宇宙学效应}
 
+\section{Luminosity Distance}
+
 \cite{Maggiore2014},
 \begin{equation}
-    \frac{\d\eta}{\d(ct)}=\frac{1}{a},
+    \int_{t_\t{emis}}^{t_\t{obs}}\frac{c\,\d t}{a(t)}=    \int_{t_\t{emis}+\Delta t_\t{emis}}^{t_\t{obs}+\Delta t_\t{obs}}\frac{c\,\d t}{a(t)}=\int_0^r\frac{\d r}{(1-kr^2)^{1/2}},
+\end{equation}
+故$\Delta t_\t{obs}=\Delta t_\t{emis}(1+z)$. 另由$E=\hbar\omega$, 有$\Delta E_\t{obs}=\Delta E_\t{emis}(1+z)$, 故$d_\t{L}=a(t_\t{obs})r(1+z)$.
+
+不用光子论, 见\cite{Ellis2012} 7.4 节.
+
+\section{Propagation}
+
+\cite{Maggiore2014},
+\begin{equation}
+    \frac{\d\eta}{\d(t)}=\frac{1}{a},
 \end{equation}
 \begin{equation}
-    \d s^2=-\d(ct)^2+a^2[\frac{\d r^2}{1-kr^2}+r^2(\d\theta^2+\sin^2\theta\d\phi^2)],
+    \d s^2=-\d t^2+a^2[\frac{\d r^2}{1-kr^2}+r^2(\d\theta^2+\sin^2\theta\,\d\phi^2)],
 \end{equation}
 \begin{equation}
-    \d s^2=a^2[-\d\eta^2+\frac{\d r^2}{1-kr^2}+r^2(\d\theta^2+\sin^2\theta\d\phi^2)].
+    \d s^2=a^2[-\d\eta^2+\frac{\d r^2}{1-kr^2}+r^2(\d\theta^2+\sin^2\theta\,\d\phi^2)].
 \end{equation}
-$\square\Phi=0$, $\Phi:=f/r$, $f:=g/a$,
+若$k=0$, $\square\Phi=0$, $\Phi:=f/r$, $f:=g/a$,
 \begin{equation}
     \p_r^2g+(\p_\eta^2a/a)g-\p_\eta^2g=0,
 \end{equation}
-$\p_\eta^2a/a\sim\eta^2$, $\omega^2\gg1/\eta^2$,
+$\p_\eta^2a/a\sim\eta^2$, 故若$\omega^2\gg1/\eta^2$,
 \begin{equation}
     g\simeq e^{i\omega(\eta-r)}.
 \end{equation}
