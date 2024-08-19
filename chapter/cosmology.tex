@@ -12,21 +12,53 @@
 
 \section{Propagation}
 
-\cite{Maggiore2014},
-\begin{equation}
-    \frac{\d\eta}{\d(t)}=\frac{1}{a},
-\end{equation}
 \begin{equation}
     \d s^2=-\d t^2+a^2[\frac{\d r^2}{1-kr^2}+r^2(\d\theta^2+\sin^2\theta\,\d\phi^2)],
 \end{equation}
+$\d t:=a\d\eta$, $(1/\sqrt{1-kr^2})\d r:=\d\psi$,
 \begin{equation}
-    \d s^2=a^2[-\d\eta^2+\frac{\d r^2}{1-kr^2}+r^2(\d\theta^2+\sin^2\theta\,\d\phi^2)].
+    \d s^2=a^2[-\d\eta^2+\d\psi^2+r(\psi)^2(\d\theta^2+\sin^2\theta\,\d\phi^2)].
 \end{equation}
-若$k=0$, $\square\Phi=0$, $\Phi:=f/r$, $f:=g/a$,
+\cite{Maggiore2014}, $\square\Phi(\eta,\psi):=0$, %$\Phi:=f/r$, $f:=g/a$,
+\begin{comment}
 \begin{equation}
-    \p_r^2g+(\p_\eta^2a/a)g-\p_\eta^2g=0,
+    \sqrt{-g}=a^4r^2\sin\theta,
 \end{equation}
-$\p_\eta^2a/a\sim\eta^2$, 故若$\omega^2\gg1/\eta^2$,
 \begin{equation}
-    g\simeq e^{i\omega(\eta-r)}.
+    \p_\eta(-(a^4r^2\sin\theta)a^{-2}\p_\eta\Phi)+\p_\psi((a^4r^2\sin\theta)a^{-2}\p_\psi\Phi)=0,
+\end{equation}
+\end{comment}
+\begin{equation}
+    -\p_\eta(a^2r^2\p_\eta\Phi)+\p_\psi(a^2r^2\p_\psi\Phi)=0,
+\end{equation}
+\begin{equation}
+    - a r \frac{\partial^{2}\Phi}{\partial \eta^{2}}  + a r \frac{\partial^{2}\Phi}{\partial \psi^{2}}  + 2 a \frac{\partial\Phi}{\partial \psi}  \frac{\d r}{\d \psi}  - 2 r \frac{\partial\Phi}{\partial \eta}  \frac{\d a}{\d \eta} =0,
+\end{equation}
+$\Phi:=g/ar$,
+\begin{equation}
+    - a g \frac{\d^{2}r}{\d \psi^{2}}  - a r \frac{\partial^{2}g}{\partial \eta^{2}}  + a r \frac{\partial^{2}g}{\partial \psi^{2}}  + g r \frac{\d^{2}a}{\d \eta^{2}} =0.
+\end{equation}
+${\d^{2}r/\d \psi^{2}}=kr$,
+\begin{equation}
+    \p_\psi^2g-kg+(\p_\eta^2a/a)g-\p_\eta^2g=0,
+\end{equation}
+$\p_\eta^2a/a\sim\eta^2$, 故$k = 0$时, 若$\omega^2\gg1/\eta^2$,
+\begin{equation}
+    g\simeq e^{i\omega(\eta-\psi)}=e^{i\omega(\eta-r)}.
+\end{equation}
+$g:=N(\eta)\varPsi(\psi)$,
+\begin{equation}
+    N\p_\psi^2\varPsi-kN\varPsi-\varPsi\p_\eta^2N\simeq0,
+\end{equation}
+\begin{equation}
+    \varPsi^{-1}\p_\psi^2\varPsi-k\simeq N^{-1}\p_\eta^2N:\simeq C,
+\end{equation}
+\begin{equation}
+    \varPsi\simeq e^{\sqrt{k-C}\psi},
+\end{equation}
+\begin{equation}
+    N\simeq e^{\sqrt{-C}\eta},
+\end{equation}
+\begin{equation}
+    g\simeq e^{i(\omega\eta-\sqrt{\omega^2-k}\psi)}.
 \end{equation}
