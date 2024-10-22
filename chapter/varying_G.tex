@@ -287,7 +287,7 @@
         -\frac{1}{2}\Gamma^{(0)}_{ab}(\mu^a-\bar{\mu}^a)(\mu^b-\bar{\mu}^b)
     ]
 \end{equation}
-设待估参数为$\mu=(\ln\xi,\ln (d_\text{L}/{d_\text{L}}_0),\ln Q,\dots)$, $\dots$为其他参数(如$\mathcal{M}$), 则$\tilde{h}_{,\ln\xi}=\tilde{h}_{,\ln (d_\text{L}/{d_\text{L}}_0)}=-\tilde{h}_{,\ln Q}=-\tilde{h}$, $\tilde{h}$对其他参数求偏导皆为纯虚数, 则由$\Gamma_{ab}=\left\langle h_{,a}|h_{,b}\right\rangle $和$\text{SNR}:=\rho=\sqrt{\left\langle h|h\right\rangle}$得
+设待估参数为$\mu=(\ln\xi,\ln (d_\text{L}/{d_\text{L}}_0),\ln Q,\dots)$, $\dots$为其他参数(如$\mathcal{M}$), 则$\tilde{h}_{,\ln\xi}=\tilde{h}_{,\ln (d_\text{L}/{d_\text{L}}_0)}=-\tilde{h}_{,\ln Q}=-\tilde{h}$, $\tilde{h}$对其他参数求偏导皆为纯虚数, 则由$\Gamma_{ab}=\left\langle h_{,a}\mid h_{,b}\right\rangle $和$\text{SNR}:=\rho=\sqrt{\left\langle h\mid h\right\rangle}$得
 \begin{equation}
     \Gamma_{ab}=\begin{bmatrix}
         \rho^2&\rho^2&-\rho^2&0&\dots\\
@@ -468,10 +468,10 @@ $p=-\frac{1}{2}\frac{d\ln G}{dz}=-\frac{1}{2}\frac{1}{G}\frac{dG}{dz}$, $\Gamma=
 
 \section{Hierarchical combination}
 
-\cite{Abbott2021,Thrane2019}, For a given beyond-GR parameter $x$, this distribution $p(x|d)$ is the expectation for $x$ after marginalizing over the hyperparameters $\mu$ and $\sigma$,
+\cite{Abbott2021,Thrane2019}, For a given beyond-GR parameter $x$, this distribution $p(x\mid d)$ is the expectation for $x$ after marginalizing over the hyperparameters $\mu$ and $\sigma$,
 \begin{equation}
-    p(x|d)=\int p(x|\mu,\sigma)p(\mu,\sigma|d)\,\d\mu\d\sigma,
+    p(x\mid d)=\int p(x\mid \mu,\sigma)p(\mu,\sigma\mid d)\,\d\mu\d\sigma,
 \end{equation}
-where $d$ represents the data for \emph{all} detected events, and $p(x|\mu,\sigma)\sim\mathcal{N}(\mu,\sigma)$ by construction.
+where $d$ represents the data for \emph{all} detected events, and $p(x\mid \mu,\sigma)\sim\mathcal{N}(\mu,\sigma)$ by construction.
 
-$p(\mu,\sigma|d)$算法见 \verb|hp.py|.
+$p(\mu,\sigma\mid d)$算法见 \verb\mid hp.py\mid .

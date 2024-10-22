@@ -5,19 +5,19 @@
 \section{Bayesian 公式}
 
 \begin{equation}
-    p(\vec{\theta}|\vec{x})=\frac{\mathcal{L}(\vec{\theta}|\vec{x})\pi(\vec{\theta})}{\mathcal{Z}}.
+    p(\vec{\theta}\mid \vec{x})=\frac{\mathcal{L}(\vec{\theta}\mid \vec{x})\pi(\vec{\theta})}{\mathcal{Z}}.
 \end{equation}
-$p(\vec{\theta}|\vec{x})$ 是 posterior, $\pi(\vec{\theta})$ 是 prior, $\mathcal{L}(\vec{\theta}|\vec{x})=p(\vec{x}|\vec{\theta})$ 是 likelihood, $\mathcal{Z}=\int\mathcal{L}(\vec{\theta}|\vec{x})\pi(\vec{\theta})\,\d\vec{\theta}$ 是 evidence.
+$p(\vec{\theta}\mid \vec{x})$ 是 posterior, $\pi(\vec{\theta})$ 是 prior, $\mathcal{L}(\vec{\theta}\mid \vec{x})=p(\vec{x}\mid \vec{\theta})$ 是 likelihood, $\mathcal{Z}=\int\mathcal{L}(\vec{\theta}\mid \vec{x})\pi(\vec{\theta})\,\d\vec{\theta}$ 是 evidence.
 
 \section{点估计}
 
-$\hat{\theta}=\t{E}[p(\vec{\theta}|\vec{x})]$ 使 $\t{E}[p(\vec{\theta}-\hat{\theta}|\vec{x})]=\t{D}[p(\vec{\theta}|\vec{x})]$ 最小.
+$\hat{\theta}=\t{E}[p(\vec{\theta}\mid \vec{x})]$ 使 $\t{E}[p(\vec{\theta}-\hat{\theta}\mid \vec{x})]=\t{D}[p(\vec{\theta}\mid \vec{x})]$ 最小.
 
 \section{区间估计}
 
-若存在 $C\in\{\theta\}$, 使得 $\int_{C}\p(\theta|\vec{x})\ge1-\alpha$, 则称 $[\hat{\theta}_\t{L},\hat{\theta}_\t{U}]$ 为 $\theta$ 的可信水平为 $1-\alpha$ 的 Bayesian 可信集. 警告: Bayesian 可信区间不是经典置信区间.
+若存在 $C\in\{\theta\}$, 使得 $\int_{C}\p(\theta\mid \vec{x})\ge1-\alpha$, 则称 $[\hat{\theta}_\t{L},\hat{\theta}_\t{U}]$ 为 $\theta$ 的可信水平为 $1-\alpha$ 的 Bayesian 可信集. 警告: Bayesian 可信区间不是经典置信区间.
 
-若存在 $C\in\{\theta\}$, 使得 $\int_{C}\p(\theta|\vec{x})=1-\alpha$, 且任意 $\theta_1\in C$, $\theta_2\notin C$, $\pi(\theta_1|\vec{x})\ge\pi(\theta_2|\vec{x})$, 则称 $C$ 为 $\theta$ 的可信水平为 $1-\alpha$ 的 Bayesian HPD 可信集. 作法: 在 $\theta-p$图中, 划一平行于 $\theta$ 轴的横线, 与 $p(\theta)$ 曲线的交点向下划垂直于 $\theta$ 轴的竖线, 获得可信集端点.
+若存在 $C\in\{\theta\}$, 使得 $\int_{C}\p(\theta\mid \vec{x})=1-\alpha$, 且任意 $\theta_1\in C$, $\theta_2\notin C$, $\pi(\theta_1\mid \vec{x})\ge\pi(\theta_2\mid \vec{x})$, 则称 $C$ 为 $\theta$ 的可信水平为 $1-\alpha$ 的 Bayesian HPD 可信集. 作法: 在 $\theta-p$图中, 划一平行于 $\theta$ 轴的横线, 与 $p(\theta)$ 曲线的交点向下划垂直于 $\theta$ 轴的竖线, 获得可信集端点.
 
 Bayesian HPD 可信区间使 Bayesian 可信区间最短.
 
@@ -33,7 +33,7 @@ Bayesian HPD 可信区间使 Bayesian 可信区间最短.
 
 \subsubsection{Jeffreys Prior}
 
-Fisher 信息矩阵 $\mathcal{I}_{ij}(\vec{\theta}):=\t{E}[\frac{\p\ln p(\vec{x}|\vec{\theta})}{\p \theta_i}\cdot\frac{\p\ln p(\vec{x}|\vec{\theta})}{\p \theta_j}]$.
+Fisher 信息矩阵 $\mathcal{I}_{ij}(\vec{\theta}):=\t{E}[\frac{\p\ln p(\vec{x}\mid \vec{\theta})}{\p \theta_i}\cdot\frac{\p\ln p(\vec{x}\mid \vec{\theta})}{\p \theta_j}]$.
 
 Jeffreys prior $\pi_\t{J}(\vec{\theta}):\propto\det(\mathcal{I}_{ij}(\vec{\theta}))^{1/2}$, 
 
@@ -41,7 +41,7 @@ Jeffreys prior $\pi_\t{J}(\vec{\theta}):\propto\det(\mathcal{I}_{ij}(\vec{\theta
 
 \section{Hierarchical Prior}
 
-$\pi(\vec{\theta}|\vec{\lambda})$ 中未定且需定的 parameter 称为 hyperparameter. 为难定的 hyperparameter 给的 prior 称为 hyperprior. prior 和 hyperprior 组成 hierarchical prior.
+$\pi(\vec{\theta}\mid \vec{\lambda})$ 中未定且需定的 parameter 称为 hyperparameter. 为难定的 hyperparameter 给的 prior 称为 hyperprior. prior 和 hyperprior 组成 hierarchical prior.
 
 \section{算法}
 
@@ -49,4 +49,4 @@ $\pi(\vec{\theta}|\vec{\lambda})$ 中未定且需定的 parameter 称为 hyperpa
 
 用 Monte Carlo 法模拟根据 posterior 构造的 Markov chain 来估计 posterior 的方法.
 
-构造一个 Markov chain $\vec{\theta}^{(1)},\dots,\vec{\theta}^{(n)},\dots$, 使得 $\lim_{n\to\infty}p(\vec{\theta}^{(n)})=p(\vec{\theta}|\vec{x})$, 用 Monte Carlo 法模拟 $\vec{\theta}^{(1)},\dots,\vec{\theta}^{(n)}$, 去除 $\vec{\theta}^{(1)},\dots,\vec{\theta}^{(m)}$, 用 $\vec{\theta}^{(m+1)},\dots,\vec{\theta}^{(n)}$ 估计 $p(\vec{\theta}|\vec{x})$.
+构造一个 Markov chain $\vec{\theta}^{(1)},\dots,\vec{\theta}^{(n)},\dots$, 使得 $\lim_{n\to\infty}p(\vec{\theta}^{(n)})=p(\vec{\theta}\mid \vec{x})$, 用 Monte Carlo 法模拟 $\vec{\theta}^{(1)},\dots,\vec{\theta}^{(n)}$, 去除 $\vec{\theta}^{(1)},\dots,\vec{\theta}^{(m)}$, 用 $\vec{\theta}^{(m+1)},\dots,\vec{\theta}^{(n)}$ 估计 $p(\vec{\theta}\mid \vec{x})$.

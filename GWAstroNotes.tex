@@ -9,6 +9,7 @@
 \usepackage{verbatim}
 %\syntaxonly
 \pagestyle{plain}
+\allowdisplaybreaks
 \hypersetup{
     colorlinks,
     linkcolor=blue,
@@ -16,7 +17,7 @@
     filecolor=cyan,
     urlcolor=magenta,
 }
-\allowdisplaybreaks
+\bibliographystyle{abbrv}
 \def\b{\boldsymbol}
 \def\d{\mathrm{d}}
 \def\f{\frac}
@@ -57,6 +58,5 @@
     \include{chapter/Bayesian}
     \backmatter
     \addcontentsline{toc}{chapter}{\bibname}
-    \bibliographystyle{abbrv}
     \bibliography{GWAstro}
 \end{document}
