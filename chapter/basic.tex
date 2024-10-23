@@ -2,20 +2,20 @@
 
 \section{Linearized Gravity}\label{linearized_gravity}
 
-\cite{Wald1984,Hughes2009,Maggiore2014}. 流形$\mathbb{R}^{4}$. 任意坐标系$\{x^{\mu}\}$, $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\gamma_{\mu\nu}s+\text{O}(s^2)$. 设$g^{\mu\nu}={?}^{\mu\nu}+{??}^{\mu\nu}s+\text{O}(s^2)$, 则$\delta^{\mu}_{\ph{\mu}\lambda}={?}^{\mu\nu}\eta_{\nu\lambda}+{?}^{\mu\nu}\gamma_{\nu\lambda}s+{??}^{\mu\nu}\eta_{\nu\lambda}s+\text{O}(s^2)$, 所以${?}^{\mu\nu}=\eta^{\mu\nu}$, ${??}^{\mu\nu}={??}^{\mu\sigma}\delta_{\sigma}^{\ph{\sigma}\nu}={??}^{\mu\sigma}\eta_{\sigma\lambda}\eta^{\lambda\nu}=-{?}^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\eta^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\gamma^{\mu\nu}$, 所以$g^{\mu\nu}=\eta^{\mu\nu}-\gamma^{\mu\nu}s+\text{O}(s^2)=\eta^{\mu\nu}-h^{\mu\nu}+\text{O}(s^2)$.
+\cite{Wald1984,Hughes2009,Maggiore2014}. 流形$\mathbb{R}^{4}$. 任意坐标系$\{x^{\mu}\}$, $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\gamma_{\mu\nu}s+\t{O}(s^2)$. 设$g^{\mu\nu}={?}^{\mu\nu}+{??}^{\mu\nu}s+\t{O}(s^2)$, 则$\delta^{\mu}_{\ph{\mu}\lambda}={?}^{\mu\nu}\eta_{\nu\lambda}+{?}^{\mu\nu}\gamma_{\nu\lambda}s+{??}^{\mu\nu}\eta_{\nu\lambda}s+\t{O}(s^2)$, 所以${?}^{\mu\nu}=\eta^{\mu\nu}$, ${??}^{\mu\nu}={??}^{\mu\sigma}\delta_{\sigma}^{\ph{\sigma}\nu}={??}^{\mu\sigma}\eta_{\sigma\lambda}\eta^{\lambda\nu}=-{?}^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\eta^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\gamma^{\mu\nu}$, 所以$g^{\mu\nu}=\eta^{\mu\nu}-\gamma^{\mu\nu}s+\t{O}(s^2)=\eta^{\mu\nu}-h^{\mu\nu}+\t{O}(s^2)$.
 \begin{equation}
-    R_{\mu\lambda\nu\sigma}=\p_\sigma\p_{[\mu}h_{\lambda]\nu}-\p_\nu\p_{[\mu}h_{\lambda]\sigma}+\text{O}(s^2).
+    R_{\mu\lambda\nu\sigma}=\p_\sigma\p_{[\mu}h_{\lambda]\nu}-\p_\nu\p_{[\mu}h_{\lambda]\sigma}+\t{O}(s^2).
 \end{equation}
 
 $\bar{h}_{\mu\nu}:=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}\eta^{\lambda\sigma}h_{\lambda\sigma}=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}h$.
 \begin{equation}
-    -\frac{1}{2} \partial^{\lambda} \partial_{\lambda} \bar{h}_{\mu \nu}+\partial^{\lambda} \partial_{(\mu} \bar{h}_{\nu) \lambda}-\frac{1}{2} \eta_{\mu \nu} \partial^{\lambda} \partial^{\sigma} \bar{h}_{\lambda \sigma}+\text{O}(s^2)=8 \pi T_{\mu \nu}.
+    -\frac{1}{2} \partial^{\lambda} \partial_{\lambda} \bar{h}_{\mu \nu}+\partial^{\lambda} \partial_{(\mu} \bar{h}_{\nu) \lambda}-\frac{1}{2} \eta_{\mu \nu} \partial^{\lambda} \partial^{\sigma} \bar{h}_{\lambda \sigma}+\t{O}(s^2)=8 \pi T_{\mu \nu}.
 \end{equation}
-存在$\{x^{\mu}\}$, 使得$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$ (Lorentz gauge). [证: 设$x'^\mu=x^\mu-\xi^\mu=x^\mu-\zeta^\mu s-\text{O}(s^2)$, 则$\frac{\p ?}{\p x'^\mu}=\frac{\p ?}{\p x^\lambda}\frac{\p x^\lambda}{\p x'^\mu}=\frac{\p ?}{\p x^\lambda}(\delta^{\lambda}_{\ph{\lambda}\mu}+\frac{\p \xi^\lambda}{\p x'^\mu})=\frac{\p ?}{\p x^\nu}+\text{O}(s^2)$, $g'_{\mu\nu}=g_{\lambda\sigma}\frac{\p x^\lambda}{\p x'^\mu}\frac{\p x^\sigma}{\p x'^\nu}=g_{\lambda\sigma}(\delta^{\lambda}_{\ph{\lambda}\mu}+\frac{\p \xi^\lambda}{\p x'^\mu})(\delta^{\sigma}_{\ph{\sigma}\nu}+\frac{\p \xi^\sigma}{\p x'^\nu})=g_{\mu\nu}+g_{\mu\sigma}\frac{\p \xi^\sigma}{\p x'^\nu}+g_{\lambda\nu}\frac{\p \xi^\lambda}{\p x'^\mu}=g_{\mu\nu}+(\eta_{\mu\sigma}+\text{O}(s))(\frac{\p \xi^\sigma}{\p x^\nu}+\text{O}(s^2))+(\eta_{\lambda\nu}+\text{O}(s))(\frac{\p \xi^\lambda}{\p x^\mu}+\text{O}(s^2))=g_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\text{O}(s^2)$, 所以$h'_{\mu\nu}=g'_{\mu\nu}-\eta_{\mu\nu}=g_{\mu\nu}-\eta_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\text{O}(s^2)=h_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\text{O}(s^2)$, 因此存在$\xi^\mu$, 使得$\p'^{\nu}\bar{h}'_{\mu\nu}+\text{O}(s^2)=0$.] 令$\{x^{\mu}\}$满足$\p^{\nu}\bar{h}_{\mu\nu}+\text{O}(s^2)=0$, 则
+存在$\{x^{\mu}\}$, 使得$\p^{\nu}\bar{h}_{\mu\nu}+\t{O}(s^2)=0$ (Lorentz gauge). [证: 设$x'^\mu=x^\mu-\xi^\mu=x^\mu-\zeta^\mu s-\t{O}(s^2)$, 则$\frac{\p ?}{\p x'^\mu}=\frac{\p ?}{\p x^\lambda}\frac{\p x^\lambda}{\p x'^\mu}=\frac{\p ?}{\p x^\lambda}(\delta^{\lambda}_{\ph{\lambda}\mu}+\frac{\p \xi^\lambda}{\p x'^\mu})=\frac{\p ?}{\p x^\nu}+\t{O}(s^2)$, $g'_{\mu\nu}=g_{\lambda\sigma}\frac{\p x^\lambda}{\p x'^\mu}\frac{\p x^\sigma}{\p x'^\nu}=g_{\lambda\sigma}(\delta^{\lambda}_{\ph{\lambda}\mu}+\frac{\p \xi^\lambda}{\p x'^\mu})(\delta^{\sigma}_{\ph{\sigma}\nu}+\frac{\p \xi^\sigma}{\p x'^\nu})=g_{\mu\nu}+g_{\mu\sigma}\frac{\p \xi^\sigma}{\p x'^\nu}+g_{\lambda\nu}\frac{\p \xi^\lambda}{\p x'^\mu}=g_{\mu\nu}+(\eta_{\mu\sigma}+\t{O}(s))(\frac{\p \xi^\sigma}{\p x^\nu}+\t{O}(s^2))+(\eta_{\lambda\nu}+\t{O}(s))(\frac{\p \xi^\lambda}{\p x^\mu}+\t{O}(s^2))=g_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\t{O}(s^2)$, 所以$h'_{\mu\nu}=g'_{\mu\nu}-\eta_{\mu\nu}=g_{\mu\nu}-\eta_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\t{O}(s^2)=h_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu+\t{O}(s^2)$, 因此存在$\xi^\mu$, 使得$\p'^{\nu}\bar{h}'_{\mu\nu}+\t{O}(s^2)=0$.] 令$\{x^{\mu}\}$满足$\p^{\nu}\bar{h}_{\mu\nu}+\t{O}(s^2)=0$, 则
 \begin{equation}
-    \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}+\text{O}(s^2)=-16\pi T_{\mu \nu}.\label{lin_gravity}
+    \p^{\lambda}\p_{\lambda}\bar{h}_{\mu\nu}+\t{O}(s^2)=-16\pi T_{\mu \nu}.\label{lin_gravity}
 \end{equation}
-略去$\text{O}(s^2)$条件: $h_{\mu\nu}$, $\p_\lambda h_{\mu\nu}$\dots{}小. 下略$\text{O}(s^2)$.
+略去$\t{O}(s^2)$条件: $h_{\mu\nu}$, $\p_\lambda h_{\mu\nu}$\dots{}小. 下略$\t{O}(s^2)$.
 
 Lorentz gauge等价于协和坐标条件.
 
@@ -29,7 +29,7 @@ Lorentz gauge等价于协和坐标条件.
     \end{bmatrix}e^{i\omega(t-z)}.\label{h_xy}
 \end{equation}
 
-\cite{Maggiore2014}. Lorentz gauge $\to$ radiation gauge, $P_{ij}:=\delta_{ij}-n_in_j$, $\Lambda_{ijkl}=P_{ik}P_{jl}-\frac{1}{2}P_{ij}P_{kl}$, $h_{ij}^\text{r}=\Lambda_{ijkl}h_{kl}^\text{L}=\Lambda_{ijkl}\bar{h}_{kl}^\text{L}$. \cite{Sathyaprakash2009}. Step 1: 坐标系空间旋转, 使$\vec{e}_z\parallel\vec{n}$. Step 2: 取$x$, $y$分量$h_{xy}$. Step 3: 去迹. [$h_+=\frac{1}{2}(h_{xx}-h_{yy})$, $h_\times=h_{xy}=h_{yx}$.]
+\cite{Maggiore2014}. Lorentz gauge $\to$ radiation gauge, $P_{ij}:=\delta_{ij}-n_in_j$, $\Lambda_{ijkl}=P_{ik}P_{jl}-\frac{1}{2}P_{ij}P_{kl}$, $h_{ij}^\t{r}=\Lambda_{ijkl}h_{kl}^\t{L}=\Lambda_{ijkl}\bar{h}_{kl}^\t{L}$. \cite{Sathyaprakash2009}. Step 1: 坐标系空间旋转, 使$\vec{e}_z\parallel\vec{n}$. Step 2: 取$x$, $y$分量$h_{xy}$. Step 3: 去迹. [$h_+=\frac{1}{2}(h_{xx}-h_{yy})$, $h_\times=h_{xy}=h_{yx}$.]
 
 $x'^\mu=x^\mu-\xi^\mu$, $h'_{\mu\nu}=h_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu$, $h_{\mu\nu}=h'_{\mu\nu}-\p'_\mu\xi_\nu-\p'_\nu\xi_\mu$.
 
@@ -48,14 +48,15 @@ $x'^\mu=x^\mu-\xi^\mu$, $h'_{\mu\nu}=h_{\mu\nu}+\p_\mu\xi_\nu+\p_\nu\xi_\mu$, $h
 
 \section{Fourier Transformation}
 
+\def\A{\mathcal{A}}
 \cite{Maggiore2014}. 
 \begin{equation}
     h_{ij}=\frac{1}{(2\pi)^3}\int\d^3\vec{k}\left[\A_{ij}(\vec{k})e^{+ik_\mu x^\mu}+\A_{ij}^*(\vec{k})e^{-ik_\mu x^\mu}\right]
 \end{equation}
 $\d^2\vec{n}:=\sin\theta\d\theta\d\phi$,
 \begin{align}
-    h_{ij}&=\int_0^\infty\d f\, f^2\int\d^2\vec{n}\left[\A_{ij}(f,\vec{n})e^{-2\pi i f(t-\vec{n}\cdot\vec{x})}+\text{c.c.}\right]\\
-    &=\int_0^\infty\d f\left[e^{-2\pi i ft}f^2\int\d^2\vec{n}\,\A_{ij}(f,\vec{n})e^{+2\pi i f\vec{n}\cdot\vec{x}}+\text{c.c.}\right]\\
+    h_{ij}&=\int_0^\infty\d f\, f^2\int\d^2\vec{n}\left[\A_{ij}(f,\vec{n})e^{-2\pi i f(t-\vec{n}\cdot\vec{x})}+\t{c.c.}\right]\\
+    &=\int_0^\infty\d f\left[e^{-2\pi i ft}f^2\int\d^2\vec{n}\,\A_{ij}(f,\vec{n})e^{+2\pi i f\vec{n}\cdot\vec{x}}+\t{c.c.}\right]\\
     &:=\int_0^\infty\d f\left[\tilde{h}_{ij}(f,\vec{x})e^{-2\pi i ft}+\tilde{h}_{ij}^*(f,\vec{x})e^{+2\pi i ft}\right]\\
     &:=\int\d f\,\tilde{h}_{ij}(f,\vec{x})e^{-2\pi i ft}.
 \end{align}
@@ -73,12 +74,12 @@ TT gauge $\Ra$ TT frame. \cite{Maggiore2014}, free test body $x^\mu(\tau)$, $\fr
 
 \section{Proper detector frame}
 
-设一基准测试体, 取其固有坐标系, 另一测试体世界线$x^{i}(t)$. \cite{Jaranowski2009}, Let us now imagine that for times $t \le 0$ there were no waves ($h^\text{TT}_{ij} = 0$) in the vicinity of the two observers and that the observers were at rest with respect to each other before the wave has come, so $x^i(t) = x^i_0 = \text{const.}$, $\d x^i/\d t = 0$, for $t \le 0$. At $t = 0$ some wave arrives. Then according to geodesic deviation equation,
+设一基准测试体, 取其固有坐标系, 另一测试体世界线$x^{i}(t)$. \cite{Jaranowski2009}, Let us now imagine that for times $t \le 0$ there were no waves ($h^\t{TT}_{ij} = 0$) in the vicinity of the two observers and that the observers were at rest with respect to each other before the wave has come, so $x^i(t) = x^i_0 = \t{const.}$, $\d x^i/\d t = 0$, for $t \le 0$. At $t = 0$ some wave arrives. Then according to geodesic deviation equation,
 \begin{equation}
-    \frac{\d^2x^i}{\d t^2}=\frac{1}{2}\frac{\p^2h^\text{TT}_{ij}}{\p t^2}x^j_0,
+    \frac{\d^2x^i}{\d t^2}=\frac{1}{2}\frac{\p^2h^\t{TT}_{ij}}{\p t^2}x^j_0,
 \end{equation}
 \begin{equation}
-    x^i=(\delta_{ij}+\frac{1}{2}h^\text{TT}_{ij})x^j_0.
+    x^i=(\delta_{ij}+\frac{1}{2}h^\t{TT}_{ij})x^j_0.
 \end{equation}
 
 考虑对观测器材有影响的其他效应, 见\cite{Maggiore2014}, \cite{Ni1978}.
