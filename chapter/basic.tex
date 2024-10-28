@@ -2,7 +2,7 @@
 
 \section{Linearized Gravity}\label{linearized_gravity}
 
-\cite{Wald1984,Hughes2009,Maggiore2014}. 流形$\mathbb{R}^{4}$. 任意坐标系$\{x^{\mu}\}$, $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\gamma_{\mu\nu}s+\t{O}(s^2)$. 设$g^{\mu\nu}={?}^{\mu\nu}+{??}^{\mu\nu}s+\t{O}(s^2)$, 则$\delta^{\mu}_{\ph{\mu}\lambda}={?}^{\mu\nu}\eta_{\nu\lambda}+{?}^{\mu\nu}\gamma_{\nu\lambda}s+{??}^{\mu\nu}\eta_{\nu\lambda}s+\t{O}(s^2)$, 所以${?}^{\mu\nu}=\eta^{\mu\nu}$, ${??}^{\mu\nu}={??}^{\mu\sigma}\delta_{\sigma}^{\ph{\sigma}\nu}={??}^{\mu\sigma}\eta_{\sigma\lambda}\eta^{\lambda\nu}=-{?}^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\eta^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\gamma^{\mu\nu}$, 所以$g^{\mu\nu}=\eta^{\mu\nu}-\gamma^{\mu\nu}s+\t{O}(s^2)=\eta^{\mu\nu}-h^{\mu\nu}+\t{O}(s^2)$.
+\cite{Wald1984,Flanagan2005,Hughes2009,Maggiore2014}. 流形$\mathbb{R}^{4}$. 任意坐标系$\{x^{\mu}\}$, $g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\gamma_{\mu\nu}s+\t{O}(s^2)$. 设$g^{\mu\nu}={?}^{\mu\nu}+{??}^{\mu\nu}s+\t{O}(s^2)$, 则$\delta^{\mu}_{\ph{\mu}\lambda}={?}^{\mu\nu}\eta_{\nu\lambda}+{?}^{\mu\nu}\gamma_{\nu\lambda}s+{??}^{\mu\nu}\eta_{\nu\lambda}s+\t{O}(s^2)$, 所以${?}^{\mu\nu}=\eta^{\mu\nu}$, ${??}^{\mu\nu}={??}^{\mu\sigma}\delta_{\sigma}^{\ph{\sigma}\nu}={??}^{\mu\sigma}\eta_{\sigma\lambda}\eta^{\lambda\nu}=-{?}^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\eta^{\mu\sigma}\gamma_{\sigma\lambda}\eta^{\lambda\nu}=-\gamma^{\mu\nu}$, 所以$g^{\mu\nu}=\eta^{\mu\nu}-\gamma^{\mu\nu}s+\t{O}(s^2)=\eta^{\mu\nu}-h^{\mu\nu}+\t{O}(s^2)$.
 \begin{equation}
     R_{\mu\lambda\nu\sigma}=\p_\sigma\p_{[\mu}h_{\lambda]\nu}-\p_\nu\p_{[\mu}h_{\lambda]\sigma}+\t{O}(s^2).
 \end{equation}
@@ -19,9 +19,15 @@ $\bar{h}_{\mu\nu}:=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}\eta^{\lambda\sigma}h_{\la
 
 Lorentz gauge等价于协和坐标条件.
 
+Lorentz gauge 后, 自由度 $10\to6$.
+
 \section{Radiation Gauge}
 
-\cite{Wald1984}. 存在$\{x^{\mu}\}$, 使得``无源处'' $h=0\Ra\bar{h}_{\mu\nu}=h_{\mu\nu}$ (TT gauge \cite{王2020,Hughes2009})且$h_{0\mu}=0$. \cite{Maggiore2014}, 解$\p^{\lambda}\p_{\lambda}\bar{h}_{ij}=0$得$h_{ij}=A_{ij}(\vec{k})e^{ik^\mu x_\mu}$ ($A_{ij}$称为polarization tensor). $h_{(ij)}=0$, $h=0$, $\p^{j}h_{ij}=0$ $\Ra$ $A_{(ij)}=0$, $A=0$, $k^{j}A_{ij}=0$. 令$\vec{e}_z\parallel\vec{k}$,
+\cite{Wald1984}. 存在$\{x^{\mu}\}$, 使得``无源处'' $h=0\Ra\bar{h}_{\mu\nu}=h_{\mu\nu}$ (TT gauge \cite{王2020,Hughes2009})且$h_{0\mu}=0$. \cite{Maggiore2014}. \cite{Maggiore2014}, $\p^\nu \bar{h}_{\mu\nu}=0$, $x^\mu\to x'^\mu = x^\mu+\xi^\mu$, $\bar{h}_{\mu\nu}\to\bar{h}'_{\mu\nu}=\bar{h}_{\mu\nu}-(\p_\mu\xi_\nu+\p_\nu\xi_\mu-\eta_{\mu\nu}\p_\rho\xi^\rho)$, $\p^{\lambda}\p_{\lambda}\xi_{\mu}=0\to\bar{h}'_{\mu\nu}=\bar{h}_{\mu\nu}$. Choose $\xi^0$ to make $\bar{h}=0$, Choose $\xi^i$ to make $h^{0i}=0$, then $h^{00}=0$. The TT gauge cannot be chosen inside the source, for global spacetimes with matter sources, see \cite{Flanagan2005}.
+
+Radiation Gauge 后, 自由度 $6\to2$.
+
+解$\p^{\lambda}\p_{\lambda}\bar{h}_{ij}=0$得$h_{ij}=A_{ij}(\vec{k})e^{ik^\mu x_\mu}$ ($A_{ij}$称为polarization tensor). $h_{(ij)}=0$, $h=0$, $\p^{j}h_{ij}=0$ $\Ra$ $A_{(ij)}=0$, $A=0$, $k^{j}A_{ij}=0$. 令$\vec{e}_z\parallel\vec{k}$,
 \begin{equation}
     h_{xy}=\begin{bmatrix}
         +h_+&h_\times\\
